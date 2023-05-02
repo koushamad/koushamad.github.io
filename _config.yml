@@ -6,34 +6,35 @@ favicon: images/favicon.ico
 version: 2
 
 # Personal info
-name: Brett Harris
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+name: Kousha Ghodsizad
+title: Senior Software Engineer
+email: kousha@iraven.io
+website: iraven.io
+phone: +31 6 47 15 49 99
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: true
 
 # Social links
-twitter_username: facespics
-github_username:  sproogen
+twitter_username: kousha_mad
+github_username:  koushamad
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-instagram_username: jameswgrant
-linkedin_username: jameswgrant
+instagram_username: kousha.mad
+linkedin_username: kousha-ghodsizad-991974104
 # xing_username: jekyll
 # pinterest_username: jekyll
-youtube_username: globalmtb
+youtube_username: %40Coffee-Go
 # googleplus_username: +jekyll
 # orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
-additional_links:
-- title: itsgoingto.be
-  icon: fas fa-globe
-  url: https://www.itsgoingto.be
+#additional_links:
+#- title: itsgoingto.be
+#  icon: fas fa-globe
+#  url: https://www.itsgoingto.be
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
 #   url: Link url (eg. https://google.com)
@@ -46,71 +47,206 @@ additional_links:
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/1629721583450.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
-
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
-
+  Hi, my name's Kousha and I am an experienced senior software engineer with a strong skill set in technical analysis, system development, and problem-solving. I thrive independently and in teams, enjoy learning and sharing knowledge with colleagues, and excel at tackling complex challenges to deliver immediate value to your company.
+  
+  I am most development skilled in: <mark>GO</mark> <mark>PHP</mark> <mark>Python</mark> <mark>SQL</mark> and <mark>NoSQL</mark>
+  
+  and most DevOps skilled in: <mark>Docker</mark> <mark>Kubernetes</mark> <mark>Terraform</mark> and <mark>AWS</mark>
+  
+  
+  +10 years of experience in software development.
+  
+  +4 years of experience in Management.
+  
+  +3 years of experience in DevOps.
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: top-middle
-        title: Super awesome project
-        link: github.com/sproogen
-        # link_text: Project Website
-        additional_links:
-          - title:  sproogen/modern-resume-theme
-            icon: fab fa-github
-            url: github.com/sproogen/modern-resume-theme
-          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
-          #   icon: fab fa-github
-          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-        quote: >
-          This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
-        description: | # this will include new lines to allow paragraphs
-          I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: The Boring Company
-        link: boringcompany.com
-        # link_text: boringcompany.com
-        sub_title: Senior Network System Administrator
-        caption: November 2017 - Present
-        quote: >
-          Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
+        title: Studocu
+        link: https://studocu.com/
+        link_text: studocu.com
+        sub_title: Senior Software Engineer
+        caption: Amsterdam - Aug 2022- Present.
+        quote: Identify and resolve codebase and database performance issues, resulting in a 40% improvement in overall performance.
         description: | # this will include new lines to allow paragraphs
-            Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+          • Collaborated with the SEO team to improve website performanc e and enhance crawler friendliness to improve our overall service.
+          
+          • Collaboration with the DevOps team to integrate monitoring tools with local, staging, and production environments to improve system observability.
+          
+          • Identify and resolve codebase and database performance issues, resulting in a 40% improvement in overall performance.
+          
+          • Developed GitHub CI/CD pipelines for both SEO and performance tests for the core project
+          
+          • Holding a workshop on system performance analysis and improvement.
+          
+          
+          Tech stack: Go · DevOps · PHP · Python · Laravel · MySQL · OOP · TDD · SQL · Redis · Kubernetes · Terraform · AWS.
+
+      - layout: left
+        title: Pepper
+        link: https://pepper.com/
+        link_text: pepper.com
+        sub_title: Senior Software Engineer
+        caption: Berlin - Aug 2021- Jul 2022.
+        quote: Ensured microservices' security by checking and rehabilitating them against hacking attacks.
+        description: | # this will include new lines to allow paragraphs
+          • Collaborated with the Supernova and Microservice teams to develop new features and maintain the product and services.
+          
+          • Redesigned and developed the deal submission, product listing, and product detail pages using GraphQL.
+          
+          • Developed a GDPR-compliant image microservice that applies requested filters and can handle over 5,000 unique images per minute using 20 instances.
+          
+          • Checking and rehabilitating microservices against hacking attacks.
+          
+          • Improved the functionality of our microservices near cache by customizing loadbalancing.
+          
+          
+          Tech stack: Go · Microservice · Kubernetes · PHP · Laravel · GraphQL · OOP · Design Patterns · TDD · ElasticSearch · Redis · AWS. 
+
+      - layout: left
+        title: Wingie Enuygun Group
+        link: https://www.enuygun.com/
+        link_text: enuygun.com
+        sub_title: Senior Software Engineer / Team Lead
+        caption: Istanbul - Aug 2019 - Jul 2021.
+        quote: Successfully mentored and collaborated with the Hotel team to maintain and integrate the system with new providers.
+        description: | # this will include new lines to allow paragraphs
+          • Collaborated and mentor the Hotel team to maintain and integrate the system with new providers.
+          
+          • Improved the team's testing culture by organizing multilayer testing workshops to establish a strong TDD culture.
+          
+          • Enhanced the product search by optimizing the ElasticSearch index and implementing a data pipeline to improve the data indexing process.
+          
+          • Developed and designed a provider hub using Go and gRPC to manage concurrent requests to providers, fetch hotel data, and parse it to our contracts.
+          
+          • Integrated multiple hotel providers, including Webbeds, OtelZ, and Juniper, into the product
+          
+          • Developed a content caching manager microservice for providers and created an automated cache rate management system based on cache Hit and Mis Rates.
+          
+          • Designed and developed a new queue manager service to improve system compatibility with GRPC. The service automates failed message retries and provides live reports of the queue status.
+          
+          • Successfully migrated the production cache cluster from Redis to AWS ElastiCache without any data loss
+          
+          • Resolved a log system architecture issue causing high traffic in Kubernetes pods, allowing us to reduce pod size.
+          
+          • Migrated product database cluster from master-slave clustering to Galera cluster with zero data loss rate.
+          
+          
+          Tech stack: Go · PHP · Microservices · Hexagonal Architecture · Symfony · Leadership ·  AWS · DevOps · OOP · TDD · Design Patterns · Big Data · MySQL · MongoDB · Kubernetes· Docker .
+
+      - layout: left
+        title: Insider
+        link: https://useinsider.com/
+        link_text: useinsider.com
+        sub_title: Senior Software Engineer
+        caption: Istanbul - Aug 2018 - Jul 2019.
+        quote: Separated the email delivery and track services from the main product, designing it with microkernel architecture and hexagonal strategy.
+        description: | # this will include new lines to allow paragraphs
+          • Responsible for the newsletter product maintenance and refactoring process, working with one senior developer and 6 mid-level developers.
+          
+          • Separated the product panel from the main product, redesigning it with microkernel architecture and repository-service strategy.
+          
+          • Fixed all security issues in the Newsletter product and made it compatible with Huawei standards.
+          
+          • Redesigned email delivery and tracking service from PHP Loman to Go Microservice Architecture.
+          
+          • Migrated old product data from MySQL to Apache Cassandra and ClickHouse with zero data loss rate.
+          
+          • Migrated Queue from SQS to RabbitMQ, improving message size from 256 KB to 120 MB.
+          
+          • Developed a robust A-B testing system for the Newsletter service, enabling data-driven decision-making and improving overall email campaign effectiveness.
+          
+          • Developed Newsletter RSS service,providing users with a convenient way to receive updates and streamlining content distribution.
+          
+          • Created an Email Spam Check service to identify and prevent spam emails, enhancing the deliverability and reputation of the Newsletter service.
+          
+          
+          Tech stack: Go · PHP · Laravel · KAFKA · AWS · Kubernetes · DevOps · TDD · OOP · Design Patterns · MySQL · MongoDB · Leadership · Redis · Cassandra · Clickhouse.
+
+      - layout: left
+        title: Bamilo
+        link: https://bamilo.com/
+        link_text: bamilo.com
+        sub_title: Senior Software Engineer / Head of development
+        caption: Tehran Aug 2015 - Jul 2018.
+        quote: Successfully expanded the development team and developed new products for Bamilo.
+        description: | # this will include new lines to allow paragraphs
+          • Started as the head of the development (TDR) team and expanded the team to develop new products.
+          
+          • Developed a Performance Management Portal (PMP) System for Bamilo Warehouse, providing a centralized platform to monitor, analyze, and optimize warehouse operations for improved efficiency and productivity.
+          
+          • Designed and implemented the Bamilo New Seller Center System, offering a comprehensive and user-friendly platform for sellers to manage their products, orders, and customer interactions, ultimately enhancing the overall marketplace experience.
+          
+          • Migrated all Seller Center products to new ones by generating an online data pipeline in Kafka with zero data loss.
+          
+          • Developed a package delivery management and tracking service, which monitored all delivery personnel around the country and suggested the best-optimized route map.
+          
+          • Solved the data collusion issue on the main product inventory stock check service by developing a product-based load balancer microservice.
+          
+          
+          Tech stack: Go · Microservice · PHP · Laravel · OOP · Design Patterns · TDD · ElasticSearch · Redis · MySQL · MongoDB · Cassandra · RabbitMQ· Kubernetes. 
+
+      - layout: left
+        title: Sepehr Mahan Tech
+        link: https://www.sepehrmahan.com/
+        link_text: sepehrmahan.com
+        sub_title: Senior Software Engineer
+        caption: Tehran Aug 2012 - Jul 2015.
+        quote: Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
+        description: | # this will include new lines to allow paragraphs
+          • Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
+          
+          • Designed a user-friendly task management solution for private organizations, enhancing productivity and workflow efficiency.
+          
+          • Developed a custom social network for organizations using PHP-Fox, prioritizing collaboration, privacy, and security.
+          
+          • Built a form builder and workflow module for PHP-Fox, simplifying data collection and process automation with an intuitive interface.
+          
+          • Created a mobile application API for seamless PHP-Fox social network integration, ensuring compatibility across devices and operating systems.
+          
+          • Constructed a task list management system for government organizations, improving efficiency, accountability, and reporting capabilities.
+          
+          • Developed a meeting management system for government organizations,optimizing scheduling, resource allocation,and seamless coordination with existing tools.
+          
+          
+          Tech stack: Linux · PHP · JavaScript · Python · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns · OOP · Teamwork. 
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Harvard University
-        caption: 2010 - 2013
-        sub_title: BSc Computer Science
+        title: Islamic Azad University
+        caption: 2011 - 2015
+        sub_title: BSc Computer Software Engineering
         quote: >
-          Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+          Designing Innovative GIS & GPS-based Android Apps: A Study of the Research and Development Process and its Impact on User Satisfaction
         description: | # this will include new lines to allow paragraphs
-          During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
+          This research study examined the research and development process for designing innovative GIS & GPS-based Android apps and its impact on user satisfaction. The study involved researching and analyzing trends in GIS & GPS technology, collaborating with a multidisciplinary team to develop and test app concepts, and gathering user feedback to inform app improvements. The study findings can inform future GIS & GPS-based app design and development, as well as contribute to the academic community's understanding of the impact of the research and development process on user satisfaction.
 
-          I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
+          - title: Education # Title for the section
+
+      - layout: left
+        title: Islamic Azad University
+        caption: 2008 - 2011
+        sub_title: ASc Computer Programming
+        quote: >
+          Enhancing Search and Rescue Robot Performance through Algorithmic Innovations: A Study of the Development, Testing, and Implementation of Novel Algorithms for Router Robots
+        description: | # this will include new lines to allow paragraphs
+          This research study investigated the development, testing, and implementation of novel algorithms for router robots in search and rescue (SAR) scenarios. The study focused on optimizing search efficiency, obstacle avoidance, and communication to enhance SAR robot performance. The research involved assessing existing algorithms, exploring potential enhancements, and collaborating with robotics developers to implement improvements. The study findings can inform future SAR robot design and development, as well as contribute to the academic community's knowledge of algorithmic innovations for SAR robots.
 
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
-      - Knitting
-      - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
-
-      Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
+      Alongside my interests in software engineering and DevOps some of my other interests and hobbies are:
+      - Professional Chess Player
+      - Rock Climbing
+      - Running
+      - Hiking
 
 # Footer
 footer_show_references: true
