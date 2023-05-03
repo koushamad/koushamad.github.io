@@ -228,8 +228,6 @@ content:
         description: | # this will include new lines to allow paragraphs
           This research study examined the research and development process for designing innovative GIS & GPS-based Android apps and its impact on user satisfaction. The study involved researching and analyzing trends in GIS & GPS technology, collaborating with a multidisciplinary team to develop and test app concepts, and gathering user feedback to inform app improvements. The study findings can inform future GIS & GPS-based app design and development, as well as contribute to the academic community's understanding of the impact of the research and development process on user satisfaction.
 
-          - title: Education # Title for the section
-
       - layout: left
         title: Islamic Azad University
         caption: 2008 - 2011
