@@ -71,10 +71,10 @@ content:
         link: https://studocu.com/
         link_text: studocu.com
         sub_title: Senior Software Engineer
-        caption: Amsterdam - Aug 2022- Present.
+        caption: Amsterdam - May 2022- Present.
         quote: Identify and resolve codebase and database performance issues, resulting in a 40% improvement in overall performance.
         description: | # this will include new lines to allow paragraphs
-          • Collaborated with the SEO team to improve website performanc e and enhance crawler friendliness to improve our overall service.
+          • Collaborated with the Platform team to improve website performance and enhance crawler friendliness to improve our overall service.
           
           • Collaboration with the DevOps team to integrate monitoring tools with local, staging, and production environments to improve system observability.
           
@@ -88,22 +88,20 @@ content:
           Tech stack: Go · DevOps · PHP · Python · Laravel · MySQL · OOP · TDD · SQL · Redis · Kubernetes · Terraform · AWS.
 
       - layout: left
-        title: Pepper
-        link: https://pepper.com/
-        link_text: pepper.com
-        sub_title: Senior Software Engineer
-        caption: Berlin - Aug 2021- Jul 2022.
-        quote: Ensured microservices' security by checking and rehabilitating them against hacking attacks.
+        title: KolayIK
+        link: https://kolayik.com/
+        link_text: kolayik.com
+        sub_title: Senior Software Engineer / Team Lead
+        caption: Istanbul - April 2021- May 2022.
+        quote: Led a comprehensive overhaul of the HR system, introduced a new Expanse Management module, developed microservices for large-scale data handling.
         description: | # this will include new lines to allow paragraphs
-          • Collaborated with the Supernova and Microservice teams to develop new features and maintain the product and services.
+          • Led the development and refactoring of the HR system, employing Test-Driven Development (TDD) and leveraging technologies such as Laravel, PHP, PostgreSQL, Modular Architecture, Domain-Driven Design (DDD), Redis, RabbitMQ, and AWS.
           
-          • Redesigned and developed the deal submission, product listing, and product detail pages using GraphQL.
+          • Spearheaded the creation of the Expanse Management module, utilizing Laravel, PostgreSQL, and AWS, to enhance operational efficiency and streamline processes.
           
-          • Developed a GDPR-compliant image microservice that applies requested filters and can handle over 5,000 unique images per minute using 20 instances.
+          • Developed and implemented a series of Microservices dedicated to managing large-scale data imports and exports. Utilized Node.js, Golang, Kubernetes, Elasticache, Amazon S3, Simple Queue Service (SQS), and AWS Lambda to ensure robustness and scalability.
           
-          • Checking and rehabilitating microservices against hacking attacks.
-          
-          • Improved the functionality of our microservices near cache by customizing loadbalancing.
+          • Engineered a scalable queue handler with integration to Slack, effectively managing failure messages within the queue and providing real-time reporting. Employed TDD, Laravel, PHP, SQS, AWS, Golang, and Kubernetes to achieve seamless functionality and enhanced system performance.
           
           
           Tech stack: Go · Microservice · Kubernetes · PHP · Laravel · GraphQL · OOP · Design Patterns · TDD · ElasticSearch · Redis · AWS. 
@@ -113,7 +111,7 @@ content:
         link: https://www.enuygun.com/
         link_text: enuygun.com
         sub_title: Senior Software Engineer / Team Lead
-        caption: Istanbul - Aug 2019 - Jul 2021.
+        caption: Istanbul - MAy 2020 - Apr 2021.
         quote: Successfully mentored and collaborated with the Hotel team to maintain and integrate the system with new providers.
         description: | # this will include new lines to allow paragraphs
           • Collaborated and mentor the Hotel team to maintain and integrate the system with new providers.
@@ -144,7 +142,7 @@ content:
         link: https://useinsider.com/
         link_text: useinsider.com
         sub_title: Senior Software Engineer
-        caption: Istanbul - Aug 2018 - Jul 2019.
+        caption: Istanbul - May 2019 - Apr 2020.
         quote: Separated the email delivery and track services from the main product, designing it with microkernel architecture and hexagonal strategy.
         description: | # this will include new lines to allow paragraphs
           • Responsible for the newsletter product maintenance and refactoring process, working with one senior developer and 6 mid-level developers.
@@ -173,7 +171,7 @@ content:
         link: https://bamilo.com/
         link_text: bamilo.com
         sub_title: Senior Software Engineer / Head of development
-        caption: Tehran Aug 2015 - Jul 2018.
+        caption: Tehran Aug 2015 - Apr 2019.
         quote: Successfully expanded the development team and developed new products for Bamilo.
         description: | # this will include new lines to allow paragraphs
           • Started as the head of the development (TDR) team and expanded the team to develop new products.
@@ -215,6 +213,28 @@ content:
           
           
           Tech stack: Linux · PHP · JavaScript · Python · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns · OOP · Teamwork. 
+  - title: Projects # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: Pepper.com - The World's Largest Deal Community
+        caption: Remote / Berlin 2021 - 2022
+        sub_title: Senior Software Engineer / Associated with KolayIK
+        quote: Ensured microservices' security by checking and rehabilitating them against hacking attacks.
+        description: | # this will include new lines to allow paragraphs
+          • Collaborated with the Supernova and Microservice teams to develop new features and maintain the product and services.
+
+          • Redesigned and developed the deal submission, product listing, and product detail pages using GraphQL.
+
+          • Developed a GDPR-compliant image microservice that applies requested filters and can handle over 5,000 unique images per minute using 20 instances.
+
+          • Checking and rehabilitating microservices against hacking attacks.
+
+          • Improved the functionality of our microservices near cache by customizing loadbalancing.
+
+
+          Tech stack: Go · Microservice · Kubernetes · PHP · Laravel · GraphQL · OOP · Design Patterns · TDD · ElasticSearch · Redis · AWS.
+        
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
