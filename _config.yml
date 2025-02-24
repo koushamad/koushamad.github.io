@@ -81,19 +81,19 @@ content:
           Tech stack:
           
 
-          • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.    
-          
-          • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.
-          
-          • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.
-          
-          • Secret Management: Utilized HashiCorp Vault for secure storage and management of sensitive information.
-          
-          • CI/CD Tools: Experienced with GitLab for version control and CI/CD pipelines, and JFrog for artifact management.
-          
-          • Workflow Automation: Proficient in using Argo Workflows, Argo Events, and Argo CD for automating and managing complex workflows in Kubernetes environments.
-          
-          • Monitoring and Observability: Implemented systems for aggregating and analyzing logs and metrics to provide insights into application performance and health.  
+            • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.    
+            
+            • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.
+            
+            • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.
+            
+            • Secret Management: Utilized HashiCorp Vault for secure storage and management of sensitive information.
+            
+            • CI/CD Tools: Experienced with GitLab for version control and CI/CD pipelines, and JFrog for artifact management.
+            
+            • Workflow Automation: Proficient in using Argo Workflows, Argo Events, and Argo CD for automating and managing complex workflows in Kubernetes environments.
+            
+            • Monitoring and Observability: Implemented systems for aggregating and analyzing logs and metrics to provide insights into application performance and health.  
           
           Adyen is a Dutch financial services company that offers a comprehensive payment platform, enabling businesses to accept e-commerce, mobile, and point-of-sale payments.
           Founded in 2006, Adyen has expanded its global presence, operating in 27 offices worldwide and employing over 4,000 people from more than 115 nationalities.
