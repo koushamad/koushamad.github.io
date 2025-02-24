@@ -1,4 +1,5 @@
-# Site
+# Site configuration
+title: Kousha Ghodsizad
 repository: sproogen/resume-theme
 favicon: images/favicon.ico
 
@@ -7,7 +8,6 @@ version: 2
 
 # Personal info
 name: Kousha Ghodsizad
-title: Senior Software Engineer
 email: kousha@iraven.io
 website: kousha.dev
 phone: +31 6 47 15 49 99
@@ -16,39 +16,24 @@ phone: +31 6 47 15 49 99
 darkmode: true
 
 # Social links
-#twitter_username: kousha_mad
-github_username:  koushamad
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-#instagram_username: kousha.mad
+github_username: koushamad
 linkedin_username: kousha-ghodsizad
-# xing_username: jekyll
-# pinterest_username: jekyll
-youtube_username: \@Coffee-Go
-# googleplus_username: +jekyll
-# orcid_username: 0000-0000-0000-0000
+youtube_username: "@Coffee-Go"
 
 # Additional icon links
 additional_links:
-- title: kousha.dev
-  icon: fas fa-globe
-  url: https://kousha.dev
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
+  - title: kousha.dev
+    icon: fas fa-globe
+    url: https://kousha.dev
 
 # About Section
-# about_title: About Me
 about_profile_image: images/1629721583450.jpg
-about_content: | # this will include new lines to allow paragraphs
-  I’m a passionate problem-solver dedicated to turning challenges into opportunities. My career has been defined by a commitment to excellence and collaboration. Whether I’m designing scalable CI/CD systems at Adyen, modernizing legacy architectures into microservices, or leading teams through complex technical transformations, I’m always focused on creating sustainable solutions that drive both individual and team success.
-  I thrive in environments that encourage innovation and resilience, where obstacles are seen as a chance to think creatively and push boundaries. I place a high value on teamwork and enjoy mentoring others, fostering a positive and inclusive atmosphere where everyone’s ideas are heard and valued. I’m always looking for ways to grow and support my colleagues in their own professional journeys.
-  Outside of work, I enjoy activities like chess, which enhances my problem-solving skills, and rock climbing and hiking, which mirror my professional mindset: embracing calculated risks, adapting to change, and working toward a clear goal. Above all, I’m a curious and approachable collaborator who believes that the most rewarding challenges lead to the most impactful solutions.
+about_content: |
+  I'm a passionate problem-solver dedicated to turning challenges into opportunities. My career has been defined by a commitment to excellence and collaboration. Whether I'm designing scalable CI/CD systems at Adyen, modernizing legacy architectures into microservices, or leading teams through complex technical transformations, I'm always focused on creating sustainable solutions that drive both individual and team success.
+
+  I thrive in environments that encourage innovation and resilience, where obstacles are seen as a chance to think creatively and push boundaries. I place a high value on teamwork and enjoy mentoring others, fostering a positive and inclusive atmosphere where everyone's ideas are heard and valued. I'm always looking for ways to grow and support my colleagues in their own professional journeys.
+
+  Outside of work, I enjoy activities like chess, which enhances my problem-solving skills, and rock climbing and hiking, which mirror my professional mindset: embracing calculated risks, adapting to change, and working toward a clear goal. Above all, I'm a curious and approachable collaborator who believes that the most rewarding challenges lead to the most impactful solutions.
   
   SKILLS
     Soft Skills: Collaboration & Teamwork, Leadership & Mentorship, Adaptability, Growth-Oriented Mindset
@@ -56,254 +41,79 @@ about_content: | # this will include new lines to allow paragraphs
     Cloud & Infrastructure: Kubernetes, Terraform, AWS, Private Cloud (OpenStack), HashiCorp Vault/Consul
     CI/CD & DevOps: ArgoCD, Argo Workflows, Argo Events, GitLab CI/CD, Jenkins, GitHub Actions
   
-  
   +10 years of experience in software development.
-  
   +4 years of experience in Management.
-  
   +3 years of experience in DevOps.
+
 content:
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Experience
+    layout: list
     content:
       - layout: left
         title: Adyen
         link: https://Adyen.com/
         link_text: Adyen.com
         sub_title: Infrastructure Engineer (CICD)
-        caption: Amsterdam - Jul 2023- Present.
-        quote: As an Infrastructure Developer at Adyen since July 2023, I have been instrumental in designing and developing advanced Continuous Integration and Continuous Deployment (CI/CD) solutions, leveraging a diverse set of technologies to enhance operational efficiency and system reliability.
-        description: | # this will include new lines to allow paragraphs
+        caption: Amsterdam - Jul 2023- Present
+        quote: >
+          As an Infrastructure Developer at Adyen since July 2023, I have been instrumental in designing and developing advanced Continuous Integration and Continuous Deployment (CI/CD) solutions, leveraging a diverse set of technologies to enhance operational efficiency and system reliability.
+        description: |
           • AdyenCLI Development: Engineered AdyenCLI, a Golang-based command-line interface (CLI) application serving as a platform for executing plugins developed in Java, Go, Bash, and Python. Utilizing gRPC, I ensured secure and permission-based interactions with these plugins, facilitating seamless execution on user laptops.
 
           • High Availability Deployment: Deployed AdyenCLI across four distinct Kubernetes clusters in different regions, managing DNS with HashiCorp Consul to direct requests to the nearest healthy service. This setup, combined with JFrog for federated plugin serving, achieved 99.999% availability globally.
 
           • Workflow Automation with Argo: Designed and implemented highly available workflows using Kubernetes and Argo Workflows. By integrating Kubernetes' leader election mechanism with Argo CD and Argo Events, I established a system that ensures continuous workflow execution across multiple clusters, maintaining 99.999% availability.
 
-          • Code Journey Project: Developed Code Journey, a system that aggregates data from GitLab, Jenkins, and other CI/CD tools, along with logs and metrics, storing them in a NoSQL database. This platform empowers developers to monitor critical data for merge requests and trace code changes post-deployment.
+          Tech stack:
+          • Programming Languages: Proficient in Golang, Python, Shell, and PHP
+          • Infrastructure and Cloud Technologies: OpenStack, Terraform
+          • Containerization and Orchestration: Kubernetes
+          • Secret Management: HashiCorp Vault
+          • CI/CD Tools: GitLab, JFrog
+          • Workflow Automation: Argo Workflows, Argo Events, Argo CD
 
-          • Contribution Automation Development: Created a GitLab merge request and pipeline management system that receives GitLab webhooks and utilizes the GitLab API to update merge requests. This system interacts with services like Jenkins and Mattermost, allowing users to define specific workflows per repository, such as assigning reviewers, running pipelines, notifying developers, and analyzing code changes.
-          
-          Tech stack: 
-
-          • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.          
-          • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.          
-          • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.          
-          • Secret Management: Utilized HashiCorp Vault for secure storage and management of sensitive information.
-          • CI/CD Tools: Experienced with GitLab for version control and CI/CD pipelines, and JFrog for artifact management.
-          • Workflow Automation: Proficient in using Argo Workflows, Argo Events, and Argo CD for automating and managing complex workflows in Kubernetes environments.
-          • Monitoring and Observability: Implemented systems for aggregating and analyzing logs and metrics to provide insights into application performance and health.  
-          
-          Adyen is a Dutch financial services company that offers a comprehensive payment platform, enabling businesses to accept e-commerce, mobile, and point-of-sale payments.
-          Founded in 2006, Adyen has expanded its global presence, operating in 27 offices worldwide and employing over 4,000 people from more than 115 nationalities.
-
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
       - layout: left
         title: Studocu
         link: https://studocu.com/
         link_text: studocu.com
         sub_title: Senior Software Engineer
-        caption: Amsterdam - Jul 2022- Jul 2023.
-        quote: As a Senior Software Engineer at StuDocu, I led critical projects to enhance system performance and observability. Collaborating with cross-functional teams, I implemented solutions that improved website efficiency and reliability.
-        description: | # this will include new lines to allow paragraphs
-          • Enhanced Website Performance: Collaborated with the Platform team to optimize website performance and improve crawler accessibility, leading to a more efficient and user-friendly service.
-          
-          • Integrated Monitoring Tools: Worked closely with the Operations team to implement monitoring tools across local, staging, and production environments, significantly enhancing system observability and reliability.
-          
-          • Optimized System Efficiency: Identified and resolved performance bottlenecks in the codebase and database, achieving a 40% improvement in overall system performance.
-          
-          • Developed CI/CD Pipelines: Created GitHub CI/CD pipelines for SEO and performance testing of the core project, streamlining deployment processes and ensuring consistent quality.
-          
-          • Conducted Performance Workshops: Led workshops focused on system performance analysis and optimization, fostering a culture of continuous improvement within the engineering team.          
-          
-          Technical Skills: Object-Oriented Programming (OOP), Agile Methodologies, Test-Driven Development, DevOps, Big Data, Kanban, Design Patterns
-          Technologies: Laravel, Amazon Web Services (AWS), MySQL, Redis, Go (Programming Language), PHP, Elasticsearch, Terraform
-          
-          StuDocu is an EdTech startup based in Amsterdam, Netherlands, providing a peer-to-peer resource-exchange platform for students to share study aids, class notes, and test preparation materials. Founded in 2013, StuDocu serves over 60 million students monthly across more than 60 countries.
+        caption: Amsterdam - Jul 2022- Jul 2023
+        quote: >
+          As a Senior Software Engineer at StuDocu, I led critical projects to enhance system performance and observability.
+        description: |
+          • Enhanced Website Performance
+          • Integrated Monitoring Tools
+          • Optimized System Efficiency
+          • Developed CI/CD Pipelines
+          • Conducted Performance Workshops
 
-      - layout: left
-        title: KolayIK
-        link: https://kolayik.com/
-        link_text: kolayik.com
-        sub_title: Senior Software Engineer / Team Lead
-        caption: Istanbul - May 2021- May 2022.
-        quote: As a Senior Software Engineer and Team Lead at Kolay, I led the development and optimization of key HR management systems, focusing on enhancing operational efficiency and scalability. Collaborating with cross-functional teams, I implemented robust solutions to streamline processes and improve system performance.
-        description: | # this will include new lines to allow paragraphs
-          • HR System Development and Refactoring: Led the overhaul of the HR system using Test-Driven Development (TDD) and technologies such as Laravel, Go, PostgreSQL, Modular Architecture, Domain-Driven Design (DDD), Redis, RabbitMQ, and AWS, resulting in improved system reliability and maintainability.
-          
-          • Expense Management Module Creation: Spearheaded the development of the Expense Management module with Laravel, PostgreSQL, and AWS, enhancing operational efficiency and streamlining financial processes.
-          
-          • Microservices for Data Management: Developed and implemented microservices for large-scale data imports and exports using Node.js, Golang, Kubernetes, ElastiCache, Amazon S3, SQS, and AWS Lambda, ensuring robustness and scalability.
-          
-          • Scalable Queue Handler Engineering: Engineered a scalable queue handler integrated with Slack to manage failure messages and provide real-time reporting, utilizing TDD, Laravel, PHP, SQS, AWS, Golang, and Kubernetes, leading to enhanced system performance.
-          
-          
-          Technical Skills: Concurrent Programming, Object-Oriented Programming (OOP), Data Security, Agile Methodologies, Test-Driven Development, Cloud Security, DevOps, Scrum, Design Patterns, Microservices
-          Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Elasticsearch, Python (Programming Language), Terraform
-          Kolay is a comprehensive human resources management platform designed to streamline various HR functions for businesses of all sizes. The platform offers tools for employee scheduling, payroll management, and compliance tracking, enhancing operational efficiency.
+          Technical Skills: Object-Oriented Programming (OOP), Agile Methodologies, Test-Driven Development
+          Technologies: Laravel, AWS, MySQL, Redis, Go, PHP, Elasticsearch, Terraform
 
-      - layout: left
-        title: Wingie Enuygun Group
-        link: https://www.enuygun.com/
-        link_text: enuygun.com
-        sub_title: Senior Software Engineer / Team Lead
-        caption: Istanbul - MAy 2020 - Apr 2021.
-        quote: As a Senior Software Engineer and Team Lead at Wingie Enuygun Group, I led the Hotel team in integrating new providers and enhancing system performance. Through mentorship and collaboration, we achieved significant improvements in testing culture, data processing, and system scalability.
-        description: | # this will include new lines to allow paragraphs
-          • Provider Integration and System Maintenance: Guided the Hotel team in maintaining existing systems and integrating new providers, including Webbeds, OtelZ, and Juniper, expanding our service offerings and ensuring seamless operations.
-          
-          • Cultivated Test-Driven Development (TDD) Culture: Organized multilayer testing workshops to promote a robust TDD culture, resulting in improved code quality and reliability across the team.
-          
-          • Optimized Search Functionality: Enhanced product search capabilities by refining the Elasticsearch index and implementing an efficient data pipeline, leading to faster and more accurate search results.
-          
-          • Developed Provider Hub: Designed and implemented a provider hub using Go and gRPC to manage concurrent requests, efficiently fetching and standardizing hotel data from various providers.
-          
-          • Implemented Content Caching Microservice: Developed a microservice for content caching management, introducing an automated cache rate management system based on hit and miss rates, which improved data retrieval times and reduced server load.
-          
-          • Database Cluster Migration: Successfully migrated the product database from a master-slave configuration to a Galera cluster, achieving zero data loss and enhancing database reliability and performance.
-          
-          Technical Skills: Object-Oriented Programming (OOP), Test-Driven Development (TDD), DevOps, Scrum, Big Data, Design Patterns, Microservices
-          Technologies: Amazon Web Services (AWS), MySQL, Go (Programming Language), PHP, MongoDB, Symfony, Elasticsearch, gRPC, Galera Cluster
-
-          Wingie Enuygun Group is a prominent player in the online travel industry, offering comprehensive flight booking services through platforms like Wingie and Enuygun. The company leverages advanced technologies to provide users with seamless travel planning experiences.
-
-
-      - layout: left
-        title: Insider
-        link: https://useinsider.com/
-        link_text: useinsider.com
-        sub_title: Senior Software Engineer
-        caption: Istanbul - June 2019 - June 2020.
-        quote: As a Senior Software Engineer at Insider, I led the maintenance and refactoring of the newsletter product, collaborating with a team of one senior and six mid-level developers. My efforts focused on system architecture redesign, security enhancements, and data migration to improve performance and compliance.
-        description: | # this will include new lines to allow paragraphs
-          • System Architecture Redesign: Separated the newsletter product panel from the main application, implementing a microkernel architecture with a repository-service pattern to enhance modularity and maintainability.
-          
-          • Security Enhancements: Identified and resolved security vulnerabilities within the newsletter product, ensuring compliance with Huawei's stringent security standards.
-          
-          • Email Service Overhaul: Transitioned the email delivery and tracking system from a PHP-based monolithic structure to a Go-based microservices architecture, improving scalability and performance.
-          
-          • Data Migration: Executed a seamless migration of legacy data from MySQL to Apache Cassandra and ClickHouse databases, achieving zero data loss and enhancing data retrieval speeds.
-          
-          • Queue System Upgrade: Upgraded the messaging queue system from Amazon SQS to RabbitMQ, significantly increasing the message size capacity from 256 KB to 120 MB, facilitating more robust data handling.
-          
-          • A/B Testing Implementation: Developed a comprehensive A/B testing framework for the newsletter service, enabling data-driven decision-making and optimizing email campaign effectiveness.
-          
-          • Spam Detection Service: Designed and implemented an email spam detection service, enhancing deliverability rates and maintaining the newsletter's sender reputation
-          
-          Technical Skills: Object-Oriented Programming (OOP), Data Security, Test-Driven Development (TDD), DevOps, Scrum, Design Patterns, Microservices
-          Technologies: Laravel, Amazon Web Services (AWS), MySQL, Apache Kafka, Redis, Go (Programming Language), PHP, MongoDB, Kubernetes, Docker, Cassandra, ClickHouse, RabbitMQ
-          
-          Insider is a leading AI-powered marketing platform founded in 2012 in Istanbul, Turkey. The company specializes in optimizing marketing strategies by connecting data and predicting user behavior, enabling marketers to create personalized, cross-channel customer experiences at scale.
-
-
-      - layout: left
-        title: Bamilo
-        link: https://bamilo.com/
-        link_text: bamilo.com
-        sub_title: Senior Software Engineer / Head of development
-        caption: Tehran Aug 2015 - Apr 2019.
-        quote: As Senior Software Engineer and Head of Development at Bamilo, Iran's leading online marketplace, I led the development of key systems and managed a growing team to enhance operational efficiency and user experience.
-        description: | # this will include new lines to allow paragraphs
-          • Team Leadership: Initiated and expanded the development team, fostering a collaborative environment to drive product innovation and system enhancements.
-          
-          • Performance Management Portal (PMP): Developed a centralized system for Bamilo's warehouse operations, enabling real-time monitoring, analysis, and optimization of processes to boost efficiency and productivity.
-          
-          • Seller Center System: Designed and implemented a comprehensive platform for sellers to manage products, orders, and customer interactions, enhancing the marketplace experience.
-          
-          • Data Migration: Engineered an online data pipeline using Kafka to seamlessly migrate all Seller Center products, ensuring zero data loss and system continuity.
-          
-          • Delivery Management Service: Developed a nationwide package delivery tracking system, optimizing routes and monitoring delivery personnel to improve logistics efficiency.
-          
-          • Inventory Management: Addressed data collision issues in the main product inventory stock check service by creating a product-based load balancer microservice, ensuring accurate stock levels.
-          
-          
-          Technical Skills: Leadership, Object-Oriented Programming (OOP), Management, Design Patterns, Microservices
-          Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Apache Kafka, DevOps, Scrum, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Kubernetes, Cassandra
-          
-          Bamilo was an e-commerce marketplace in Iran, offering a wide range of products including electronics, fashion, and home appliances. Founded in 2014, the company operated until March 2019.
-
-
-      - layout: left
-        title: Sepehr Mahan Tech
-        link: https://www.sepehrmahan.com/
-        link_text: sepehrmahan.com
-        sub_title: Senior Software Engineer
-        caption: Tehran Aug 2012 - Jul 2015.
-        quote: Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
-        description: | # this will include new lines to allow paragraphs
-          • Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
-          
-          • Designed a user-friendly task management solution for private organizations, enhancing productivity and workflow efficiency.
-          
-          • Developed a custom social network for organizations using PHP-Fox, prioritizing collaboration, privacy, and security.
-          
-          • Built a form builder and workflow module for PHP-Fox, simplifying data collection and process automation with an intuitive interface.
-          
-          • Created a mobile application API for seamless PHP-Fox social network integration, ensuring compatibility across devices and operating systems.
-          
-          • Constructed a task list management system for government organizations, improving efficiency, accountability, and reporting capabilities.
-          
-          • Developed a meeting management system for government organizations,optimizing scheduling, resource allocation,and seamless coordination with existing tools.
-          
-          
-          Tech stack: Linux · PHP · JavaScript · Python · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns · OOP · Teamwork. 
-
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: Pepper.com - The World's Largest Deal Community
-        caption: Remote / Berlin 2021 - 2022
-        sub_title: Senior Software Engineer / Associated with KolayIK
-        quote: At Sepehr Mahan Tech, a leading provider of cloud-based enterprise team networking solutions in Iran, I developed and implemented innovative software solutions to enhance organizational communication and efficiency.
-        description: | # this will include new lines to allow paragraphs
-          • Suggestion System: Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
-
-          • Task Management Solution: Designed a user-friendly task management solution for private organizations, enhancing productivity and workflow efficiency.
-
-          • Custom Social Network: Developed a custom social network for organizations using PHP-Fox, prioritizing collaboration, privacy, and security.
-
-          • Form Builder and Workflow Module: Built a form builder and workflow module for PHP-Fox, simplifying data collection and process automation with an intuitive interface.
-
-          • Mobile Application API: Created a mobile application API for seamless PHP-Fox social network integration, ensuring compatibility across devices and operating systems.
-          
-          • Task List Management System: Constructed a task list management system for government organizations, improving efficiency, accountability, and reporting capabilities.
-          
-          • Meeting Management System: Developed a meeting management system for government organizations, optimizing scheduling, resource allocation, and seamless coordination with existing tools.
-
-          Technical Skills: Object-Oriented Programming (OOP), Design Patterns
-          Technologies: PHP, MySQL, Node.js, JavaScript, Redis, MongoDB, Python, RabbitMQ, Linux
-  
-          Sepehr Mahan Tech, established in 2011, is a cloud-based enterprise team networking solution provider based in Tehran, Iran. The company specializes in document management systems, knowledge management systems, project and task management, and meeting management solutions.
-
-
-
-- title: Education # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Education
+    layout: list
     content:
       - layout: left
         title: Islamic Azad University
         caption: 2011 - 2015
         sub_title: BSc Computer Software Engineering
         quote: >
-          Designing Innovative GIS & GPS-based Android Apps: A Study of the Research and Development Process and its Impact on User Satisfaction
-        description: | # this will include new lines to allow paragraphs
-          This research study examined the research and development process for designing innovative GIS & GPS-based Android apps and its impact on user satisfaction. The study involved researching and analyzing trends in GIS & GPS technology, collaborating with a multidisciplinary team to develop and test app concepts, and gathering user feedback to inform app improvements. The study findings can inform future GIS & GPS-based app design and development, as well as contribute to the academic community's understanding of the impact of the research and development process on user satisfaction.
+          Designing Innovative GIS & GPS-based Android Apps
+        description: |
+          Research study examining the development process for innovative GIS & GPS-based Android apps and their impact on user satisfaction.
 
       - layout: left
         title: Islamic Azad University
         caption: 2008 - 2011
         sub_title: ASc Computer Programming
         quote: >
-          Enhancing Search and Rescue Robot Performance through Algorithmic Innovations: A Study of the Development, Testing, and Implementation of Novel Algorithms for Router Robots
-        description: | # this will include new lines to allow paragraphs
-          This research study investigated the development, testing, and implementation of novel algorithms for router robots in search and rescue (SAR) scenarios. The study focused on optimizing search efficiency, obstacle avoidance, and communication to enhance SAR robot performance. The research involved assessing existing algorithms, exploring potential enhancements, and collaborating with robotics developers to implement improvements. The study findings can inform future SAR robot design and development, as well as contribute to the academic community's knowledge of algorithmic innovations for SAR robots.
+          Enhancing Search and Rescue Robot Performance
+        description: |
+          Research study on developing and implementing novel algorithms for search and rescue robots.
 
   - title: A Little More About Me
     layout: text
-    content: | # this will include new lines to allow paragraphs
+    content: |
       Alongside my interests in software engineering and DevOps some of my other interests and hobbies are:
       - Professional Chess Player
       - Rock Climbing
@@ -312,7 +122,6 @@ content:
 
 # Footer
 footer_show_references: true
-# references_title: References on request (Override references text)
 
 # Build settings
 remote_theme: sproogen/resume-theme
@@ -322,4 +131,4 @@ sass:
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
