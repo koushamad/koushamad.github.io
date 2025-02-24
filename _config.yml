@@ -57,7 +57,7 @@ content:
           
           •  Cloud & Infrastructure: Kubernetes, Helm, Terraform, AWS, Private Cloud, OpenStack, Cilium, HashiCorp Vault/Consul, Nexus, Harbor
           
-          •  CI/CD & DevOps: ArgoCD, Argo Workflows, Argo Events, GitLab CI/CD, Jenkins, Templating, JFrog, Prometheus, Grafana, ELK Stack
+          •  CI/CD & DevOps: GitLab CI/CD, Jenkins, Templating, ArgoCD, Argo Workflows, Argo Events Argo Rollouts, JFrog, Prometheus, Grafana, ELK Stack
           
           •  Databases: SQL/NoSQL, MySQL, PostgreSQL, Cassandra, Redis, Elasticsearch, MongoDB
 
