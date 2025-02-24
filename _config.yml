@@ -269,8 +269,7 @@ content:
           Sepehr Mahan Tech, established in 2011, is a cloud-based enterprise team networking solution provider based in Tehran, Iran. The company specializes in document management systems, knowledge management systems, project and task management, and meeting management solutions.
 
 
-
-- title: Education # Title for the section
+  - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
