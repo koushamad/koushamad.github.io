@@ -43,11 +43,13 @@ about_content: | # this will include new lines to allow paragraphs
   SKILLS
     Soft Skills: Collaboration & Teamwork, Leadership & Mentorship, Adaptability, Growth-Oriented Mindset
   
-    Programming Languages: Golang, Python, PHP, SQL, NoSQL, Elasticsearch, Shel script
+    Programming Languages: Golang, Python, PHP, Shel script
   
     Cloud & Infrastructure: Kubernetes, Helm, Terraform, AWS, Private Cloud, OpenStack, Cilium, HashiCorp Vault/Consul, Nexus, Harbor
 
     CI/CD & DevOps: ArgoCD, Argo Workflows, Argo Events, GitLab CI/CD, Jenkins, Templating, JFrog, Prometheus, Grafana, ELK Stack
+  
+    Databases: SQL, NoSQL, MySQL, PostgreSQL, Cassandra, ClickHouse, Redis, Elasticsearch, MongoDB
   
   
   +10 years of experience in software development.
@@ -86,9 +88,7 @@ content:
             • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.
             
             • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.
-            
-            • Secret Management: Utilized HashiCorp Vault for secure storage and management of sensitive information.
-            
+                        
             • CI/CD Tools: Experienced with GitLab for version control and CI/CD pipelines, and JFrog for artifact management.
             
             • Workflow Automation: Proficient in using Argo Workflows, Argo Events, and Argo CD for automating and managing complex workflows in Kubernetes environments.
