@@ -84,17 +84,11 @@ content:
           Tech stack: 
 
           • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.          
-          
           • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.          
-          
           • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.          
-          
           • Secret Management: Utilized HashiCorp Vault for secure storage and management of sensitive information.
-          
           • CI/CD Tools: Experienced with GitLab for version control and CI/CD pipelines, and JFrog for artifact management.
-          
           • Workflow Automation: Proficient in using Argo Workflows, Argo Events, and Argo CD for automating and managing complex workflows in Kubernetes environments.
-          
           • Monitoring and Observability: Implemented systems for aggregating and analyzing logs and metrics to provide insights into application performance and health.  
           
           Adyen is a Dutch financial services company that offers a comprehensive payment platform, enabling businesses to accept e-commerce, mobile, and point-of-sale payments.
@@ -131,19 +125,21 @@ content:
         link: https://kolayik.com/
         link_text: kolayik.com
         sub_title: Senior Software Engineer / Team Lead
-        caption: Istanbul - April 2021- May 2022.
-        quote: Led a comprehensive overhaul of the HR system, introduced a new Expanse Management module, developed microservices for large-scale data handling.
+        caption: Istanbul - May 2021- May 2022.
+        quote: As a Senior Software Engineer and Team Lead at Kolay, I led the development and optimization of key HR management systems, focusing on enhancing operational efficiency and scalability. Collaborating with cross-functional teams, I implemented robust solutions to streamline processes and improve system performance.
         description: | # this will include new lines to allow paragraphs
-          • Led the development and refactoring of the HR system, employing Test-Driven Development (TDD) and leveraging technologies such as Laravel, PHP, PostgreSQL, Modular Architecture, Domain-Driven Design (DDD), Redis, RabbitMQ, and AWS.
+          • HR System Development and Refactoring: Led the overhaul of the HR system using Test-Driven Development (TDD) and technologies such as Laravel, Go, PostgreSQL, Modular Architecture, Domain-Driven Design (DDD), Redis, RabbitMQ, and AWS, resulting in improved system reliability and maintainability.
           
-          • Spearheaded the creation of the Expanse Management module, utilizing Laravel, PostgreSQL, and AWS, to enhance operational efficiency and streamline processes.
+          • Expense Management Module Creation: Spearheaded the development of the Expense Management module with Laravel, PostgreSQL, and AWS, enhancing operational efficiency and streamlining financial processes.
           
-          • Developed and implemented a series of Microservices dedicated to managing large-scale data imports and exports. Utilized Node.js, Golang, Kubernetes, Elasticache, Amazon S3, Simple Queue Service (SQS), and AWS Lambda to ensure robustness and scalability.
+          • Microservices for Data Management: Developed and implemented microservices for large-scale data imports and exports using Node.js, Golang, Kubernetes, ElastiCache, Amazon S3, SQS, and AWS Lambda, ensuring robustness and scalability.
           
-          • Engineered a scalable queue handler with integration to Slack, effectively managing failure messages within the queue and providing real-time reporting. Employed TDD, Laravel, PHP, SQS, AWS, Golang, and Kubernetes to achieve seamless functionality and enhanced system performance.
+          • Scalable Queue Handler Engineering: Engineered a scalable queue handler integrated with Slack to manage failure messages and provide real-time reporting, utilizing TDD, Laravel, PHP, SQS, AWS, Golang, and Kubernetes, leading to enhanced system performance.
           
           
-          Tech stack: Go · Microservice · Kubernetes · PHP · Laravel · GraphQL · OOP · Design Patterns · TDD · ElasticSearch · Redis · AWS. 
+          Technical Skills: Concurrent Programming, Object-Oriented Programming (OOP), Data Security, Agile Methodologies, Test-Driven Development, Cloud Security, DevOps, Scrum, Design Patterns, Microservices
+          Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Elasticsearch, Python (Programming Language), Terraform
+          Kolay is a comprehensive human resources management platform designed to streamline various HR functions for businesses of all sizes. The platform offers tools for employee scheduling, payroll management, and compliance tracking, enhancing operational efficiency.
 
       - layout: left
         title: Wingie Enuygun Group
@@ -151,59 +147,53 @@ content:
         link_text: enuygun.com
         sub_title: Senior Software Engineer / Team Lead
         caption: Istanbul - MAy 2020 - Apr 2021.
-        quote: Successfully mentored and collaborated with the Hotel team to maintain and integrate the system with new providers.
+        quote: As a Senior Software Engineer and Team Lead at Wingie Enuygun Group, I led the Hotel team in integrating new providers and enhancing system performance. Through mentorship and collaboration, we achieved significant improvements in testing culture, data processing, and system scalability.
         description: | # this will include new lines to allow paragraphs
-          • Collaborated and mentor the Hotel team to maintain and integrate the system with new providers.
+          • Provider Integration and System Maintenance: Guided the Hotel team in maintaining existing systems and integrating new providers, including Webbeds, OtelZ, and Juniper, expanding our service offerings and ensuring seamless operations.
           
-          • Improved the team's testing culture by organizing multilayer testing workshops to establish a strong TDD culture.
+          • Cultivated Test-Driven Development (TDD) Culture: Organized multilayer testing workshops to promote a robust TDD culture, resulting in improved code quality and reliability across the team.
           
-          • Enhanced the product search by optimizing the ElasticSearch index and implementing a data pipeline to improve the data indexing process.
+          • Optimized Search Functionality: Enhanced product search capabilities by refining the Elasticsearch index and implementing an efficient data pipeline, leading to faster and more accurate search results.
           
-          • Developed and designed a provider hub using Go and gRPC to manage concurrent requests to providers, fetch hotel data, and parse it to our contracts.
+          • Developed Provider Hub: Designed and implemented a provider hub using Go and gRPC to manage concurrent requests, efficiently fetching and standardizing hotel data from various providers.
           
-          • Integrated multiple hotel providers, including Webbeds, OtelZ, and Juniper, into the product
+          • Implemented Content Caching Microservice: Developed a microservice for content caching management, introducing an automated cache rate management system based on hit and miss rates, which improved data retrieval times and reduced server load.
           
-          • Developed a content caching manager microservice for providers and created an automated cache rate management system based on cache Hit and Mis Rates.
+          • Database Cluster Migration: Successfully migrated the product database from a master-slave configuration to a Galera cluster, achieving zero data loss and enhancing database reliability and performance.
           
-          • Designed and developed a new queue manager service to improve system compatibility with GRPC. The service automates failed message retries and provides live reports of the queue status.
-          
-          • Successfully migrated the production cache cluster from Redis to AWS ElastiCache without any data loss
-          
-          • Resolved a log system architecture issue causing high traffic in Kubernetes pods, allowing us to reduce pod size.
-          
-          • Migrated product database cluster from master-slave clustering to Galera cluster with zero data loss rate.
-          
-          
-          Tech stack: Go · PHP · Microservices · Hexagonal Architecture · Symfony · Leadership ·  AWS · DevOps · OOP · TDD · Design Patterns · Big Data · MySQL · MongoDB · Kubernetes· Docker .
+          Technical Skills: Object-Oriented Programming (OOP), Test-Driven Development (TDD), DevOps, Scrum, Big Data, Design Patterns, Microservices
+          Technologies: Amazon Web Services (AWS), MySQL, Go (Programming Language), PHP, MongoDB, Symfony, Elasticsearch, gRPC, Galera Cluster
+
+          Wingie Enuygun Group is a prominent player in the online travel industry, offering comprehensive flight booking services through platforms like Wingie and Enuygun. The company leverages advanced technologies to provide users with seamless travel planning experiences.
+
 
       - layout: left
         title: Insider
         link: https://useinsider.com/
         link_text: useinsider.com
         sub_title: Senior Software Engineer
-        caption: Istanbul - May 2019 - Apr 2020.
-        quote: Separated the email delivery and track services from the main product, designing it with microkernel architecture and hexagonal strategy.
+        caption: Istanbul - June 2019 - June 2020.
+        quote: As a Senior Software Engineer at Insider, I led the maintenance and refactoring of the newsletter product, collaborating with a team of one senior and six mid-level developers. My efforts focused on system architecture redesign, security enhancements, and data migration to improve performance and compliance.
         description: | # this will include new lines to allow paragraphs
-          • Responsible for the newsletter product maintenance and refactoring process, working with one senior developer and 6 mid-level developers.
+          • System Architecture Redesign: Separated the newsletter product panel from the main application, implementing a microkernel architecture with a repository-service pattern to enhance modularity and maintainability.
           
-          • Separated the product panel from the main product, redesigning it with microkernel architecture and repository-service strategy.
+          • Security Enhancements: Identified and resolved security vulnerabilities within the newsletter product, ensuring compliance with Huawei's stringent security standards.
           
-          • Fixed all security issues in the Newsletter product and made it compatible with Huawei standards.
+          • Email Service Overhaul: Transitioned the email delivery and tracking system from a PHP-based monolithic structure to a Go-based microservices architecture, improving scalability and performance.
           
-          • Redesigned email delivery and tracking service from PHP Loman to Go Microservice Architecture.
+          • Data Migration: Executed a seamless migration of legacy data from MySQL to Apache Cassandra and ClickHouse databases, achieving zero data loss and enhancing data retrieval speeds.
           
-          • Migrated old product data from MySQL to Apache Cassandra and ClickHouse with zero data loss rate.
+          • Queue System Upgrade: Upgraded the messaging queue system from Amazon SQS to RabbitMQ, significantly increasing the message size capacity from 256 KB to 120 MB, facilitating more robust data handling.
           
-          • Migrated Queue from SQS to RabbitMQ, improving message size from 256 KB to 120 MB.
+          • A/B Testing Implementation: Developed a comprehensive A/B testing framework for the newsletter service, enabling data-driven decision-making and optimizing email campaign effectiveness.
           
-          • Developed a robust A-B testing system for the Newsletter service, enabling data-driven decision-making and improving overall email campaign effectiveness.
+          • Spam Detection Service: Designed and implemented an email spam detection service, enhancing deliverability rates and maintaining the newsletter's sender reputation
           
-          • Developed Newsletter RSS service,providing users with a convenient way to receive updates and streamlining content distribution.
+          Technical Skills: Object-Oriented Programming (OOP), Data Security, Test-Driven Development (TDD), DevOps, Scrum, Design Patterns, Microservices
+          Technologies: Laravel, Amazon Web Services (AWS), MySQL, Apache Kafka, Redis, Go (Programming Language), PHP, MongoDB, Kubernetes, Docker, Cassandra, ClickHouse, RabbitMQ
           
-          • Created an Email Spam Check service to identify and prevent spam emails, enhancing the deliverability and reputation of the Newsletter service.
-          
-          
-          Tech stack: Go · PHP · Laravel · KAFKA · AWS · Kubernetes · DevOps · TDD · OOP · Design Patterns · MySQL · MongoDB · Leadership · Redis · Cassandra · Clickhouse.
+          Insider is a leading AI-powered marketing platform founded in 2012 in Istanbul, Turkey. The company specializes in optimizing marketing strategies by connecting data and predicting user behavior, enabling marketers to create personalized, cross-channel customer experiences at scale.
+
 
       - layout: left
         title: Bamilo
@@ -211,22 +201,26 @@ content:
         link_text: bamilo.com
         sub_title: Senior Software Engineer / Head of development
         caption: Tehran Aug 2015 - Apr 2019.
-        quote: Successfully expanded the development team and developed new products for Bamilo.
+        quote: As Senior Software Engineer and Head of Development at Bamilo, Iran's leading online marketplace, I led the development of key systems and managed a growing team to enhance operational efficiency and user experience.
         description: | # this will include new lines to allow paragraphs
-          • Started as the head of the development (TDR) team and expanded the team to develop new products.
+          • Team Leadership: Initiated and expanded the development team, fostering a collaborative environment to drive product innovation and system enhancements.
           
-          • Developed a Performance Management Portal (PMP) System for Bamilo Warehouse, providing a centralized platform to monitor, analyze, and optimize warehouse operations for improved efficiency and productivity.
+          • Performance Management Portal (PMP): Developed a centralized system for Bamilo's warehouse operations, enabling real-time monitoring, analysis, and optimization of processes to boost efficiency and productivity.
           
-          • Designed and implemented the Bamilo New Seller Center System, offering a comprehensive and user-friendly platform for sellers to manage their products, orders, and customer interactions, ultimately enhancing the overall marketplace experience.
+          • Seller Center System: Designed and implemented a comprehensive platform for sellers to manage products, orders, and customer interactions, enhancing the marketplace experience.
           
-          • Migrated all Seller Center products to new ones by generating an online data pipeline in Kafka with zero data loss.
+          • Data Migration: Engineered an online data pipeline using Kafka to seamlessly migrate all Seller Center products, ensuring zero data loss and system continuity.
           
-          • Developed a package delivery management and tracking service, which monitored all delivery personnel around the country and suggested the best-optimized route map.
+          • Delivery Management Service: Developed a nationwide package delivery tracking system, optimizing routes and monitoring delivery personnel to improve logistics efficiency.
           
-          • Solved the data collusion issue on the main product inventory stock check service by developing a product-based load balancer microservice.
+          • Inventory Management: Addressed data collision issues in the main product inventory stock check service by creating a product-based load balancer microservice, ensuring accurate stock levels.
           
           
-          Tech stack: Go · Microservice · PHP · Laravel · OOP · Design Patterns · TDD · ElasticSearch · Redis · MySQL · MongoDB · Cassandra · RabbitMQ· Kubernetes. 
+          Technical Skills: Leadership, Object-Oriented Programming (OOP), Management, Design Patterns, Microservices
+          Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Apache Kafka, DevOps, Scrum, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Kubernetes, Cassandra
+          
+          Bamilo was an e-commerce marketplace in Iran, offering a wide range of products including electronics, fashion, and home appliances. Founded in 2014, the company operated until March 2019.
+
 
       - layout: left
         title: Sepehr Mahan Tech
@@ -252,6 +246,7 @@ content:
           
           
           Tech stack: Linux · PHP · JavaScript · Python · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns · OOP · Teamwork. 
+
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
@@ -259,23 +254,30 @@ content:
         title: Pepper.com - The World's Largest Deal Community
         caption: Remote / Berlin 2021 - 2022
         sub_title: Senior Software Engineer / Associated with KolayIK
-        quote: Ensured microservices' security by checking and rehabilitating them against hacking attacks.
+        quote: At Sepehr Mahan Tech, a leading provider of cloud-based enterprise team networking solutions in Iran, I developed and implemented innovative software solutions to enhance organizational communication and efficiency.
         description: | # this will include new lines to allow paragraphs
-          • Collaborated with the Supernova and Microservice teams to develop new features and maintain the product and services.
+          • Suggestion System: Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
 
-          • Redesigned and developed the deal submission, product listing, and product detail pages using GraphQL.
+          • Task Management Solution: Designed a user-friendly task management solution for private organizations, enhancing productivity and workflow efficiency.
 
-          • Developed a GDPR-compliant image microservice that applies requested filters and can handle over 5,000 unique images per minute using 20 instances.
+          • Custom Social Network: Developed a custom social network for organizations using PHP-Fox, prioritizing collaboration, privacy, and security.
 
-          • Checking and rehabilitating microservices against hacking attacks.
+          • Form Builder and Workflow Module: Built a form builder and workflow module for PHP-Fox, simplifying data collection and process automation with an intuitive interface.
 
-          • Improved the functionality of our microservices near cache by customizing loadbalancing.
+          • Mobile Application API: Created a mobile application API for seamless PHP-Fox social network integration, ensuring compatibility across devices and operating systems.
+          
+          • Task List Management System: Constructed a task list management system for government organizations, improving efficiency, accountability, and reporting capabilities.
+          
+          • Meeting Management System: Developed a meeting management system for government organizations, optimizing scheduling, resource allocation, and seamless coordination with existing tools.
+
+          Technical Skills: Object-Oriented Programming (OOP), Design Patterns
+          Technologies: PHP, MySQL, Node.js, JavaScript, Redis, MongoDB, Python, RabbitMQ, Linux
+  
+          Sepehr Mahan Tech, established in 2011, is a cloud-based enterprise team networking solution provider based in Tehran, Iran. The company specializes in document management systems, knowledge management systems, project and task management, and meeting management solutions.
 
 
-          Tech stack: Go · Microservice · Kubernetes · PHP · Laravel · GraphQL · OOP · Design Patterns · TDD · ElasticSearch · Redis · AWS.
-        
 
-  - title: Education # Title for the section
+- title: Education # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
