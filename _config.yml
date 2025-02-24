@@ -42,9 +42,12 @@ about_content: | # this will include new lines to allow paragraphs
   
   SKILLS
     Soft Skills: Collaboration & Teamwork, Leadership & Mentorship, Adaptability, Growth-Oriented Mindset
-    Programming Languages: Golang, Python, PHP, SQL, NoSQL, Bash/Shell
-    Cloud & Infrastructure: Kubernetes, Terraform, AWS, Private Cloud (OpenStack), HashiCorp Vault/Consul
-    CI/CD & DevOps: ArgoCD, Argo Workflows, Argo Events, GitLab CI/CD, Jenkins, GitHub Actions
+  
+    Programming Languages: Golang, Python, PHP, SQL, NoSQL, Elasticsearch, Bash
+  
+    Cloud & Infrastructure: Kubernetes, Helm, Terraform, AWS, Private Cloud (OpenStack), Cilium, HashiCorp Vault/Consul, Nexus, Harbor, Kibana
+
+    CI/CD & DevOps: ArgoCD, Argo Workflows, Argo Events, GitLab CI/CD, Jenkins,,
   
   
   +10 years of experience in software development.
@@ -76,12 +79,18 @@ content:
           
           Tech stack: 
 
-          • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.          
-          • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.          
-          • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.          
+          • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.    
+          
+          • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.
+          
+          • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.
+          
           • Secret Management: Utilized HashiCorp Vault for secure storage and management of sensitive information.
+          
           • CI/CD Tools: Experienced with GitLab for version control and CI/CD pipelines, and JFrog for artifact management.
+          
           • Workflow Automation: Proficient in using Argo Workflows, Argo Events, and Argo CD for automating and managing complex workflows in Kubernetes environments.
+          
           • Monitoring and Observability: Implemented systems for aggregating and analyzing logs and metrics to provide insights into application performance and health.  
           
           Adyen is a Dutch financial services company that offers a comprehensive payment platform, enabling businesses to accept e-commerce, mobile, and point-of-sale payments.
@@ -109,6 +118,7 @@ content:
           • Conducted Performance Workshops: Led workshops focused on system performance analysis and optimization, fostering a culture of continuous improvement within the engineering team.          
           
           Technical Skills: Object-Oriented Programming (OOP), Agile Methodologies, Test-Driven Development, DevOps, Big Data, Kanban, Design Patterns
+
           Technologies: Laravel, Amazon Web Services (AWS), MySQL, Redis, Go (Programming Language), PHP, Elasticsearch, Terraform
           
           StuDocu is an EdTech startup based in Amsterdam, Netherlands, providing a peer-to-peer resource-exchange platform for students to share study aids, class notes, and test preparation materials. Founded in 2013, StuDocu serves over 60 million students monthly across more than 60 countries.
@@ -131,7 +141,9 @@ content:
           
           
           Technical Skills: Concurrent Programming, Object-Oriented Programming (OOP), Data Security, Agile Methodologies, Test-Driven Development, Cloud Security, DevOps, Scrum, Design Patterns, Microservices
+          
           Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Elasticsearch, Python (Programming Language), Terraform
+          
           Kolay is a comprehensive human resources management platform designed to streamline various HR functions for businesses of all sizes. The platform offers tools for employee scheduling, payroll management, and compliance tracking, enhancing operational efficiency.
 
       - layout: left
@@ -183,6 +195,7 @@ content:
           • Spam Detection Service: Designed and implemented an email spam detection service, enhancing deliverability rates and maintaining the newsletter's sender reputation
           
           Technical Skills: Object-Oriented Programming (OOP), Data Security, Test-Driven Development (TDD), DevOps, Scrum, Design Patterns, Microservices
+          
           Technologies: Laravel, Amazon Web Services (AWS), MySQL, Apache Kafka, Redis, Go (Programming Language), PHP, MongoDB, Kubernetes, Docker, Cassandra, ClickHouse, RabbitMQ
           
           Insider is a leading AI-powered marketing platform founded in 2012 in Istanbul, Turkey. The company specializes in optimizing marketing strategies by connecting data and predicting user behavior, enabling marketers to create personalized, cross-channel customer experiences at scale.
@@ -210,6 +223,7 @@ content:
           
           
           Technical Skills: Leadership, Object-Oriented Programming (OOP), Management, Design Patterns, Microservices
+          
           Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Apache Kafka, DevOps, Scrum, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Kubernetes, Cassandra
           
           Bamilo was an e-commerce marketplace in Iran, offering a wide range of products including electronics, fashion, and home appliances. Founded in 2014, the company operated until March 2019.
@@ -264,6 +278,7 @@ content:
           • Meeting Management System: Developed a meeting management system for government organizations, optimizing scheduling, resource allocation, and seamless coordination with existing tools.
 
           Technical Skills: Object-Oriented Programming (OOP), Design Patterns
+          
           Technologies: PHP, MySQL, Node.js, JavaScript, Redis, MongoDB, Python, RabbitMQ, Linux
   
           Sepehr Mahan Tech, established in 2011, is a cloud-based enterprise team networking solution provider based in Tehran, Iran. The company specializes in document management systems, knowledge management systems, project and task management, and meeting management solutions.
