@@ -77,7 +77,9 @@ content:
 
           • Contribution Automation Development: Created a GitLab merge request and pipeline management system that receives GitLab webhooks and utilizes the GitLab API to update merge requests. This system interacts with services like Jenkins and Mattermost, allowing users to define specific workflows per repository, such as assigning reviewers, running pipelines, notifying developers, and analyzing code changes.
           
-          Tech stack: 
+          
+          Tech stack:
+          
 
           • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.    
           
