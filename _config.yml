@@ -24,7 +24,6 @@ youtube_username: "@Coffee-Go"
 additional_links:
   - title: kousha.dev
     icon: fas fa-globe
-    url: https://kousha.dev
 
 # Google Analytics and Tag Manager
 # Using more than one of these may cause issues with reporting
@@ -37,7 +36,9 @@ additional_links:
 about_profile_image: images/1629721583450.jpg
 about_content: | # this will include new lines to allow paragraphs
   I’m a passionate problem-solver dedicated to turning challenges into opportunities. My career has been defined by a commitment to excellence and collaboration. Whether I’m designing scalable CI/CD systems at Adyen, modernizing legacy architectures into microservices, or leading teams through complex technical transformations, I’m always focused on creating sustainable solutions that drive both individual and team success.
+  
   I thrive in environments that encourage innovation and resilience, where obstacles are seen as a chance to think creatively and push boundaries. I place a high value on teamwork and enjoy mentoring others, fostering a positive and inclusive atmosphere where everyone’s ideas are heard and valued. I’m always looking for ways to grow and support my colleagues in their own professional journeys.
+  
   Outside of work, I enjoy activities like chess, which enhances my problem-solving skills, and rock climbing and hiking, which mirror my professional mindset: embracing calculated risks, adapting to change, and working toward a clear goal. Above all, I’m a curious and approachable collaborator who believes that the most rewarding challenges lead to the most impactful solutions.
 
 content:
