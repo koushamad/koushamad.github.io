@@ -268,28 +268,20 @@ content:
         title: Pepper.com - The World's Largest Deal Community
         caption: Remote / Berlin 2021 - 2022
         sub_title: Senior Software Engineer / Associated with KolayIK
-        quote: At Sepehr Mahan Tech, a leading provider of cloud-based enterprise team networking solutions in Iran, I developed and implemented innovative software solutions to enhance organizational communication and efficiency.
+        quote: Ensured microservices' security by checking and rehabilitating them against hacking attacks.
         description: | # this will include new lines to allow paragraphs
-          • Suggestion System: Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
+          • Collaborated with the Supernova and Microservice teams to develop new features and maintain the product and services.
 
-          • Task Management Solution: Designed a user-friendly task management solution for private organizations, enhancing productivity and workflow efficiency.
+          • Redesigned and developed the deal submission, product listing, and product detail pages using GraphQL.
 
-          • Custom Social Network: Developed a custom social network for organizations using PHP-Fox, prioritizing collaboration, privacy, and security.
+          • Developed a GDPR-compliant image microservice that applies requested filters and can handle over 5,000 unique images per minute using 20 instances.
 
-          • Form Builder and Workflow Module: Built a form builder and workflow module for PHP-Fox, simplifying data collection and process automation with an intuitive interface.
+          • Checking and rehabilitating microservices against hacking attacks.
 
-          • Mobile Application API: Created a mobile application API for seamless PHP-Fox social network integration, ensuring compatibility across devices and operating systems.
-          
-          • Task List Management System: Constructed a task list management system for government organizations, improving efficiency, accountability, and reporting capabilities.
-          
-          • Meeting Management System: Developed a meeting management system for government organizations, optimizing scheduling, resource allocation, and seamless coordination with existing tools.
+          • Improved the functionality of our microservices near cache by customizing loadbalancing.
 
-          Technical Skills: Object-Oriented Programming (OOP), Design Patterns
-          
-          Technologies: PHP, MySQL, Node.js, JavaScript, Redis, MongoDB, Python, RabbitMQ, Linux
-  
-          Sepehr Mahan Tech, established in 2011, is a cloud-based enterprise team networking solution provider based in Tehran, Iran. The company specializes in document management systems, knowledge management systems, project and task management, and meeting management solutions.
 
+          Tech stack: Go · Microservice · Kubernetes · PHP · Laravel · GraphQL · OOP · Design Patterns · TDD · ElasticSearch · Redis · AWS.
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
