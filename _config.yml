@@ -1,7 +1,7 @@
 # Site configuration
 title: Kousha Ghodsizad
 repository: sproogen/resume-theme
-favicon: images/favicon.ico
+favicon: images/raven.svg
 
 # Content configuration version
 version: 2
