@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
 
+# Keep local builds compatible with the system Ruby shipped on this machine.
+gem "ffi", "< 1.17"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 

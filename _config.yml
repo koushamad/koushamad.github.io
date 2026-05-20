@@ -1,5 +1,5 @@
 # Site configuration
-title: Kousha Ghodsizad
+title: Kousha Ghodsizad — Systems & Infrastructure Architect
 repository: sproogen/resume-theme
 favicon: images/raven.svg
 
@@ -18,67 +18,86 @@ darkmode: true
 # Social links
 github_username: koushamad
 linkedin_username: kousha-ghodsizad
-youtube_username: "@Coffee-Go"
 
 # Additional icon links
 additional_links:
+  - title: Amsterdam, Netherlands
+    icon: fas fa-map-marker-alt
   - title: kousha.dev
     icon: fas fa-globe
+    url: https://kousha.dev
 
 # Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
 # gtm: "GTM-0000000"
 # gtag: "UA-00000000-0"
 # google_analytics: "UA-00000000-0"
 
-# About Section
-# about_title: About Me
+# Header / Executive Summary
+about_title: Executive Summary
 about_profile_image: images/1629721583450.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Systems & Infrastructure Architect / Platform Engineer with a strong background in backend systems, Kubernetes, DevOps, CI/CD, observability, automation, and reliability. I bring clarity to complex technical systems by designing maintainable architecture, improving delivery workflows, and strengthening production operations.
+about_content: |
+  Systems & Infrastructure Architect / Platform Engineer with a backend engineering background and production experience across Kubernetes-based infrastructure, CI/CD, automation, observability, reliability, and distributed systems. I focus on building and improving platforms that make delivery safer, operations clearer, and backend systems easier to maintain.
 
-  I work best where ownership, clear context, thoughtful engineering, and sustainable delivery matter. My strongest contributions are platform work, backend architecture, automation, observability, reliability improvements, and technical review. I prefer calm collaboration, well-understood priorities, and sustainable operations over permanently reactive delivery.
-
-  Outside work I enjoy chess, rock climbing, running, and hiking. These interests reflect the same qualities I value professionally: patience, focus, good judgement, and steady progress.
+  My engineering style is calm, structured, and operationally mature: clarity over ambiguity, automation over repeated manual work, maintainability over short-term fixes, and reviewable architecture over accidental complexity. I contribute best through platform ownership, backend architecture, deployment reliability, technical review, and sustainable engineering practices.
 
 content:
-  - title: SKILLS
+  - title: Core Expertise
     layout: list
     content:
       - layout: left
-        title: Systems & Infrastructure Architect / Platform Engineer
-        sub_title: Backend, Platform, Automation, Reliability
-        caption: Amsterdam - Jul 2023- Present
-        quote: "I help teams make complex systems clearer, safer to operate, and easier to deliver."
+        title: Platform Engineering
+        sub_title: Internal platforms, production infrastructure, deployment reliability
         description: |
-          • Backend: Go, PHP, Python, Shell, APIs, services, workers, CLIs, service boundaries, integration layers
+          • Kubernetes-based production systems, Helm-based packaging, ArgoCD/GitOps delivery, private cloud environments, and platform workflows that support engineering teams.
 
-          • Infrastructure: Kubernetes, Docker, Helm, ArgoCD, Argo Workflows, Argo Events, Terraform, AWS, private cloud, OpenStack, Cilium, Vault/Consul, Harbor, Nexus
+          • Strong focus on reliability, operational clarity, safe rollout patterns, and reducing friction in developer delivery paths.
 
-          • CI/CD: GitLab CI, Jenkins, deployment automation, merge-request automation, artifact workflows, release guardrails, developer tooling
+      - layout: left
+        title: Backend Systems
+        sub_title: Go services, APIs, distributed systems, messaging
+        description: |
+          • Backend services, APIs, workers, CLIs, service boundaries, integration layers, and data flows with particular strength in Go-based systems.
 
-          • Data & Messaging: MySQL, PostgreSQL, Redis, RabbitMQ, Kafka, NATS, Cassandra, ClickHouse, Elasticsearch, MongoDB
+          • Practical experience with messaging and data systems such as Redis, RabbitMQ, Kafka, NATS, MySQL, PostgreSQL, Cassandra, ClickHouse, Elasticsearch, and MongoDB.
 
-          • Observability: Prometheus, Grafana, metrics, logging, readiness checks, operational dashboards, production feedback loops
+      - layout: left
+        title: CI/CD & Automation
+        sub_title: Pipelines, operational tooling, infrastructure workflows
+        description: |
+          • GitLab CI, Jenkins, deployment automation, merge-request automation, release guardrails, artifact workflows, and internal developer tooling.
 
-          • Architecture: system design, reliability, automation, modular architecture, domain boundaries, technical review, mentoring
+          • Automation mindset: make repeated operational work safer, easier to review, and easier for teams to understand.
 
-          10+ years software development  |  4+ years technical leadership  |  4+ years infrastructure/DevOps/platform work
+      - layout: left
+        title: Reliability & Observability
+        sub_title: Metrics, monitoring, rollout safety, production debugging
+        description: |
+          • Observability and reliability work using metrics, logs, readiness checks, dashboards, production feedback loops, and deployment hardening.
 
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
+          • Comfortable investigating system behaviour across application, infrastructure, pipeline, and database layers.
+
+      - layout: left
+        title: Architecture & Technical Leadership
+        sub_title: System design, review, standards, operational improvements
+        description: |
+          • Architecture review, service-boundary design, platform decision-making, engineering standards, mentoring, and technical ownership.
+
+          • Career progression from backend engineer to team lead and infrastructure/platform engineer, with increasing responsibility for system design and operational complexity.
+
+  - title: Professional Experience
+    layout: list
     content:
       - layout: left
         title: Adyen
-        link: https://Adyen.com/
-        link_text: Adyen.com
-        sub_title: Infrastructure Engineer (CICD)
-        caption: Amsterdam - Jul 2023- Present.
+        link: https://adyen.com/
+        link_text: adyen.com
+        sub_title: Infrastructure Engineer — CI/CD & Platform
+        caption: Amsterdam, Netherlands · Jul 2023 — Present
         quote: Production infrastructure, CI/CD, Kubernetes-based delivery, automation, and operational reliability for a large-scale payments platform.
-        description: | # this will include new lines to allow paragraphs
-          • Designed and improved production CI/CD and platform tooling around Kubernetes-based delivery workflows.
+        description: |
+          • Designed and improved production CI/CD and platform tooling around Kubernetes-based delivery workflows, with attention to deployment reliability and operational clarity.
 
-          • Worked with Helm, ArgoCD, Argo Workflows, Argo Events, GitLab, Jenkins, JFrog, Consul, and internal automation to make delivery paths safer and easier to operate.
+          • Worked with Helm, ArgoCD, Argo Workflows, GitLab/Jenkins integrations, artifact systems, and internal automation to make delivery paths safer and easier to operate.
 
           • Built and maintained Go-based developer/platform tooling, including CLI and service integrations for controlled plugin execution and workflow automation.
 
@@ -86,206 +105,208 @@ content:
 
           • Collaborated across teams on review, architecture, reliability concerns, and practical automation for production infrastructure.
 
-          Tech stack: Go, Python, Shell, Kubernetes, Helm, ArgoCD, Argo Workflows, Argo Events, GitLab CI, Jenkins, JFrog, Consul, Prometheus/Grafana-style observability, private cloud/OpenStack, Terraform.
-
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
       - layout: left
         title: Studocu
         link: https://studocu.com/
         link_text: studocu.com
         sub_title: Senior Software Engineer
-        caption: Amsterdam - Jul 2022- Jul 2023.
+        caption: Amsterdam, Netherlands · Jul 2022 — Jul 2023
         quote: Backend performance, observability, CI/CD checks, and reliability improvements for a high-traffic education platform.
-        description: | # this will include new lines to allow paragraphs
+        description: |
           • Improved backend and platform-facing areas around website performance, crawler accessibility, and production reliability.
 
           • Worked with operations and platform teams to add monitoring across local, staging, and production environments.
 
-          • Built CI/CD checks for SEO and performance testing to make release quality more repeatable.
+          • Built CI/CD checks for SEO and performance testing to make release quality more repeatable and easier to validate.
 
-          • Investigated bottlenecks across application and database layers and translated findings into practical engineering work.
-
-          Technologies: PHP, Laravel, Go, AWS, MySQL, Redis, Elasticsearch, Terraform, CI/CD, observability tooling.
+          • Investigated bottlenecks across application and database layers and translated findings into practical engineering improvements.
 
       - layout: left
         title: KolayIK
         link: https://kolayik.com/
         link_text: kolayik.com
-        sub_title: Senior Software Engineer / Team Lead
-        caption: Istanbul - May 2021- May 2022.
+        sub_title: Senior Software Engineer / Backend Team Lead
+        caption: Istanbul, Turkey · May 2021 — May 2022
         quote: Backend architecture, team leadership, automation, and platform reliability for HR and operations systems.
-        description: | # this will include new lines to allow paragraphs
+        description: |
           • Led backend and platform-oriented work across HR systems, expense management, data import/export, and queue-based services.
 
-          • Applied modular architecture, domain boundaries, TDD, Redis/RabbitMQ messaging, AWS services, and Kubernetes where appropriate.
+          • Applied modular architecture, domain boundaries, TDD, messaging, AWS services, and Kubernetes where appropriate to improve maintainability and operational behaviour.
 
           • Built automation for failure reporting and operational feedback, including queue handling and Slack-integrated reporting.
 
-          • Supported delivery through technical review, design direction, and mentoring for backend engineers.
-
-          Technologies: PHP, Laravel, Go, PostgreSQL, MySQL, Redis, RabbitMQ, AWS, SQS, Lambda, Kubernetes, GraphQL, Elasticsearch, Terraform.
+          • Supported delivery through technical review, design direction, mentoring, and pragmatic engineering standards.
 
       - layout: left
         title: Wingie Enuygun Group
         link: https://www.enuygun.com/
         link_text: enuygun.com
         sub_title: Senior Software Engineer / Team Lead
-        caption: Istanbul - MAy 2020 - Apr 2021.
+        caption: Istanbul, Turkey · May 2020 — Apr 2021
         quote: Team leadership, provider integrations, Go services, search, caching, and database reliability for travel systems.
-        description: | # this will include new lines to allow paragraphs
+        description: |
           • Led hotel-provider integration work and backend services for provider aggregation, search, caching, and data pipelines.
 
           • Designed Go/gRPC services to manage concurrent provider requests and standardise hotel data from external systems.
 
           • Improved reliability through testing practices, Elasticsearch tuning, cache-rate management, and database cluster migration work.
 
-          • Guided the team through technical review, testing workshops, and pragmatic delivery decisions.
-
-          Technologies: Go, gRPC, PHP, Symfony, AWS, MySQL, MongoDB, Elasticsearch, Galera Cluster, caching systems.
-
+          • Guided the team through technical review, testing workshops, and delivery decisions that balanced reliability with business needs.
 
       - layout: left
         title: Insider
         link: https://useinsider.com/
         link_text: useinsider.com
         sub_title: Senior Software Engineer
-        caption: Istanbul - June 2019 - June 2020.
+        caption: Istanbul, Turkey · Jun 2019 — Jun 2020
         quote: Backend architecture, service refactoring, messaging, security remediation, and data migration for marketing infrastructure.
-        description: | # this will include new lines to allow paragraphs
+        description: |
           • Refactored newsletter and email-delivery systems from legacy structures toward clearer service boundaries.
 
-          • Worked on Go services, PHP/Laravel components, messaging, security remediation, and data migration across MySQL, Cassandra, and ClickHouse.
+          • Worked on Go services, messaging, security remediation, and data migration across high-volume marketing data systems.
 
           • Improved maintainability through architecture review, repository-service patterns, and clearer data-flow design.
 
           • Built supporting services for A/B testing, spam detection, and queue-based processing.
 
-          Technologies: Go, PHP, Laravel, AWS, MySQL, Kafka, Redis, MongoDB, Kubernetes, Docker, Cassandra, ClickHouse, RabbitMQ.
-
-
       - layout: left
         title: Bamilo
         link: https://bamilo.com/
         link_text: bamilo.com
-        sub_title: Senior Software Engineer / Head of development
-        caption: Tehran Aug 2015 - Apr 2019.
+        sub_title: Senior Software Engineer / Head of Development
+        caption: Tehran, Iran · Aug 2015 — Apr 2019
         quote: Technical ownership, backend architecture, internal platforms, logistics systems, and team leadership for an e-commerce marketplace.
-        description: | # this will include new lines to allow paragraphs
+        description: |
           • Built and led engineering work across seller tooling, warehouse operations, delivery tracking, inventory services, and internal platforms.
 
           • Owned backend architecture, service design, team growth, and technical review for marketplace operations systems.
 
-          • Designed Kafka-based data migration pipelines and service improvements for inventory and seller-centre workflows.
+          • Designed data migration pipelines and service improvements for inventory and seller-centre workflows.
 
           • Helped convert operational problems into maintainable systems for logistics, warehouse, seller, and marketplace teams.
-
-          Technologies: PHP, Laravel, Go, MySQL, Kafka, RabbitMQ, Redis, GraphQL, MongoDB, Kubernetes, Cassandra, AWS.
-
 
       - layout: left
         title: Sepehr Mahan Tech
         link: https://www.sepehrmahan.com/
         link_text: sepehrmahan.com
-        sub_title: Senior Software Engineer
-        caption: Tehran Aug 2012 - Jul 2015.
-        quote: Backend application development, workflow systems, process automation, and organisational collaboration platforms.
-        description: | # this will include new lines to allow paragraphs
+        sub_title: Software Engineer / Senior Software Engineer
+        caption: Tehran, Iran · Aug 2012 — Jul 2015
+        quote: Early backend engineering, workflow systems, process automation, and organisational collaboration platforms.
+        description: |
           • Developed suggestion, task-management, meeting-management, form-builder, workflow, social-network, and mobile API systems.
 
           • Focused on backend services, process automation, maintainable application foundations, and practical delivery for private and public-sector clients.
 
-          • Worked across PHP, JavaScript, Python, Node.js, SQL/MySQL, Redis, MongoDB, RabbitMQ, Linux, OOP, and design patterns.
+          • Built the early backend and product-engineering foundation that later grew into larger platform, architecture, and leadership responsibilities.
 
-  - title: Selected Projects # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Selected Projects
+    layout: list
     content:
       - layout: left
         title: IRaven Media
-        caption: Personal platform project
-        sub_title: Workspace-scoped media operations platform
-        quote: Go API and Next.js dashboard with production-minded platform, release, observability, and workspace foundations.
-        description: | # this will include new lines to allow paragraphs
-          • Designed a modular Go API foundation with Echo, Cobra, GORM, MySQL, Redis-ready cache/queue configuration, NATS-ready event bus, JWT authentication, workspace roles, audit logs, API-token scopes, and Prometheus-compatible metrics endpoints.
+        caption: Workspace-scoped media operations platform
+        sub_title: Go API, Next.js dashboard, Kubernetes-oriented production workflow
+        quote: Multi-tenant-style workspace platform with production-minded API, worker, observability, and release foundations.
+        description: |
+          • Designed a modular Go API foundation with HTTP services, console commands, migrations, workers, scheduling, workspace roles, audit logs, API-token scopes, and metrics endpoints.
 
-          • Built production-oriented health, readiness, migrations, workers, scheduling, publishing, and operational runbook patterns.
+          • Built production-oriented health, readiness, queue/cache/event-bus configuration, release runbooks, and operational verification patterns.
 
-          • Coordinated API and web release workflows with Kubernetes namespace separation, Argo CD apps, tagged images, and verification steps.
-
-          Technologies: Go, Echo, Cobra, GORM, MySQL, Redis, NATS, JWT, Next.js, Kubernetes, Argo CD, Prometheus-style metrics.
+          • Coordinated API and web release workflows with Kubernetes namespace separation, Argo CD apps, tagged images, and production checks.
 
       - layout: left
         title: ChanceGoal
-        caption: Personal product platform
-        sub_title: Backend, web/admin, iOS, onboarding, notifications, and operational tooling
-        quote: Multi-surface product architecture with Go services, client applications, authentication, onboarding, and notification foundations.
-        description: | # this will include new lines to allow paragraphs
-          • Worked across backend APIs, admin/web clients, mobile flows, and local runtime automation.
+        caption: Product platform and backend architecture
+        sub_title: Go API, admin/web clients, iOS, onboarding, notifications, operational tooling
+        quote: Product platform work focused on backend foundations, authentication, onboarding state, notifications, and maintainable delivery workflows.
+        description: |
+          • Worked across backend APIs, admin/web clients, mobile flows, local runtime automation, and service-level tests.
 
-          • Implemented backend foundations around authentication, onboarding state, notifications, persistence, and service-level tests.
+          • Implemented backend foundations around authentication, onboarding state, notifications, persistence, and operational tooling.
 
-          • Used the project to refine maintainable platform patterns across product architecture, API design, deployment, and developer workflow concerns.
-
-          Technologies: Go, Echo, GORM, MySQL, web/admin clients, iOS, Docker Compose, tests, automation scripts.
+          • Used the project to refine maintainable platform patterns across product architecture, API design, deployment, and developer workflows.
 
       - layout: left
         title: Personal Portfolio Platform
-        caption: Personal site platform
-        sub_title: Structured content model, static rendering, and content administration
-        quote: A maintainable personal website platform with validated content, clear source data, and production-minded publishing.
-        description: | # this will include new lines to allow paragraphs
+        caption: Structured profile and publishing platform
+        sub_title: Next.js, structured content, static rendering, content administration
+        quote: Personal site platform focused on maintainable content, validated publishing, and clear operational boundaries.
+        description: |
           • Migrated the profile site toward a structured content model with static rendering and validated content.
 
           • Built a maintainable publishing foundation with clear source data, deployment documentation, and MySQL-backed content administration.
 
           • Focused on safe automation, clear operational boundaries, and long-term maintainability.
 
-          Technologies: Next.js, Node.js, MySQL, structured content, content validation, static rendering, deployment documentation.
-
       - layout: left
         title: Pepper.com Platform Work
-        caption: Remote / Berlin 2021 - 2022
-        sub_title: Senior Software Engineer / Associated with KolayIK
-        quote: Marketplace microservices, product/deal flows, GraphQL features, image service work, and security-oriented review.
-        description: | # this will include new lines to allow paragraphs
+        caption: Marketplace microservices work · Remote / Berlin
+        sub_title: Backend services, GraphQL flows, image service work, near-cache behaviour
+        quote: Marketplace platform work with microservices, product/deal flows, backend behaviour, and security-oriented review.
+        description: |
           • Collaborated with Supernova and microservice teams to develop features, maintain services, and improve backend behaviour.
 
           • Redesigned and developed deal submission, product listing, and product detail flows using GraphQL.
 
-          • Worked on an image microservice, near-cache behaviour, load-balancing improvements, and microservice security review.
+          • Worked on image-service capabilities, near-cache behaviour, load-balancing improvements, and microservice security review.
 
-          Technologies: Go, Kubernetes, PHP, Laravel, GraphQL, Redis, Elasticsearch, AWS, microservices, TDD.
+  - title: Technologies
+    layout: list
+    content:
+      - layout: left
+        title: Backend
+        description: |
+          Go, PHP, Python, Shell, APIs, services, workers, CLIs, service boundaries, integration layers.
 
-  - title: Education # Title for the section
-    layout: list # Type of content section (list/text)
+      - layout: left
+        title: Infrastructure & Platform
+        description: |
+          Kubernetes, Docker, Helm, ArgoCD, Argo Workflows, Argo Events, Terraform, AWS, private cloud, OpenStack, Cilium, Vault/Consul, Harbor, Nexus.
+
+      - layout: left
+        title: CI/CD & Automation
+        description: |
+          GitLab CI, Jenkins, deployment automation, merge-request automation, artifact workflows, release guardrails, operational tooling.
+
+      - layout: left
+        title: Data & Messaging
+        description: |
+          MySQL, PostgreSQL, Redis, RabbitMQ, Kafka, NATS, Cassandra, ClickHouse, Elasticsearch, MongoDB.
+
+      - layout: left
+        title: Observability & Reliability
+        description: |
+          Prometheus, Grafana, metrics, logging, readiness checks, operational dashboards, rollout safety, production feedback loops.
+
+      - layout: left
+        title: Architecture
+        description: |
+          System design, reliability engineering, automation strategy, modular architecture, domain boundaries, technical review, engineering standards.
+
+  - title: Education / Certifications
+    layout: list
     content:
       - layout: left
         title: Islamic Azad University
-        caption: 2011 - 2015
+        caption: 2011 — 2015
         sub_title: BSc Computer Software Engineering
-        quote: >
-          Designing Innovative GIS & GPS-based Android Apps: A Study of the Research and Development Process and its Impact on User Satisfaction
-        description: | # this will include new lines to allow paragraphs
-          This research study examined the research and development process for designing innovative GIS & GPS-based Android apps and its impact on user satisfaction. The study involved researching and analyzing trends in GIS & GPS technology, collaborating with a multidisciplinary team to develop and test app concepts, and gathering user feedback to inform app improvements. The study findings can inform future GIS & GPS-based app design and development, as well as contribute to the academic community's understanding of the impact of the research and development process on user satisfaction.
+        description: |
+          Computer software engineering foundation with research work in GIS/GPS-based Android applications.
 
       - layout: left
         title: Islamic Azad University
-        caption: 2008 - 2011
+        caption: 2008 — 2011
         sub_title: ASc Computer Programming
-        quote: >
-          Enhancing Search and Rescue Robot Performance through Algorithmic Innovations: A Study of the Development, Testing, and Implementation of Novel Algorithms for Router Robots
-        description: | # this will include new lines to allow paragraphs
-          This research study investigated the development, testing, and implementation of novel algorithms for router robots in search and rescue (SAR) scenarios. The study focused on optimizing search efficiency, obstacle avoidance, and communication to enhance SAR robot performance. The research involved assessing existing algorithms, exploring potential enhancements, and collaborating with robotics developers to implement improvements. The study findings can inform future SAR robot design and development, as well as contribute to the academic community's knowledge of algorithmic innovations for SAR robots.
+        description: |
+          Computer programming foundation with early algorithmic and robotics-related research work.
 
-  - title: A Little More About Me
+  - title: Links
     layout: text
-    content: | # this will include new lines to allow paragraphs
-      Alongside my interests in software engineering and DevOps some of my other interests and hobbies are:
-      - Professional Chess Player
-      - Rock Climbing
-      - Running
-      - Hiking
+    content: |
+      - Website: https://kousha.dev
+      - LinkedIn: https://www.linkedin.com/in/kousha-ghodsizad/
+      - GitHub: https://github.com/koushamad/
+      - Location: Amsterdam, Netherlands
 
 # Footer
 footer_show_references: true
