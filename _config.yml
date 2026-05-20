@@ -35,33 +35,35 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/1629721583450.jpg
 about_content: | # this will include new lines to allow paragraphs
-  I’m a passionate problem-solver dedicated to turning challenges into opportunities. My career has been defined by a commitment to excellence and collaboration. Whether I’m designing scalable CI/CD systems at Adyen, modernizing legacy architectures into microservices, or leading teams through complex technical transformations, I’m always focused on creating sustainable solutions that drive both individual and team success.
-  
-  I thrive in environments that encourage innovation and resilience, where obstacles are seen as a chance to think creatively and push boundaries. I place a high value on teamwork and enjoy mentoring others, fostering a positive and inclusive atmosphere where everyone’s ideas are heard and valued. I’m always looking for ways to grow and support my colleagues in their own professional journeys.
-  
-  Outside of work, I enjoy activities like chess, which enhances my problem-solving skills, and rock climbing and hiking, which mirror my professional mindset: embracing calculated risks, adapting to change, and working toward a clear goal. Above all, I’m a curious and approachable collaborator who believes that the most rewarding challenges lead to the most impactful solutions.
+  Systems & Infrastructure Architect / Platform Engineer with a strong background in backend systems, Kubernetes, DevOps, CI/CD, observability, automation, and reliability. I bring clarity to complex technical systems by designing maintainable architecture, improving delivery workflows, and strengthening production operations.
+
+  I work best where ownership, clear context, thoughtful engineering, and sustainable delivery matter. My strongest contributions are platform work, backend architecture, automation, observability, reliability improvements, and technical review. I prefer calm collaboration, well-understood priorities, and sustainable operations over permanently reactive delivery.
+
+  Outside work I enjoy chess, rock climbing, running, and hiking. These interests reflect the same qualities I value professionally: patience, focus, good judgement, and steady progress.
 
 content:
   - title: SKILLS
     layout: list
     content:
       - layout: left
-        title: SKILLS
-        sub_title: Software and Infrastructure Engineer (CI/CD)
+        title: Systems & Infrastructure Architect / Platform Engineer
+        sub_title: Backend, Platform, Automation, Reliability
         caption: Amsterdam - Jul 2023- Present
-        quote: "Through diverse collaborations across 10+ tech stacks, I've cultivated a simple truth: Great engineering emerges when continuous learning meets cross-functional teamwork."
+        quote: "I help teams make complex systems clearer, safer to operate, and easier to deliver."
         description: |
-          •  Soft Skills: Collaboration & Teamwork, Leadership & Mentorship, Adaptability, Growth-Oriented Mindset
-          
-          •  Programming Languages: Golang, Python, PHP, Shell script
-          
-          •  Cloud & Infrastructure: Kubernetes, Helm, Terraform, AWS, Private Cloud, OpenStack, Cilium, HashiCorp Vault/Consul, Nexus, Harbor
-          
-          •  CI/CD & DevOps: GitLab CI/CD, Jenkins, Templating, ArgoCD, Argo Workflows, Argo Events Argo Rollouts, JFrog, Prometheus, Grafana, ELK Stack
-          
-          •  Databases: SQL/NoSQL, MySQL, PostgreSQL, Cassandra, Redis, Elasticsearch, MongoDB
+          • Backend: Go, PHP, Python, Shell, APIs, services, workers, CLIs, service boundaries, integration layers
 
-          +10 years software development  |  +4 years management  |  +4 years infrastructure/DevOps
+          • Infrastructure: Kubernetes, Docker, Helm, ArgoCD, Argo Workflows, Argo Events, Terraform, AWS, private cloud, OpenStack, Cilium, Vault/Consul, Harbor, Nexus
+
+          • CI/CD: GitLab CI, Jenkins, deployment automation, merge-request automation, artifact workflows, release guardrails, developer tooling
+
+          • Data & Messaging: MySQL, PostgreSQL, Redis, RabbitMQ, Kafka, NATS, Cassandra, ClickHouse, Elasticsearch, MongoDB
+
+          • Observability: Prometheus, Grafana, metrics, logging, readiness checks, operational dashboards, production feedback loops
+
+          • Architecture: system design, reliability, automation, modular architecture, domain boundaries, technical review, mentoring
+
+          10+ years software development  |  4+ years technical leadership  |  4+ years infrastructure/DevOps/platform work
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
@@ -72,36 +74,19 @@ content:
         link_text: Adyen.com
         sub_title: Infrastructure Engineer (CICD)
         caption: Amsterdam - Jul 2023- Present.
-        quote: As an Infrastructure Developer at Adyen since July 2023, I have been instrumental in designing and developing advanced Continuous Integration and Continuous Deployment (CI/CD) solutions, leveraging a diverse set of technologies to enhance operational efficiency and system reliability.
+        quote: Production infrastructure, CI/CD, Kubernetes-based delivery, automation, and operational reliability for a large-scale payments platform.
         description: | # this will include new lines to allow paragraphs
-          • AdyenCLI Development: Engineered AdyenCLI, a Golang-based command-line interface (CLI) application serving as a platform for executing plugins developed in Java, Go, Bash, and Python. Utilizing gRPC, I ensured secure and permission-based interactions with these plugins, facilitating seamless execution on user laptops.
+          • Designed and improved production CI/CD and platform tooling around Kubernetes-based delivery workflows.
 
-          • High Availability Deployment: Deployed AdyenCLI across four distinct Kubernetes clusters in different regions, managing DNS with HashiCorp Consul to direct requests to the nearest healthy service. This setup, combined with JFrog for federated plugin serving, achieved 99.999% availability globally.
+          • Worked with Helm, ArgoCD, Argo Workflows, Argo Events, GitLab, Jenkins, JFrog, Consul, and internal automation to make delivery paths safer and easier to operate.
 
-          • Workflow Automation with Argo: Designed and implemented highly available workflows using Kubernetes and Argo Workflows. By integrating Kubernetes' leader election mechanism with Argo CD and Argo Events, I established a system that ensures continuous workflow execution across multiple clusters, maintaining 99.999% availability.
+          • Built and maintained Go-based developer/platform tooling, including CLI and service integrations for controlled plugin execution and workflow automation.
 
-          • Code Journey Project: Developed Code Journey, a system that aggregates data from GitLab, Jenkins, and other CI/CD tools, along with logs and metrics, storing them in a NoSQL database. This platform empowers developers to monitor critical data for merge requests and trace code changes post-deployment.
+          • Improved deployment hardening, observability, and operational feedback loops so teams could understand merge requests, releases, logs, metrics, and post-deployment behaviour more clearly.
 
-          • Contribution Automation Development: Created a GitLab merge request and pipeline management system that receives GitLab webhooks and utilizes the GitLab API to update merge requests. This system interacts with services like Jenkins and Mattermost, allowing users to define specific workflows per repository, such as assigning reviewers, running pipelines, notifying developers, and analyzing code changes.
-          
-          
-          Tech stack:
-          
+          • Collaborated across teams on review, architecture, reliability concerns, and practical automation for production infrastructure.
 
-            • Programming Languages: Proficient in Golang, Python, Shell, and PHP, with extensive experience in developing secure and efficient applications.    
-            
-            • Infrastructure and Cloud Technologies: Experienced with private cloud environments, including OpenStack, and proficient in using Terraform for infrastructure as code.
-            
-            • Containerization and Orchestration: Skilled in deploying and managing applications using Kubernetes, ensuring high availability and scalability.
-                        
-            • CI/CD Tools: Experienced with GitLab for version control and CI/CD pipelines, and JFrog for artifact management.
-            
-            • Workflow Automation: Proficient in using Argo Workflows, Argo Events, and Argo CD for automating and managing complex workflows in Kubernetes environments.
-            
-            • Monitoring and Observability: Implemented systems for aggregating and analyzing logs and metrics to provide insights into application performance and health.  
-          
-          Adyen is a Dutch financial services company that offers a comprehensive payment platform, enabling businesses to accept e-commerce, mobile, and point-of-sale payments.
-          Founded in 2006, Adyen has expanded its global presence, operating in 27 offices worldwide and employing over 4,000 people from more than 115 nationalities.
+          Tech stack: Go, Python, Shell, Kubernetes, Helm, ArgoCD, Argo Workflows, Argo Events, GitLab CI, Jenkins, JFrog, Consul, Prometheus/Grafana-style observability, private cloud/OpenStack, Terraform.
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
@@ -112,23 +97,17 @@ content:
         link_text: studocu.com
         sub_title: Senior Software Engineer
         caption: Amsterdam - Jul 2022- Jul 2023.
-        quote: As a Senior Software Engineer at StuDocu, I led critical projects to enhance system performance and observability. Collaborating with cross-functional teams, I implemented solutions that improved website efficiency and reliability.
+        quote: Backend performance, observability, CI/CD checks, and reliability improvements for a high-traffic education platform.
         description: | # this will include new lines to allow paragraphs
-          • Enhanced Website Performance: Collaborated with the Platform team to optimize website performance and improve crawler accessibility, leading to a more efficient and user-friendly service.
-          
-          • Integrated Monitoring Tools: Worked closely with the Operations team to implement monitoring tools across local, staging, and production environments, significantly enhancing system observability and reliability.
-          
-          • Optimized System Efficiency: Identified and resolved performance bottlenecks in the codebase and database, achieving a 40% improvement in overall system performance.
-          
-          • Developed CI/CD Pipelines: Created GitHub CI/CD pipelines for SEO and performance testing of the core project, streamlining deployment processes and ensuring consistent quality.
-          
-          • Conducted Performance Workshops: Led workshops focused on system performance analysis and optimization, fostering a culture of continuous improvement within the engineering team.          
-          
-          Technical Skills: Object-Oriented Programming (OOP), Agile Methodologies, Test-Driven Development, DevOps, Big Data, Kanban, Design Patterns
+          • Improved backend and platform-facing areas around website performance, crawler accessibility, and production reliability.
 
-          Technologies: Laravel, Amazon Web Services (AWS), MySQL, Redis, Go (Programming Language), PHP, Elasticsearch, Terraform
-          
-          StuDocu is an EdTech startup based in Amsterdam, Netherlands, providing a peer-to-peer resource-exchange platform for students to share study aids, class notes, and test preparation materials. Founded in 2013, StuDocu serves over 60 million students monthly across more than 60 countries.
+          • Worked with operations and platform teams to add monitoring across local, staging, and production environments.
+
+          • Built CI/CD checks for SEO and performance testing to make release quality more repeatable.
+
+          • Investigated bottlenecks across application and database layers and translated findings into practical engineering work.
+
+          Technologies: PHP, Laravel, Go, AWS, MySQL, Redis, Elasticsearch, Terraform, CI/CD, observability tooling.
 
       - layout: left
         title: KolayIK
@@ -136,22 +115,17 @@ content:
         link_text: kolayik.com
         sub_title: Senior Software Engineer / Team Lead
         caption: Istanbul - May 2021- May 2022.
-        quote: As a Senior Software Engineer and Team Lead at Kolay, I led the development and optimization of key HR management systems, focusing on enhancing operational efficiency and scalability. Collaborating with cross-functional teams, I implemented robust solutions to streamline processes and improve system performance.
+        quote: Backend architecture, team leadership, automation, and platform reliability for HR and operations systems.
         description: | # this will include new lines to allow paragraphs
-          • HR System Development and Refactoring: Led the overhaul of the HR system using Test-Driven Development (TDD) and technologies such as Laravel, Go, PostgreSQL, Modular Architecture, Domain-Driven Design (DDD), Redis, RabbitMQ, and AWS, resulting in improved system reliability and maintainability.
-          
-          • Expense Management Module Creation: Spearheaded the development of the Expense Management module with Laravel, PostgreSQL, and AWS, enhancing operational efficiency and streamlining financial processes.
-          
-          • Microservices for Data Management: Developed and implemented microservices for large-scale data imports and exports using Node.js, Golang, Kubernetes, ElastiCache, Amazon S3, SQS, and AWS Lambda, ensuring robustness and scalability.
-          
-          • Scalable Queue Handler Engineering: Engineered a scalable queue handler integrated with Slack to manage failure messages and provide real-time reporting, utilizing TDD, Laravel, PHP, SQS, AWS, Golang, and Kubernetes, leading to enhanced system performance.
-          
-          
-          Technical Skills: Concurrent Programming, Object-Oriented Programming (OOP), Data Security, Agile Methodologies, Test-Driven Development, Cloud Security, DevOps, Scrum, Design Patterns, Microservices
-          
-          Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Elasticsearch, Python (Programming Language), Terraform
-          
-          Kolay is a comprehensive human resources management platform designed to streamline various HR functions for businesses of all sizes. The platform offers tools for employee scheduling, payroll management, and compliance tracking, enhancing operational efficiency.
+          • Led backend and platform-oriented work across HR systems, expense management, data import/export, and queue-based services.
+
+          • Applied modular architecture, domain boundaries, TDD, Redis/RabbitMQ messaging, AWS services, and Kubernetes where appropriate.
+
+          • Built automation for failure reporting and operational feedback, including queue handling and Slack-integrated reporting.
+
+          • Supported delivery through technical review, design direction, and mentoring for backend engineers.
+
+          Technologies: PHP, Laravel, Go, PostgreSQL, MySQL, Redis, RabbitMQ, AWS, SQS, Lambda, Kubernetes, GraphQL, Elasticsearch, Terraform.
 
       - layout: left
         title: Wingie Enuygun Group
@@ -159,24 +133,17 @@ content:
         link_text: enuygun.com
         sub_title: Senior Software Engineer / Team Lead
         caption: Istanbul - MAy 2020 - Apr 2021.
-        quote: As a Senior Software Engineer and Team Lead at Wingie Enuygun Group, I led the Hotel team in integrating new providers and enhancing system performance. Through mentorship and collaboration, we achieved significant improvements in testing culture, data processing, and system scalability.
+        quote: Team leadership, provider integrations, Go services, search, caching, and database reliability for travel systems.
         description: | # this will include new lines to allow paragraphs
-          • Provider Integration and System Maintenance: Guided the Hotel team in maintaining existing systems and integrating new providers, including Webbeds, OtelZ, and Juniper, expanding our service offerings and ensuring seamless operations.
-          
-          • Cultivated Test-Driven Development (TDD) Culture: Organized multilayer testing workshops to promote a robust TDD culture, resulting in improved code quality and reliability across the team.
-          
-          • Optimized Search Functionality: Enhanced product search capabilities by refining the Elasticsearch index and implementing an efficient data pipeline, leading to faster and more accurate search results.
-          
-          • Developed Provider Hub: Designed and implemented a provider hub using Go and gRPC to manage concurrent requests, efficiently fetching and standardizing hotel data from various providers.
-          
-          • Implemented Content Caching Microservice: Developed a microservice for content caching management, introducing an automated cache rate management system based on hit and miss rates, which improved data retrieval times and reduced server load.
-          
-          • Database Cluster Migration: Successfully migrated the product database from a master-slave configuration to a Galera cluster, achieving zero data loss and enhancing database reliability and performance.
-          
-          Technical Skills: Object-Oriented Programming (OOP), Test-Driven Development (TDD), DevOps, Scrum, Big Data, Design Patterns, Microservices
-          Technologies: Amazon Web Services (AWS), MySQL, Go (Programming Language), PHP, MongoDB, Symfony, Elasticsearch, gRPC, Galera Cluster
+          • Led hotel-provider integration work and backend services for provider aggregation, search, caching, and data pipelines.
 
-          Wingie Enuygun Group is a prominent player in the online travel industry, offering comprehensive flight booking services through platforms like Wingie and Enuygun. The company leverages advanced technologies to provide users with seamless travel planning experiences.
+          • Designed Go/gRPC services to manage concurrent provider requests and standardise hotel data from external systems.
+
+          • Improved reliability through testing practices, Elasticsearch tuning, cache-rate management, and database cluster migration work.
+
+          • Guided the team through technical review, testing workshops, and pragmatic delivery decisions.
+
+          Technologies: Go, gRPC, PHP, Symfony, AWS, MySQL, MongoDB, Elasticsearch, Galera Cluster, caching systems.
 
 
       - layout: left
@@ -185,27 +152,17 @@ content:
         link_text: useinsider.com
         sub_title: Senior Software Engineer
         caption: Istanbul - June 2019 - June 2020.
-        quote: As a Senior Software Engineer at Insider, I led the maintenance and refactoring of the newsletter product, collaborating with a team of one senior and six mid-level developers. My efforts focused on system architecture redesign, security enhancements, and data migration to improve performance and compliance.
+        quote: Backend architecture, service refactoring, messaging, security remediation, and data migration for marketing infrastructure.
         description: | # this will include new lines to allow paragraphs
-          • System Architecture Redesign: Separated the newsletter product panel from the main application, implementing a microkernel architecture with a repository-service pattern to enhance modularity and maintainability.
-          
-          • Security Enhancements: Identified and resolved security vulnerabilities within the newsletter product, ensuring compliance with Huawei's stringent security standards.
-          
-          • Email Service Overhaul: Transitioned the email delivery and tracking system from a PHP-based monolithic structure to a Go-based microservices architecture, improving scalability and performance.
-          
-          • Data Migration: Executed a seamless migration of legacy data from MySQL to Apache Cassandra and ClickHouse databases, achieving zero data loss and enhancing data retrieval speeds.
-          
-          • Queue System Upgrade: Upgraded the messaging queue system from Amazon SQS to RabbitMQ, significantly increasing the message size capacity from 256 KB to 120 MB, facilitating more robust data handling.
-          
-          • A/B Testing Implementation: Developed a comprehensive A/B testing framework for the newsletter service, enabling data-driven decision-making and optimizing email campaign effectiveness.
-          
-          • Spam Detection Service: Designed and implemented an email spam detection service, enhancing deliverability rates and maintaining the newsletter's sender reputation
-          
-          Technical Skills: Object-Oriented Programming (OOP), Data Security, Test-Driven Development (TDD), DevOps, Scrum, Design Patterns, Microservices
-          
-          Technologies: Laravel, Amazon Web Services (AWS), MySQL, Apache Kafka, Redis, Go (Programming Language), PHP, MongoDB, Kubernetes, Docker, Cassandra, ClickHouse, RabbitMQ
-          
-          Insider is a leading AI-powered marketing platform founded in 2012 in Istanbul, Turkey. The company specializes in optimizing marketing strategies by connecting data and predicting user behavior, enabling marketers to create personalized, cross-channel customer experiences at scale.
+          • Refactored newsletter and email-delivery systems from legacy structures toward clearer service boundaries.
+
+          • Worked on Go services, PHP/Laravel components, messaging, security remediation, and data migration across MySQL, Cassandra, and ClickHouse.
+
+          • Improved maintainability through architecture review, repository-service patterns, and clearer data-flow design.
+
+          • Built supporting services for A/B testing, spam detection, and queue-based processing.
+
+          Technologies: Go, PHP, Laravel, AWS, MySQL, Kafka, Redis, MongoDB, Kubernetes, Docker, Cassandra, ClickHouse, RabbitMQ.
 
 
       - layout: left
@@ -214,26 +171,17 @@ content:
         link_text: bamilo.com
         sub_title: Senior Software Engineer / Head of development
         caption: Tehran Aug 2015 - Apr 2019.
-        quote: As Senior Software Engineer and Head of Development at Bamilo, Iran's leading online marketplace, I led the development of key systems and managed a growing team to enhance operational efficiency and user experience.
+        quote: Technical ownership, backend architecture, internal platforms, logistics systems, and team leadership for an e-commerce marketplace.
         description: | # this will include new lines to allow paragraphs
-          • Team Leadership: Initiated and expanded the development team, fostering a collaborative environment to drive product innovation and system enhancements.
-          
-          • Performance Management Portal (PMP): Developed a centralized system for Bamilo's warehouse operations, enabling real-time monitoring, analysis, and optimization of processes to boost efficiency and productivity.
-          
-          • Seller Center System: Designed and implemented a comprehensive platform for sellers to manage products, orders, and customer interactions, enhancing the marketplace experience.
-          
-          • Data Migration: Engineered an online data pipeline using Kafka to seamlessly migrate all Seller Center products, ensuring zero data loss and system continuity.
-          
-          • Delivery Management Service: Developed a nationwide package delivery tracking system, optimizing routes and monitoring delivery personnel to improve logistics efficiency.
-          
-          • Inventory Management: Addressed data collision issues in the main product inventory stock check service by creating a product-based load balancer microservice, ensuring accurate stock levels.
-          
-          
-          Technical Skills: Leadership, Object-Oriented Programming (OOP), Management, Design Patterns, Microservices
-          
-          Technologies: Laravel, RabbitMQ, Amazon Web Services (AWS), MySQL, Apache Kafka, DevOps, Scrum, Redis, Go (Programming Language), PHP, GraphQL, MongoDB, Kubernetes, Cassandra
-          
-          Bamilo was an e-commerce marketplace in Iran, offering a wide range of products including electronics, fashion, and home appliances. Founded in 2014, the company operated until March 2019.
+          • Built and led engineering work across seller tooling, warehouse operations, delivery tracking, inventory services, and internal platforms.
+
+          • Owned backend architecture, service design, team growth, and technical review for marketplace operations systems.
+
+          • Designed Kafka-based data migration pipelines and service improvements for inventory and seller-centre workflows.
+
+          • Helped convert operational problems into maintainable systems for logistics, warehouse, seller, and marketplace teams.
+
+          Technologies: PHP, Laravel, Go, MySQL, Kafka, RabbitMQ, Redis, GraphQL, MongoDB, Kubernetes, Cassandra, AWS.
 
 
       - layout: left
@@ -242,48 +190,74 @@ content:
         link_text: sepehrmahan.com
         sub_title: Senior Software Engineer
         caption: Tehran Aug 2012 - Jul 2015.
-        quote: Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
+        quote: Backend application development, workflow systems, process automation, and organisational collaboration platforms.
         description: | # this will include new lines to allow paragraphs
-          • Collaborated with internal teams to create an innovative suggestion system for private organizations, streamlining communication and fostering innovation.
-          
-          • Designed a user-friendly task management solution for private organizations, enhancing productivity and workflow efficiency.
-          
-          • Developed a custom social network for organizations using PHP-Fox, prioritizing collaboration, privacy, and security.
-          
-          • Built a form builder and workflow module for PHP-Fox, simplifying data collection and process automation with an intuitive interface.
-          
-          • Created a mobile application API for seamless PHP-Fox social network integration, ensuring compatibility across devices and operating systems.
-          
-          • Constructed a task list management system for government organizations, improving efficiency, accountability, and reporting capabilities.
-          
-          • Developed a meeting management system for government organizations,optimizing scheduling, resource allocation,and seamless coordination with existing tools.
-          
-          
-          Tech stack: Linux · PHP · JavaScript · Python · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns · OOP · Teamwork. 
+          • Developed suggestion, task-management, meeting-management, form-builder, workflow, social-network, and mobile API systems.
 
-  - title: Projects # Title for the section
+          • Focused on backend services, process automation, maintainable application foundations, and practical delivery for private and public-sector clients.
+
+          • Worked across PHP, JavaScript, Python, Node.js, SQL/MySQL, Redis, MongoDB, RabbitMQ, Linux, OOP, and design patterns.
+
+  - title: Selected Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Pepper.com - The World's Largest Deal Community
+        title: IRaven Media
+        caption: Personal platform project
+        sub_title: Workspace-scoped media operations platform
+        quote: Go API and Next.js dashboard with production-minded platform, release, observability, and workspace foundations.
+        description: | # this will include new lines to allow paragraphs
+          • Designed a modular Go API foundation with Echo, Cobra, GORM, MySQL, Redis-ready cache/queue configuration, NATS-ready event bus, JWT authentication, workspace roles, audit logs, API-token scopes, and Prometheus-compatible metrics endpoints.
+
+          • Built production-oriented health, readiness, migrations, workers, scheduling, publishing, and operational runbook patterns.
+
+          • Coordinated API and web release workflows with Kubernetes namespace separation, Argo CD apps, tagged images, and verification steps.
+
+          Technologies: Go, Echo, Cobra, GORM, MySQL, Redis, NATS, JWT, Next.js, Kubernetes, Argo CD, Prometheus-style metrics.
+
+      - layout: left
+        title: ChanceGoal
+        caption: Personal product platform
+        sub_title: Backend, web/admin, iOS, onboarding, notifications, and operational tooling
+        quote: Multi-surface product architecture with Go services, client applications, authentication, onboarding, and notification foundations.
+        description: | # this will include new lines to allow paragraphs
+          • Worked across backend APIs, admin/web clients, mobile flows, and local runtime automation.
+
+          • Implemented backend foundations around authentication, onboarding state, notifications, persistence, and service-level tests.
+
+          • Used the project to refine maintainable platform patterns across product architecture, API design, deployment, and developer workflow concerns.
+
+          Technologies: Go, Echo, GORM, MySQL, web/admin clients, iOS, Docker Compose, tests, automation scripts.
+
+      - layout: left
+        title: Personal Portfolio Platform
+        caption: Personal site platform
+        sub_title: Structured content model, static rendering, and content administration
+        quote: A maintainable personal website platform with validated content, clear source data, and production-minded publishing.
+        description: | # this will include new lines to allow paragraphs
+          • Migrated the profile site toward a structured content model with static rendering and validated content.
+
+          • Built a maintainable publishing foundation with clear source data, deployment documentation, and MySQL-backed content administration.
+
+          • Focused on safe automation, clear operational boundaries, and long-term maintainability.
+
+          Technologies: Next.js, Node.js, MySQL, structured content, content validation, static rendering, deployment documentation.
+
+      - layout: left
+        title: Pepper.com Platform Work
         caption: Remote / Berlin 2021 - 2022
         sub_title: Senior Software Engineer / Associated with KolayIK
-        quote: Ensured microservices' security by checking and rehabilitating them against hacking attacks.
+        quote: Marketplace microservices, product/deal flows, GraphQL features, image service work, and security-oriented review.
         description: | # this will include new lines to allow paragraphs
-          • Collaborated with the Supernova and Microservice teams to develop new features and maintain the product and services.
+          • Collaborated with Supernova and microservice teams to develop features, maintain services, and improve backend behaviour.
 
-          • Redesigned and developed the deal submission, product listing, and product detail pages using GraphQL.
+          • Redesigned and developed deal submission, product listing, and product detail flows using GraphQL.
 
-          • Developed a GDPR-compliant image microservice that applies requested filters and can handle over 5,000 unique images per minute using 20 instances.
+          • Worked on an image microservice, near-cache behaviour, load-balancing improvements, and microservice security review.
 
-          • Checking and rehabilitating microservices against hacking attacks.
+          Technologies: Go, Kubernetes, PHP, Laravel, GraphQL, Redis, Elasticsearch, AWS, microservices, TDD.
 
-          • Improved the functionality of our microservices near cache by customizing loadbalancing.
-
-
-          Tech stack: Go · Microservice · Kubernetes · PHP · Laravel · GraphQL · OOP · Design Patterns · TDD · ElasticSearch · Redis · AWS.
-
-  - title: Experience # Title for the section
+  - title: Education # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
