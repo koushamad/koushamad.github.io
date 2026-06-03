@@ -227,16 +227,28 @@ content:
           • Used the project to refine maintainable platform patterns across product architecture, API design, deployment, and developer workflows.
 
       - layout: left
-        title: Personal Portfolio Platform
-        caption: Structured profile and publishing platform
-        sub_title: Next.js, structured content, static rendering, content administration
-        quote: Personal site platform focused on maintainable content, validated publishing, and clear operational boundaries.
+        title: Zenory.fit
+        caption: Multi-platform wellness ecosystem
+        sub_title: Next.js 15, TypeScript, Supabase, iOS (Swift), Garmin ConnectIQ, browser extension
+        quote: Cross-platform wellness product covering meditation, sleep, mindfulness, and fitness across web, iOS, Garmin, and browser.
         description: |
-          • Migrated the profile site toward a structured content model with static rendering and validated content.
+          • Built a multi-platform product spanning a Next.js marketing and web app, iOS app, Garmin ConnectIQ watch app, and a Firefox browser extension backed by Supabase.
 
-          • Built a maintainable publishing foundation with clear source data, deployment documentation, and MySQL-backed content administration.
+          • Designed a creator and instructor platform (Zenory Senseis) alongside feature-specific flows for meditation, sleep, music, routines, and goals.
 
-          • Focused on safe automation, clear operational boundaries, and long-term maintainability.
+          • Established shared content, deployment, and operational foundations across web, native, and wearable targets with consistent delivery patterns.
+
+      - layout: left
+        title: Socc360.com
+        caption: Global football intelligence platform
+        sub_title: Next.js 15, React 19, TypeScript, Tailwind v4, iOS (Swift), real-time data integration
+        quote: Premium football information product delivering live scores, fixtures, teams, players, leagues, and news across web and iOS.
+        description: |
+          • Built a web and iOS product consuming a live football data API across 15 routes covering scores, fixtures, leagues, teams, players, match timelines, and editorial news.
+
+          • Designed a shared "Cobalt & Amber" design system used consistently across the web app and iOS app, including motion, typography, and colour tokens.
+
+          • Focused on real-time overlays, editorial-quality presentation, and a strict information-only product boundary with no betting or market features.
 
       - layout: left
         title: Pepper.com Platform Work
