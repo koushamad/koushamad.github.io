@@ -203,18 +203,6 @@ content:
     layout: list
     content:
       - layout: left
-        title: IRaven Media
-        caption: Workspace-scoped media operations platform
-        sub_title: Go API, Next.js dashboard, Kubernetes-oriented production workflow
-        quote: Multi-tenant-style workspace platform with production-minded API, worker, observability, and release foundations.
-        description: |
-          • Designed a modular Go API foundation with HTTP services, console commands, migrations, workers, scheduling, workspace roles, audit logs, API-token scopes, and metrics endpoints.
-
-          • Built production-oriented health, readiness, queue/cache/event-bus configuration, release runbooks, and operational verification patterns.
-
-          • Coordinated API and web release workflows with Kubernetes namespace separation, Argo CD apps, tagged images, and production checks.
-
-      - layout: left
         title: ChanceGoal
         caption: Product platform and backend architecture
         sub_title: Go API, admin/web clients, iOS, onboarding, notifications, operational tooling
