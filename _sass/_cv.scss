@@ -14,7 +14,13 @@
 // ── Palette (sampled from the reference PDF) ─────────────────────────────────
 $charcoal:   #4f4f4f; // the header band
 $teal:       #2c806e; // section headings, discs, rules, column divider
-$mint:       #45e0c2; // company / entry names
+// The reference sets company / entry names in mint #45e0c2, but that measures
+// 1.65:1 on white — below WCAG AA (4.5:1) and below even AA-large (3:1), so the
+// employer names, some of the most important words on the sheet, all but vanish
+// on a greyscale office printer. This is the same hue (168°) and saturation as
+// the sampled mint, darkened to 5.04:1, which sits beside the heading teal
+// without collapsing into it.
+$teal-deep:  #157d68; // company / entry names
 $link-green: #007655; // the underlined link row
 $ink:        #565556; // body copy, role titles
 $ink-soft:   #666666; // bullets and labels
@@ -290,7 +296,7 @@ body.cv-body {
 }
 
 .cv-org {
-  color: $mint;
+  color: $teal-deep;
 
   a {
     color: inherit;

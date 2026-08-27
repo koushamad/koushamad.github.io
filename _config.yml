@@ -1,6 +1,8 @@
 # Site configuration
 title: Systems & Infrastructure Architect
-repository: sproogen/resume-theme
+# This site's own repo. jekyll-github-metadata reads it to resolve `site.github`
+# off GitHub Pages; it used to name the resume theme this site no longer uses.
+repository: koushamad/koushamad.github.io
 favicon: images/raven.svg
 
 # Content configuration version
