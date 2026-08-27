@@ -1,0 +1,56 @@
+{%- comment -%}
+  One entry in the wide main column, on the reference design's timeline.
+
+  Shape of a role in the reference:
+
+      ── Studocu, Amsterdam.                 <- org (mint) + place (grey)
+         Senior software engineer, Aug 2022  <- role (bold) + dates (light)
+         Responsibilities and Achievements:  <- label, experience sections only
+         • …                                 <- bullets
+         Tech stack: a · b · c               <- comes from the description
+
+  `caption` in _config.yml carries both place and dates joined by "·"
+  ("Amsterdam, Netherlands · Jul 2023 — Present"), so it is split back into
+  the two slots. A caption with no "·" is treated as the place, which is what
+  reads correctly for the project, education and recommendation entries.
+
+  The heading lines are written on one physical line each: Liquid's whitespace
+  stripping would otherwise eat the single space that separates the company
+  from its location, and the role from its dates.
+
+  Parameters: item, is_experience.
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- assign place = '' -%}
+{%- assign dates = '' -%}
+{%- assign cap = item.caption | default: '' | strip -%}
+{%- if cap != '' -%}
+  {%- if cap contains '·' -%}
+    {%- assign cp = cap | split: '·' -%}
+    {%- assign place = cp[0] | strip -%}
+    {%- assign dates = cp | slice: 1, 8 | join: ' · ' | strip -%}
+  {%- else -%}
+    {%- assign place = cap -%}
+  {%- endif -%}
+{%- endif -%}
+
+<article class="cv-entry">
+  <span class="cv-entry-tick" aria-hidden="true"></span>
+
+  <h3 class="cv-entry-head"><span class="cv-org">{% if item.link %}<a href="{{ item.link }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}{% if place != '' %},{% endif %}</span>{% if place != '' %} <span class="cv-place">{{ place }}.</span>{% endif %}</h3>
+
+  {%- if item.sub_title or dates != '' -%}
+  <p class="cv-entry-role">{% if item.sub_title %}<span class="cv-role">{{ item.sub_title }}{% if dates != '' %},{% endif %}</span>{% endif %}{% if dates != '' %} <span class="cv-dates">{{ dates }}.</span>{% endif %}</p>
+  {%- endif -%}
+
+  {%- if item.quote and item.quote != '' -%}
+    <p class="cv-entry-lead">{{ item.quote }}</p>
+  {%- endif -%}
+
+  {%- if item.description and item.description != '' -%}
+    {%- if include.is_experience == true -%}
+      <p class="cv-label">Responsibilities and Achievements:</p>
+    {%- endif -%}
+    {%- include cv-prose.html description=item.description -%}
+  {%- endif -%}
+</article>

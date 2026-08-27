@@ -1,32 +1,60 @@
 {%- comment -%}
-  Local override of sproogen/resume-theme's _includes/about.html.
+  Page-one masthead: photo, name, link row, contact line.
 
-  Two changes from upstream:
+  The profile photo is a real <img>, never a CSS background. Browsers drop
+  background images when printing unless the reader has ticked "Background
+  graphics", so a background version simply vanishes from the exported PDF.
+  Set `export_photo: false` in _config.yml to drop the photo from the export
+  only; it stays on screen.
 
-  1. The profile photo is a real <img> instead of a <span> with a CSS
-     background-image. Browsers drop background images when printing unless the
-     user ticks "Background graphics", so the background version vanished from
-     the exported PDF. An <img> prints without that caveat.
-
-  2. The photo column is no longer marked `.no-print`. Upstream hides the photo
-     when printing; Kousha's previous CV carried one, so it is kept in the
-     export. Set `export_photo: false` in _config.yml to follow upstream.
-
-  Upstream: https://github.com/sproogen/resume-theme/blob/master/_includes/about.html
+  The two full-bleed rules above and below the contact line are drawn here
+  rather than as borders on the row, because in the reference design they run
+  the whole width of the paper, past the page margins.
 {%- endcomment -%}
-<div class="container intro-container">
-  <h3 id="{{ site.about_title | slugify | default: 'about-me' }}">{{ site.about_title | default:
-  "About Me" }}</h3>
-  <div class="row clearfix">
-    {%- if site.about_profile_image -%}
-      <div class="col-xs-12 col-sm-4 col-md-3{% if site.export_photo == false %} no-print{% endif %}">
-        <img class="profile-img profile-img-el"
-             src="{{ site.about_profile_image | relative_url }}"
-             alt="{{ site.name | default: 'Profile photo' }}">
-      </div>
-    {%- endif -%}
-    <div class="{{ 'col-xs-12 ' }}{%- if site.about_profile_image -%}col-sm-8 col-md-9 col-print-12{%- endif -%}">
-      {{ site.about_content | strip | markdownify }}
+<header class="cv-masthead">
+
+  {%- if site.about_profile_image -%}
+    <div class="cv-photo-wrap{% if site.export_photo == false %} no-print{% endif %}">
+      <img class="cv-photo"
+           src="{{ site.about_profile_image | relative_url }}"
+           alt="{{ site.name | default: 'Profile photo' }}">
     </div>
-  </div>
-</div>
+  {%- endif -%}
+
+  <h1 class="cv-name">{{ site.name | default: site.title }}</h1>
+
+  <p class="cv-linkrow">
+    {%- assign sep = '' -%}
+    {%- if site.email -%}
+      <a href="mailto:{{ site.email }}">Email</a>{%- assign sep = ', ' -%}
+    {%- endif -%}
+    {%- if site.linkedin_username -%}
+      {{ sep }}<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">Linkedin</a>{%- assign sep = ', ' -%}
+    {%- endif -%}
+    {%- if site.github_username -%}
+      {{ sep }}<a href="https://github.com/{{ site.github_username }}/">Github</a>{%- assign sep = ', ' -%}
+    {%- endif -%}
+  </p>
+
+  <div class="cv-rule cv-rule-bleed"></div>
+
+  <p class="cv-contact">
+    {%- comment -%}
+      Liquid has no array append, so the parts are accumulated into a string
+      with an improbable delimiter and split back out.
+    {%- endcomment -%}
+    {%- assign raw = '' -%}
+    {%- for link in site.additional_links -%}
+      {%- if link.title -%}{%- assign raw = raw | append: link.title | append: '|~|' -%}{%- endif -%}
+    {%- endfor -%}
+    {%- if site.phone -%}{%- assign raw = raw | append: site.phone | append: '|~|' -%}{%- endif -%}
+    {%- if site.email -%}{%- assign raw = raw | append: site.email | append: '|~|' -%}{%- endif -%}
+    {%- assign bits = raw | split: '|~|' -%}
+    {%- for bit in bits -%}
+      <span class="cv-contact-item">{{ bit }}</span>
+      {%- unless forloop.last -%}<span class="cv-contact-dot" aria-hidden="true">&bull;</span>{%- endunless -%}
+    {%- endfor -%}
+  </p>
+
+  <div class="cv-rule cv-rule-bleed"></div>
+</header>

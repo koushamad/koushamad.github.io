@@ -2,25 +2,17 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import 'modern-resume-theme';
+@import 'cv';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Export to PDF
 //
-// The export is the browser's own print output, so these rules are what make
-// the exported file look right. Everything here is either the button itself or
-// a print correction.
+// The export is the browser's own print output, so the print rules in _cv.scss
+// are what make the exported file look right. Everything here is the button
+// itself — it never appears in the export, because it carries `.no-print`.
 // ─────────────────────────────────────────────────────────────────────────────
 
-$export-accent: #1e88a8;
-
-// The profile photo is an <img> in the local about.html override (a CSS
-// background would not survive printing). The theme's `.profile-img` sizes it
-// as a 200px circle; `object-fit` reproduces what `background-size: cover` did.
-.profile-img-el {
-  object-fit: cover;
-  object-position: center;
-}
+$export-accent: $teal;
 
 .export-cv-button {
   position: fixed;
@@ -36,9 +28,10 @@ $export-accent: #1e88a8;
   border: 0;
   border-radius: 999px;
 
-  font-family: inherit;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-family: $sans;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   line-height: 1;
   color: #fff;
   background-color: $export-accent;
@@ -67,7 +60,7 @@ $export-accent: #1e88a8;
 }
 
 .export-cv-icon {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   line-height: 1;
 }
 
@@ -93,62 +86,5 @@ $export-accent: #1e88a8;
     &:active {
       transform: none;
     }
-  }
-}
-
-@media print {
-  // The theme's dark mode carries no print rules, so a dark page prints as
-  // pale grey on white. The button's JS also strips `.dark` before printing;
-  // this is the belt-and-braces half, covering print-to-PDF paths that never
-  // fire beforeprint (some headless renderers, "Save as PDF" extensions).
-  .dark {
-    background-color: #fff !important;
-    color: #000 !important;
-
-    a {
-      color: #000 !important;
-    }
-
-    mark {
-      color: #000 !important;
-      background-color: transparent !important;
-    }
-  }
-
-  // Sensible margins for A4/Letter; the theme sets none of its own.
-  @page {
-    margin: 14mm 12mm;
-  }
-
-  html,
-  body {
-    background: #fff !important;
-  }
-
-  // Keep an individual role and its bullets together, so a job title is never
-  // orphaned at the foot of a page.
-  //
-  // This must target the ITEM, not the section. `.container` is the whole
-  // section wrapper ("Professional Experience" and every role inside it), and
-  // making that unbreakable pushes each section onto a fresh page and leaves
-  // most of the preceding one blank. The theme's per-item element is
-  // `.row.layout`.
-  .row.layout {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  h3,
-  h4,
-  h5 {
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  // Render images at full fidelity rather than letting the print pipeline
-  // wash them out.
-  img {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
   }
 }

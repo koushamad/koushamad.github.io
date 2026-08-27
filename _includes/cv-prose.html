@@ -1,0 +1,47 @@
+{%- comment -%}
+  Renders one markdown body — a `description`, or the `content` of a
+  `layout: text` section.
+
+  _config.yml writes bullets as literal "• " prefixes. Markdown does not treat
+  "•" as a list marker, so markdownify alone yields paragraphs that merely
+  start with a bullet character: no hanging indent, no list semantics. This
+  walks the block line by line instead, so a real <ul> comes out, and so the
+  trailing "**Tech stack:** …" line that follows the bullets is recognised as
+  its own paragraph rather than being swallowed by the last bullet.
+
+  Parameters:
+    description — the markdown block
+    mode        — 'markdown' to skip the line walk and hand the whole block to
+                  markdownify (used for `layout: text` sections, which are
+                  ordinary markdown and have no bullet convention)
+    class       — extra class on the wrapper
+{%- endcomment -%}
+{%- assign desc = include.description | strip -%}
+{%- if desc != '' -%}
+<div class="cv-copy {{ include.class }}">
+  {%- if include.mode == 'markdown' -%}
+    {{ desc | markdownify }}
+  {%- else -%}
+    {%- assign lines = desc | newline_to_br | strip_newlines | split: '<br />' -%}
+    {%- assign inlist = false -%}
+    {%- for raw in lines -%}
+      {%- assign line = raw | strip -%}
+      {%- if line == '' -%}{%- continue -%}{%- endif -%}
+      {%- assign marker = line | slice: 0, 1 -%}
+      {%- assign html = line | remove_first: '•' | strip | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip -%}
+      {%- if marker == '•' -%}
+        {%- unless inlist -%}<ul class="cv-bullets">{%- assign inlist = true -%}{%- endunless -%}
+        <li>{{ html }}</li>
+      {%- else -%}
+        {%- if inlist -%}</ul>{%- assign inlist = false -%}{%- endif -%}
+        {%- if line contains 'Tech stack' -%}
+          <p class="cv-tech">{{ html }}</p>
+        {%- else -%}
+          <p>{{ html }}</p>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if inlist -%}</ul>{%- endif -%}
+  {%- endif -%}
+</div>
+{%- endif -%}

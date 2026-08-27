@@ -394,7 +394,19 @@ footer_show_references: true
 # references_title: References on request (Override references text)
 
 # Build settings
-remote_theme: sproogen/resume-theme
+#
+# No `remote_theme`. The design is Kousha's own 2023 CV, rebuilt locally in
+# _layouts/, _includes/ and _sass/ — nothing is inherited from a theme gem.
+
+# Layout: sections listed here render in the narrow right-hand sidebar; every
+# other section goes in the wide main column. Titles must match `content:`
+# exactly. Unlisted sections whose title mentions skills, technologies,
+# education, certificates, languages, tools or links land in the sidebar too,
+# so renaming one does not silently move it. See _includes/is-sidebar.html.
+sidebar_sections:
+  - Technologies
+  - Education / Certifications
+  - Links
 
 sass:
   sass_dir: _sass

@@ -1,0 +1,48 @@
+{%- comment -%}
+  The white glyph inside a section heading's filled teal disc.
+
+  Inline SVG rather than an icon font or a background image: both of those are
+  dropped or mangled by print pipelines, and the exported PDF is the primary
+  deliverable here. Chosen from the section title so renaming a section still
+  produces a sensible glyph, with a neutral diamond as the fallback.
+
+  Parameters: title — the section heading text.
+{%- endcomment -%}
+{%- assign t = include.title | downcase -%}
+{%- assign glyph = 'default' -%}
+{%- if t contains 'summary' or t contains 'profile' or t contains 'about' -%}{%- assign glyph = 'person' -%}
+{%- elsif t contains 'experience' or t contains 'employment' or t contains 'career' -%}{%- assign glyph = 'work' -%}
+{%- elsif t contains 'project' -%}{%- assign glyph = 'layers' -%}
+{%- elsif t contains 'expertise' or t contains 'highlight' or t contains 'strength' -%}{%- assign glyph = 'spark' -%}
+{%- elsif t contains 'technolog' or t contains 'skill' or t contains 'tool' -%}{%- assign glyph = 'asterisk' -%}
+{%- elsif t contains 'education' or t contains 'certific' or t contains 'course' -%}{%- assign glyph = 'cap' -%}
+{%- elsif t contains 'language' -%}{%- assign glyph = 'globe' -%}
+{%- elsif t contains 'recommend' or t contains 'linkedin' or t contains 'reference' or t contains 'testimonial' -%}{%- assign glyph = 'linkedin' -%}
+{%- elsif t contains 'link' or t contains 'contact' -%}{%- assign glyph = 'globe' -%}
+{%- endif -%}
+<svg class="cv-sec-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  {%- case glyph -%}
+  {%- when 'person' -%}
+    <circle cx="12" cy="8.6" r="3.5"/>
+    <path d="M12 13.2c-3.6 0-6.4 2.1-6.4 4.8v1.4h12.8v-1.4c0-2.7-2.8-4.8-6.4-4.8z"/>
+  {%- when 'work' -%}
+    <path d="M9.4 5.2h5.2c.7 0 1.2.5 1.2 1.2v1.3h2.6c.8 0 1.4.6 1.4 1.4v8.3c0 .8-.6 1.4-1.4 1.4H5.6c-.8 0-1.4-.6-1.4-1.4V9.1c0-.8.6-1.4 1.4-1.4h2.6V6.4c0-.7.5-1.2 1.2-1.2zm.7 2.5h3.8v-.9h-3.8v.9z"/>
+  {%- when 'layers' -%}
+    <path d="M12 4.4 3.6 8.7 12 13l8.4-4.3L12 4.4z"/>
+    <path d="m5.9 12.1-2.3 1.2L12 17.6l8.4-4.3-2.3-1.2L12 15.1l-6.1-3z"/>
+  {%- when 'spark' -%}
+    <path d="M12 3.8 13.9 9l5.2 1.9-5.2 1.9L12 18l-1.9-5.2L4.9 11l5.2-1.9L12 3.8z"/>
+  {%- when 'asterisk' -%}
+    <path d="M10.9 4.2h2.2v5.1l3.6-3.6 1.6 1.6-3.6 3.6h5.1v2.2h-5.1l3.6 3.6-1.6 1.6-3.6-3.6v5.1h-2.2v-5.1l-3.6 3.6-1.6-1.6 3.6-3.6H4.2v-2.2h5.1L5.7 7.3l1.6-1.6 3.6 3.6V4.2z"/>
+  {%- when 'cap' -%}
+    <path d="M12 4.6 2.4 9.2 12 13.8l9.6-4.6L12 4.6z"/>
+    <path d="M6.4 12.3v3.4c0 1.6 2.5 2.9 5.6 2.9s5.6-1.3 5.6-2.9v-3.4L12 15.1l-5.6-2.8z"/>
+    <path d="M20.4 10.4h1.3v4.9h-1.3z"/>
+  {%- when 'globe' -%}
+    <path d="M12 3.6a8.4 8.4 0 1 0 0 16.8 8.4 8.4 0 0 0 0-16.8zm0 1.6c1 0 2.2 1.6 2.8 4.2H9.2C9.8 6.8 11 5.2 12 5.2zM8.9 11h6.2c.1.6.1 1.3.1 2s0 1.4-.1 2H8.9c-.1-.6-.1-1.3-.1-2s0-1.4.1-2zm-1.6 0c-.1.6-.1 1.3-.1 2s0 1.4.1 2H5.4a6.8 6.8 0 0 1 0-4h1.9zm9.4 0h1.9a6.8 6.8 0 0 1 0 4h-1.9c.1-.6.1-1.3.1-2s0-1.4-.1-2zM6.1 9.4a6.9 6.9 0 0 1 3.2-3.1c-.5.9-.9 1.9-1.1 3.1H6.1zm9.7 0c-.2-1.2-.6-2.2-1.1-3.1a6.9 6.9 0 0 1 3.2 3.1h-2.1zM12 18.8c-1 0-2.2-1.6-2.8-4.2h5.6c-.6 2.6-1.8 4.2-2.8 4.2zm-2.7-.2a6.9 6.9 0 0 1-3.2-3.1h2.1c.2 1.2.6 2.3 1.1 3.1zm5.4 0c.5-.8.9-1.9 1.1-3.1h2.1a6.9 6.9 0 0 1-3.2 3.1z"/>
+  {%- when 'linkedin' -%}
+    <path d="M6.6 9.5h3v9.4h-3V9.5zm1.5-4.6a1.8 1.8 0 1 1 0 3.5 1.8 1.8 0 0 1 0-3.5zM11.4 9.5h2.9v1.3h.1c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.6v5.1h-3v-4.5c0-1.1 0-2.5-1.5-2.5s-1.7 1.2-1.7 2.4v4.6h-3V9.5z"/>
+  {%- else -%}
+    <path d="m12 4.6 7.4 7.4-7.4 7.4-7.4-7.4L12 4.6z"/>
+  {%- endcase -%}
+</svg>

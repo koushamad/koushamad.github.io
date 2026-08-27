@@ -1,0 +1,33 @@
+{%- comment -%}
+  Decides whether a section belongs in the narrow right-hand sidebar.
+  Outputs the bare string "true" or "false", so callers should capture it.
+
+  Two rules, in order:
+    1. an exact title match against `sidebar_sections` in _config.yml;
+    2. otherwise a keyword match on the title.
+
+  The keyword fallback exists because the content in _config.yml is edited
+  independently of this theme — renaming "Technologies" to "Skills" should
+  keep it in the sidebar rather than silently dumping it into the main column.
+  Anything unrecognised goes to the main column, which is the safe default:
+  it is the column with room for it.
+
+  Parameters: section.
+{%- endcomment -%}
+{%- assign title = include.section.title | default: '' -%}
+{%- assign lower = title | downcase -%}
+{%- assign verdict = 'false' -%}
+{%- for named in site.sidebar_sections -%}
+  {%- if named == title -%}{%- assign verdict = 'true' -%}{%- endif -%}
+{%- endfor -%}
+{%- if verdict == 'false' -%}
+  {%- comment -%}
+    "links" rather than "link", so that a "LinkedIn Recommendations" section
+    is not swept into the sidebar — it belongs in the wide column.
+  {%- endcomment -%}
+  {%- assign keys = 'technolog,skill,education,certific,language,links,tool,highlight' | split: ',' -%}
+  {%- for key in keys -%}
+    {%- if lower contains key -%}{%- assign verdict = 'true' -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{{- verdict -}}
