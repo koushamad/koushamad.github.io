@@ -1,0 +1,32 @@
+{%- comment -%}
+  Local override of sproogen/resume-theme's _includes/about.html.
+
+  Two changes from upstream:
+
+  1. The profile photo is a real <img> instead of a <span> with a CSS
+     background-image. Browsers drop background images when printing unless the
+     user ticks "Background graphics", so the background version vanished from
+     the exported PDF. An <img> prints without that caveat.
+
+  2. The photo column is no longer marked `.no-print`. Upstream hides the photo
+     when printing; Kousha's previous CV carried one, so it is kept in the
+     export. Set `export_photo: false` in _config.yml to follow upstream.
+
+  Upstream: https://github.com/sproogen/resume-theme/blob/master/_includes/about.html
+{%- endcomment -%}
+<div class="container intro-container">
+  <h3 id="{{ site.about_title | slugify | default: 'about-me' }}">{{ site.about_title | default:
+  "About Me" }}</h3>
+  <div class="row clearfix">
+    {%- if site.about_profile_image -%}
+      <div class="col-xs-12 col-sm-4 col-md-3{% if site.export_photo == false %} no-print{% endif %}">
+        <img class="profile-img profile-img-el"
+             src="{{ site.about_profile_image | relative_url }}"
+             alt="{{ site.name | default: 'Profile photo' }}">
+      </div>
+    {%- endif -%}
+    <div class="{{ 'col-xs-12 ' }}{%- if site.about_profile_image -%}col-sm-8 col-md-9 col-print-12{%- endif -%}">
+      {{ site.about_content | strip | markdownify }}
+    </div>
+  </div>
+</div>

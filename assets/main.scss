@@ -3,3 +3,152 @@
 ---
 
 @import 'modern-resume-theme';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Export to PDF
+//
+// The export is the browser's own print output, so these rules are what make
+// the exported file look right. Everything here is either the button itself or
+// a print correction.
+// ─────────────────────────────────────────────────────────────────────────────
+
+$export-accent: #1e88a8;
+
+// The profile photo is an <img> in the local about.html override (a CSS
+// background would not survive printing). The theme's `.profile-img` sizes it
+// as a 200px circle; `object-fit` reproduces what `background-size: cover` did.
+.profile-img-el {
+  object-fit: cover;
+  object-position: center;
+}
+
+.export-cv-button {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 999;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 999px;
+
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background-color: $export-accent;
+
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    background-color: darken($export-accent, 8%);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  // Keyboard users must be able to see where they are.
+  &:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px $export-accent;
+  }
+}
+
+.export-cv-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+// On narrow screens the label costs more than it explains; keep the icon.
+@media screen and (max-width: 480px) {
+  .export-cv-button {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.85rem;
+  }
+
+  .export-cv-label {
+    display: none;
+  }
+}
+
+// Respect users who have asked for less motion.
+@media (prefers-reduced-motion: reduce) {
+  .export-cv-button {
+    transition: none;
+
+    &:hover,
+    &:active {
+      transform: none;
+    }
+  }
+}
+
+@media print {
+  // The theme's dark mode carries no print rules, so a dark page prints as
+  // pale grey on white. The button's JS also strips `.dark` before printing;
+  // this is the belt-and-braces half, covering print-to-PDF paths that never
+  // fire beforeprint (some headless renderers, "Save as PDF" extensions).
+  .dark {
+    background-color: #fff !important;
+    color: #000 !important;
+
+    a {
+      color: #000 !important;
+    }
+
+    mark {
+      color: #000 !important;
+      background-color: transparent !important;
+    }
+  }
+
+  // Sensible margins for A4/Letter; the theme sets none of its own.
+  @page {
+    margin: 14mm 12mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  // Keep an individual role and its bullets together, so a job title is never
+  // orphaned at the foot of a page.
+  //
+  // This must target the ITEM, not the section. `.container` is the whole
+  // section wrapper ("Professional Experience" and every role inside it), and
+  // making that unbreakable pushes each section onto a fresh page and leaves
+  // most of the preceding one blank. The theme's per-item element is
+  // `.row.layout`.
+  .row.layout {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h3,
+  h4,
+  h5 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  // Render images at full fidelity rather than letting the print pipeline
+  // wash them out.
+  img {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
