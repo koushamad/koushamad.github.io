@@ -1,12 +1,13 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
-
-# Keep local builds compatible with the system Ruby shipped on this machine.
-gem "ffi", "< 1.17"
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+# LOCAL PREVIEW ONLY. GitHub's classic Pages builder ignores this file and
+# uses its own pinned `github-pages` environment, so what deploys is decided
+# by GitHub, not by these gems. The old `gem "github-pages"` setup cannot run
+# on Ruby >= 3.2 (its pinned liquid 4.0.3 calls String#tainted?), so local
+# serving uses modern Jekyll with the same remote theme + plugins instead.
+gem "jekyll", "~> 4.3"
+gem "jekyll-remote-theme"
+gem "jekyll-seo-tag"
+gem "webrick"
+gem "csv"
+gem "base64"
