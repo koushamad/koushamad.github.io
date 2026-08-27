@@ -1,5 +1,5 @@
 # Site configuration
-title: Kousha Ghodsizad — Systems & Infrastructure Architect
+title: Systems & Infrastructure Architect
 repository: sproogen/resume-theme
 favicon: images/raven.svg
 
@@ -121,6 +121,8 @@ content:
 
           • Investigated bottlenecks across application and database layers and translated findings into practical engineering improvements.
 
+          **Tech stack:** Amazon Web Services (AWS) · S3 · SNS · SQS · RDS · DevOps · PHP · Laravel · Go · Big Data · Test Driven Development (TDD) · MySQL · ElasticSearch · Redis
+
       - layout: left
         title: KolayIK
         link: https://kolayik.com/
@@ -153,6 +155,8 @@ content:
 
           • Guided the team through technical review, testing workshops, and delivery decisions that balanced reliability with business needs.
 
+          **Tech stack:** Hexagonal Architecture · Microservices · Amazon Web Services (AWS) · DevOps · PHP · Go · Object-Oriented Programming (OOP) · Web Applications · Design Patterns · Big Data · Test Driven Development · MySQL · MongoDB · Symfony
+
       - layout: left
         title: Insider
         link: https://useinsider.com/
@@ -168,6 +172,8 @@ content:
           • Improved maintainability through architecture review, repository-service patterns, and clearer data-flow design.
 
           • Built supporting services for A/B testing, spam detection, and queue-based processing.
+
+          **Tech stack:** RabbitMQ · Amazon Web Services (AWS) · DevOps · PHP · Go (Programming Language) · Object-Oriented Programming (OOP) · Design Patterns · Test Driven Development · MySQL · MongoDB · Leadership · Teamwork · Management · Redis
 
       - layout: left
         title: Bamilo
@@ -185,6 +191,8 @@ content:
 
           • Helped convert operational problems into maintainable systems for logistics, warehouse, seller, and marketplace teams.
 
+          **Tech stack:** RabbitMQ · Kubernetes · GraphQL · Amazon Web Services (AWS) · DevOps · PHP · Laravel · Go (Programming Language) · Object-Oriented Programming (OOP) · Design Patterns · MySQL · MongoDB · Leadership · Management · Redis · Cassandra · Apache Kafka
+
       - layout: left
         title: Sepehr Mahan Tech
         link: https://www.sepehrmahan.com/
@@ -198,6 +206,8 @@ content:
           • Focused on backend services, process automation, maintainable application foundations, and practical delivery for private and public-sector clients.
 
           • Built the early backend and product-engineering foundation that later grew into larger platform, architecture, and leadership responsibilities.
+
+          **Tech stack:** Linux · PHP · JavaScript · Python (Programming Language) · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns · Object-Oriented Programming (OOP) · Teamwork
 
   - title: Selected Projects
     layout: list
@@ -249,6 +259,8 @@ content:
           • Redesigned and developed deal submission, product listing, and product detail flows using GraphQL.
 
           • Worked on image-service capabilities, near-cache behaviour, load-balancing improvements, and microservice security review.
+
+          **Tech stack:** GraphQL · Amazon Web Services (AWS) · SQS · SNS · RDS · S3 · ELB · Microservice · PHP · Laravel · Go · Object-Oriented Programming (OOP) · Design Patterns · Test Driven Development (TDD) · ElasticSearch · Redis
 
   - title: Technologies
     layout: list
@@ -307,6 +319,75 @@ content:
       - LinkedIn: https://www.linkedin.com/in/kousha-ghodsizad/
       - GitHub: https://github.com/koushamad/
       - Location: Amsterdam, Netherlands
+
+  - title: LinkedIn Recommendations
+    layout: list
+    content:
+      - layout: left
+        title: Ryan Klann
+        sub_title: VP of Engineering, Pepper.com
+        caption: The World's Largest Deal Community
+        quote: >-
+          Kousha is a developer who has very strong technical skills and has shown to be able to
+          take responsibility for a project and be relied upon. If there is something technical
+          that he doesn't understand he will jump right in and learn what he needs in order to
+          solve the problem. It's been a pleasure working with you.
+
+      - layout: left
+        title: Nikola Barac
+        sub_title: Head of Software Engineering, Pepper.com
+        caption: The World's Largest Deal Community
+        quote: >-
+          Kousha worked on pepper.com features as a senior PHP developer and took ownership of one
+          of our most important microservices written in Go. He demonstrated passion for tackling
+          challenging problems, staying o hours until they got solved and following up the next
+          days. While working on his daily tasks he was often paying attention to security issues
+          that many developers often neglect. Kousha was a valuable team member and I would be
+          very happy to work with him again!
+
+      - layout: left
+        title: Hooman Moghani
+        sub_title: Product Manager, Insider
+        quote: >-
+          Kousha is amazing at his job! He is one of the most brilliant engineers that I've worked
+          with, one of the best in his field, and is always willing to share best practices. He was
+          always very committed and focused on delivering on time. He was a top performer and
+          inspired us to give our best. Anyone would be lucky to have Kousha as a colleague.
+
+      - layout: left
+        title: Gizem Sevinç
+        sub_title: CTO and Co-founder, Kolay
+        quote: >-
+          Kousha is a talented software developer that I thoroughly enjoy working with. Thanks to
+          its extensive knowledge in backend technologies, it provides effective and fast solutions
+          to many problems. Highly recommended if you are working with PHP, Phyton, or Go.
+
+      - layout: left
+        title: Mehrab Sadooghianzadeh
+        sub_title: CTO, Dreamdays
+        quote: >-
+          Kousha is a talented expert in many development areas.
+
+      - layout: left
+        title: Mana Azizi
+        sub_title: Group Product Director, Bamilo (Rocket Internet SE)
+        quote: >-
+          I believe Kousha as a talented full-stack software developer with a creative mind which
+          is coming not only from his intelligence but also from his broad experience. He posses
+          strong analytical mind which is absolutely invaluable for a developer. His calm attitude
+          in addition to his knowledge and experience makes him a precious asset for any company
+          targeting large-scale platforms development.
+
+      - layout: left
+        title: Raha Molaie
+        sub_title: HR Administrator, Bamilo (Rocket Internet SE)
+        quote: >-
+          It was a short time after Bamilo (our former company) that we both worked together
+          closely but with no doubt, Kousha is one of the maturest people I've ever worked with and
+          I can call his personality "Self-HR", I've never heard that word before but I like to use
+          it due to defining Kousha's behavior and leadership ability and also being easy going and
+          helpfulness. He always gave me hand on colleagues' issues in the best way. He definitely
+          is a valuable asset to any organization.
 
 # Footer
 footer_show_references: true
