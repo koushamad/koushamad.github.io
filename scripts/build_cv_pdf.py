@@ -31,6 +31,10 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUT = ROOT / "assets" / "Kousha-Ghodsizad-CV.pdf"
 
+# The website lists every recommendation; the PDF keeps only these, in this
+# order (most senior / most concrete first) so it stays tight.
+PDF_RECOMMENDATIONS = ["Nikola Barac", "Ryan Klann", "Hooman Moghani"]
+
 
 def chrome_binary():
     for candidate in (
@@ -113,8 +117,13 @@ def load():
         education.append({"school": e["title"], "degree": e.get("sub_title", ""),
                           "years": (e.get("caption") or "").strip()})
 
+    by_name = {e["title"]: e for e in entries("LinkedIn Recommendations")}
+    missing = [n for n in PDF_RECOMMENDATIONS if n not in by_name]
+    if missing:
+        sys.exit(f"recommendations not found in _config.yml: {missing}")
     recs = []
-    for e in entries("LinkedIn Recommendations"):
+    for name in PDF_RECOMMENDATIONS:
+        e = by_name[name]
         recs.append({"who": e["title"], "role": e.get("sub_title", ""),
                      "quote": " ".join((e.get("quote") or "").split())})
 

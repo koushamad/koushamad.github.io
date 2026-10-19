@@ -1,5 +1,5 @@
 # Site configuration
-title: Systems & Infrastructure Architect
+title: Systems & Infrastructure Engineer
 repository: sproogen/resume-theme
 favicon: images/raven.svg
 
@@ -39,7 +39,7 @@ additional_links:
 about_title: Executive Summary
 about_profile_image: images/1629721583450.jpg
 about_content: |
-  Systems & Infrastructure Architect / Platform Engineer with a backend engineering background and production experience across Kubernetes-based infrastructure, CI/CD, automation, observability, reliability, and distributed systems. I focus on building and improving platforms that make delivery safer, operations clearer, and backend systems easier to maintain.
+  Systems & Infrastructure / Platform Engineer with a backend engineering background and production experience across Kubernetes-based infrastructure, CI/CD, automation, observability, reliability, and distributed systems. I focus on building and improving platforms that make delivery safer, operations clearer, and backend systems easier to maintain.
 
   My engineering style is calm, structured, and operationally mature: clarity over ambiguity, automation over repeated manual work, maintainability over short-term fixes, and reviewable architecture over accidental complexity. I contribute best through platform ownership, backend architecture, deployment reliability, technical review, and sustainable engineering practices.
 
@@ -215,42 +215,6 @@ content:
   - title: Selected Projects
     layout: list
     content:
-      - layout: left
-        title: ChanceGoal
-        caption: Product platform and backend architecture
-        sub_title: Go API, admin/web clients, iOS, onboarding, notifications, operational tooling
-        quote: Product platform work focused on backend foundations, authentication, onboarding state, notifications, and maintainable delivery workflows.
-        description: |
-          • Worked across backend APIs, admin/web clients, mobile flows, local runtime automation, and service-level tests.
-
-          • Implemented backend foundations around authentication, onboarding state, notifications, persistence, and operational tooling.
-
-          • Used the project to refine maintainable platform patterns across product architecture, API design, deployment, and developer workflows.
-
-      - layout: left
-        title: Zenory.fit
-        caption: Multi-platform wellness ecosystem
-        sub_title: Next.js 15, TypeScript, Supabase, iOS (Swift), Garmin ConnectIQ, browser extension
-        quote: Cross-platform wellness product covering meditation, sleep, mindfulness, and fitness across web, iOS, Garmin, and browser.
-        description: |
-          • Built a multi-platform product spanning a Next.js marketing and web app, iOS app, Garmin ConnectIQ watch app, and a Firefox browser extension backed by Supabase.
-
-          • Designed a creator and instructor platform (Zenory Senseis) alongside feature-specific flows for meditation, sleep, music, routines, and goals.
-
-          • Established shared content, deployment, and operational foundations across web, native, and wearable targets with consistent delivery patterns.
-
-      - layout: left
-        title: Socc360.com
-        caption: Global football intelligence platform
-        sub_title: Next.js 15, React 19, TypeScript, Tailwind v4, iOS (Swift), real-time data integration
-        quote: Premium football information product delivering live scores, fixtures, teams, players, leagues, and news across web and iOS.
-        description: |
-          • Built a web and iOS product consuming a live football data API across 15 routes covering scores, fixtures, leagues, teams, players, match timelines, and editorial news.
-
-          • Designed a shared "Cobalt & Amber" design system used consistently across the web app and iOS app, including motion, typography, and colour tokens.
-
-          • Focused on real-time overlays, editorial-quality presentation, and a strict information-only product boundary with no betting or market features.
-
       - layout: left
         title: Pepper.com Platform Work
         caption: Marketplace microservices work · Remote / Berlin
