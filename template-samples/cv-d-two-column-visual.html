@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Kousha Ghodsizad — CV</title>
+<style>
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h2 { break-after: avoid-page; }
+
+body { font: 9.6pt/1.48 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #202020; }
+.railbg { position: fixed; left: 0; top: 0; bottom: 0; width: 62mm;
+          background: #f4f6f8; border-right: .6pt solid #dfe3e8; }
+.grid { display: grid; grid-template-columns: 62mm 1fr; position: relative; }
+.rail { padding: 13mm 7mm 10mm 9mm; }
+.main { padding: 13mm 12mm 10mm 9mm; }
+h1 { font-size: 17.5pt; color: #16324f; line-height: 1.12; }
+.role { font-size: 9.6pt; font-weight: 600; margin: 1.2mm 0 4mm; color: #37506b; }
+.rail h2 { font-size: 8.6pt; text-transform: uppercase; letter-spacing: .7px;
+           color: #16324f; margin: 4mm 0 1.6mm; border-bottom: 1pt solid #cfd6dd; padding-bottom: .8mm; }
+.rail .item { font-size: 8.6pt; margin-bottom: 1mm; word-wrap: break-word; }
+.rail .skillrow { font-size: 8.4pt; margin-bottom: 1.4mm; }
+.rail .skillrow b { display: block; color: #16324f; }
+.rail .edu { font-size: 8.4pt; margin-bottom: 1.6mm; }
+.rail .quote { font-size: 8.1pt; font-style: italic; color: #45505c; margin-bottom: 2mm; }
+.rail .quote b { display: block; font-style: normal; color: #16324f; }
+.main h2 { font-size: 10pt; text-transform: uppercase; letter-spacing: .7px;
+           color: #16324f; margin: 4.5mm 0 2mm; }
+.main h2:first-child { margin-top: 0; }
+.job { margin-bottom: 3.2mm; break-inside: avoid-page; }
+.jobline { display: flex; justify-content: space-between; align-items: baseline; }
+.jobline b { font-size: 10.2pt; color: #16324f; }
+.dates { font-size: 8.4pt; color: #5a6672; white-space: nowrap; }
+.rolename { font-size: 9.4pt; font-weight: 600; margin-bottom: .8mm; }
+ul { margin: 0 0 0 3.8mm; }
+li { margin-bottom: .55mm; }
+li::marker { color: #16324f; }
+p.sum { margin-bottom: 1.6mm; font-size: 9.4pt; }
+
+</style></head><body><div class="railbg"></div><div class="grid"><aside class="rail"><h1>Kousha Ghodsizad</h1><div class="role">Systems &amp; Infrastructure Architect</div><h2>Contact</h2><div class="item">Amsterdam, Netherlands</div><div class="item">+31 6 47 15 49 99</div><div class="item">kousha@iraven.io</div><div class="item">kousha.dev</div><div class="item">linkedin.com/in/kousha-ghodsizad</div><div class="item">github.com/koushamad</div><h2>Technical Skills</h2><div class="skillrow"><b>Backend</b>Go, PHP, Python, Shell, APIs, services, workers, CLIs, service boundaries, integration layers</div><div class="skillrow"><b>Infrastructure &amp; Platform</b>Kubernetes, Docker, Helm, ArgoCD, Argo Workflows, Argo Events, Terraform, AWS, private cloud, OpenStack, Cilium, Vault/Consul, Harbor, Nexus</div><div class="skillrow"><b>CI/CD &amp; Automation</b>GitLab CI, Jenkins, deployment automation, merge-request automation, artifact workflows, release guardrails, operational tooling</div><div class="skillrow"><b>Data &amp; Messaging</b>MySQL, PostgreSQL, Redis, RabbitMQ, Kafka, NATS, Cassandra, ClickHouse, Elasticsearch, MongoDB</div><div class="skillrow"><b>Observability &amp; Reliability</b>Prometheus, Grafana, metrics, logging, readiness checks, operational dashboards, rollout safety, production feedback loops</div><div class="skillrow"><b>Architecture</b>System design, reliability engineering, automation strategy, modular architecture, domain boundaries, technical review, engineering standards</div><h2>Education</h2><div class="edu"><b>BSc Computer Software Engineering</b><br>Islamic Azad University · 2011 — 2015</div><div class="edu"><b>ASc Computer Programming</b><br>Islamic Azad University · 2008 — 2011</div><h2>Endorsements</h2><div class="quote"><b>Ryan Klann · VP of Engineering, Pepper.com</b>“Kousha is a developer who has very strong technical skills and has shown to be able to take responsibility for a project and be relied upon. If there is something…”</div><div class="quote"><b>Nikola Barac · Head of Software Engineering, Pepper.com</b>“Kousha worked on pepper.com features as a senior PHP developer and took ownership of one of our most important microservices written in Go. He demonstrated passion…”</div></aside><div class="main"><h2>Summary</h2><p class="sum">Systems &amp; Infrastructure Architect / Platform Engineer with a backend engineering background and production experience across Kubernetes-based infrastructure, CI/CD, automation, observability, reliability, and distributed systems. I focus on building and improving platforms that make delivery safer, operations clearer, and backend systems easier to maintain.</p><p class="sum">My engineering style is calm, structured, and operationally mature: clarity over ambiguity, automation over repeated manual work, maintainability over short-term fixes, and reviewable architecture over accidental complexity. I contribute best through platform ownership, backend architecture, deployment reliability, technical review, and sustainable engineering practices.</p><h2>Experience</h2><div class="job">
+<div class="jobline"><b>Adyen</b><span class="dates">Jul 2023 — Present</span></div>
+<div class="rolename">Infrastructure Engineer — CI/CD &amp; Platform · Amsterdam, Netherlands</div>
+<ul class=""><li>Designed and improved production CI/CD and platform tooling around Kubernetes-based delivery workflows, with attention to deployment reliability and operational clarity.</li><li>Worked with Helm, ArgoCD, Argo Workflows, GitLab/Jenkins integrations, artifact systems, and internal automation to make delivery paths safer and easier to operate.</li><li>Built and maintained Go-based developer/platform tooling, including CLI and service integrations for controlled plugin execution and workflow automation.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Studocu</b><span class="dates">Jul 2022 — Jul 2023</span></div>
+<div class="rolename">Senior Software Engineer · Amsterdam, Netherlands</div>
+<ul class=""><li>Improved backend and platform-facing areas around website performance, crawler accessibility, and production reliability.</li><li>Worked with operations and platform teams to add monitoring across local, staging, and production environments.</li><li>Built CI/CD checks for SEO and performance testing to make release quality more repeatable and easier to validate.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>KolayIK</b><span class="dates">May 2021 — May 2022</span></div>
+<div class="rolename">Senior Software Engineer / Backend Team Lead · Istanbul, Turkey</div>
+<ul class=""><li>Led backend and platform-oriented work across HR systems, expense management, data import/export, and queue-based services.</li><li>Applied modular architecture, domain boundaries, TDD, messaging, AWS services, and Kubernetes where appropriate to improve maintainability and operational behaviour.</li><li>Built automation for failure reporting and operational feedback, including queue handling and Slack-integrated reporting.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Wingie Enuygun Group</b><span class="dates">May 2020 — Apr 2021</span></div>
+<div class="rolename">Senior Software Engineer / Team Lead · Istanbul, Turkey</div>
+<ul class=""><li>Led hotel-provider integration work and backend services for provider aggregation, search, caching, and data pipelines.</li><li>Designed Go/gRPC services to manage concurrent provider requests and standardise hotel data from external systems.</li><li>Improved reliability through testing practices, Elasticsearch tuning, cache-rate management, and database cluster migration work.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Insider</b><span class="dates">Jun 2019 — Jun 2020</span></div>
+<div class="rolename">Senior Software Engineer · Istanbul, Turkey</div>
+<ul class=""><li>Refactored newsletter and email-delivery systems from legacy structures toward clearer service boundaries.</li><li>Worked on Go services, messaging, security remediation, and data migration across high-volume marketing data systems.</li><li>Improved maintainability through architecture review, repository-service patterns, and clearer data-flow design.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Bamilo</b><span class="dates">Aug 2015 — Apr 2019</span></div>
+<div class="rolename">Senior Software Engineer / Head of Development · Tehran, Iran</div>
+<ul class=""><li>Built and led engineering work across seller tooling, warehouse operations, delivery tracking, inventory services, and internal platforms.</li><li>Owned backend architecture, service design, team growth, and technical review for marketplace operations systems.</li><li>Designed data migration pipelines and service improvements for inventory and seller-centre workflows.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Sepehr Mahan Tech</b><span class="dates">Aug 2012 — Jul 2015</span></div>
+<div class="rolename">Software Engineer / Senior Software Engineer · Tehran, Iran</div>
+<ul class=""><li>Developed suggestion, task-management, meeting-management, form-builder, workflow, social-network, and mobile API systems.</li><li>Focused on backend services, process automation, maintainable application foundations, and practical delivery for private and public-sector clients.</li><li>Built the early backend and product-engineering foundation that later grew into larger platform, architecture, and leadership responsibilities.</li></ul>
+</div><h2>Selected Projects</h2><div class="job">
+<div class="jobline"><b>ChanceGoal</b><span class="dates">Product platform and backend architecture</span></div>
+<ul class=""><li>Worked across backend APIs, admin/web clients, mobile flows, local runtime automation, and service-level tests.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Zenory.fit</b><span class="dates">Multi-platform wellness ecosystem</span></div>
+<ul class=""><li>Built a multi-platform product spanning a Next.js marketing and web app, iOS app, Garmin ConnectIQ watch app, and a Firefox browser extension backed by Supabase.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Socc360.com</b><span class="dates">Global football intelligence platform</span></div>
+<ul class=""><li>Built a web and iOS product consuming a live football data API across 15 routes covering scores, fixtures, leagues, teams, players, match timelines, and editorial news.</li></ul>
+</div><div class="job">
+<div class="jobline"><b>Pepper.com Platform Work</b><span class="dates">Marketplace microservices work · Remote / Berlin</span></div>
+<ul class=""><li>Collaborated with Supernova and microservice teams to develop features, maintain services, and improve backend behaviour.</li></ul>
+</div></div></div></body></html>
