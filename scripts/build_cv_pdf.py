@@ -31,9 +31,9 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUT = ROOT / "assets" / "Kousha-Ghodsizad-CV.pdf"
 
-# The website lists every recommendation; the PDF keeps only these, in this
-# order (most senior / most concrete first) so it stays tight.
-PDF_RECOMMENDATIONS = ["Nikola Barac", "Ryan Klann", "Hooman Moghani"]
+# The PDF shows these recommendations in this order; keep the list in step
+# with the curated entries in _config.yml so the website and PDF match.
+PDF_RECOMMENDATIONS = ["Nikola Barac", "Ryan Klann", "Gizem Sevinç"]
 
 
 def chrome_binary():

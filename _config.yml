@@ -39,53 +39,67 @@ additional_links:
 about_title: Executive Summary
 about_profile_image: images/1629721583450.jpg
 about_content: |
-  Systems & Infrastructure / Platform Engineer with a backend engineering background and production experience across Kubernetes-based infrastructure, CI/CD, automation, observability, reliability, and distributed systems. I focus on building and improving platforms that make delivery safer, operations clearer, and backend systems easier to maintain.
+  Systems & Infrastructure / Platform Engineer with a backend engineering background. I build and operate production platforms: Kubernetes-based infrastructure, CI/CD and workflow systems, and the developer tooling teams use to ship and run their services. My work covers infrastructure automation, observability, reliability, and distributed systems, with a focus on platforms that are secure, resilient, and straightforward to operate.
 
-  My engineering style is calm, structured, and operationally mature: clarity over ambiguity, automation over repeated manual work, maintainability over short-term fixes, and reviewable architecture over accidental complexity. I contribute best through platform ownership, backend architecture, deployment reliability, technical review, and sustainable engineering practices.
+  I own the systems I work on from design and implementation through production operation and ongoing improvement. I enjoy hard technical problems and the architectural decisions that come with them, and I build tools that let engineering teams work independently. I hold a high bar for engineering quality and for systems that stay reliable and maintainable as they grow.
 
 content:
   - title: Core Expertise
     layout: list
     content:
       - layout: left
-        title: Platform Engineering
-        sub_title: Internal platforms, production infrastructure, deployment reliability
+        title: Platform Engineering & Developer Tooling
+        sub_title: Internal platforms, CLIs, self-service workflows, secure execution
         description: |
-          • Kubernetes-based production systems, Helm-based packaging, ArgoCD/GitOps delivery, private cloud environments, and platform workflows that support engineering teams.
+          • Go-based platform tooling, including CLIs and plugin SDKs, with plugin management and access-controlled execution on Linux.
 
-          • Strong focus on reliability, operational clarity, safe rollout patterns, and reducing friction in developer delivery paths.
+          • Workflow automation with Argo Workflows, Argo Events, and Temporal, and self-service tooling that lets teams operate independently.
 
       - layout: left
-        title: Backend Systems
+        title: Kubernetes & Application Delivery
+        sub_title: Kubernetes infrastructure, GitOps, progressive delivery, CI/CD
+        description: |
+          • Kubernetes-based production infrastructure and application delivery with Helm, Argo CD for GitOps, and Argo Rollouts for progressive delivery in private cloud environments.
+
+          • CI/CD with GitLab CI and Jenkins, deployment and merge-request automation, artifact workflows, and release guardrails.
+
+      - layout: left
+        title: Infrastructure as Code & Secrets
+        sub_title: Provisioning, secrets management, service discovery
+        description: |
+          • Terraform, HashiCorp Vault, and HashiCorp Consul used alongside Kubernetes to provision infrastructure, manage secrets, and register services.
+
+      - layout: left
+        title: High Availability & Reliability
+        sub_title: Resilient infrastructure, rollout safety, operational readiness
+        description: |
+          • Work on highly available infrastructure for heavy workloads that keeps running through the loss of an entire data centre.
+
+          • Deployment hardening, safe rollout patterns, readiness checks, and the operational groundwork that lets production changes ship with confidence.
+
+      - layout: left
+        title: Observability & Production Operations
+        sub_title: Metrics, monitoring, debugging, incident investigation
+        description: |
+          • Prometheus and Grafana, metrics, logs, dashboards, and post-deployment feedback loops for production systems.
+
+          • Investigating and resolving production issues across application, infrastructure, pipeline, and database layers.
+
+      - layout: left
+        title: Backend & Distributed Systems
         sub_title: Go services, APIs, distributed systems, messaging
         description: |
-          • Backend services, APIs, workers, CLIs, service boundaries, integration layers, and data flows with particular strength in Go-based systems.
+          • Backend services, APIs, workers, CLIs, service boundaries, integration layers, and data flows, with particular strength in Go.
 
           • Practical experience with messaging and data systems such as Redis, RabbitMQ, Kafka, NATS, MySQL, PostgreSQL, Cassandra, ClickHouse, Elasticsearch, and MongoDB.
 
       - layout: left
-        title: CI/CD & Automation
-        sub_title: Pipelines, operational tooling, infrastructure workflows
-        description: |
-          • GitLab CI, Jenkins, deployment automation, merge-request automation, release guardrails, artifact workflows, and internal developer tooling.
-
-          • Automation mindset: make repeated operational work safer, easier to review, and easier for teams to understand.
-
-      - layout: left
-        title: Reliability & Observability
-        sub_title: Metrics, monitoring, rollout safety, production debugging
-        description: |
-          • Observability and reliability work using metrics, logs, readiness checks, dashboards, production feedback loops, and deployment hardening.
-
-          • Comfortable investigating system behaviour across application, infrastructure, pipeline, and database layers.
-
-      - layout: left
         title: Architecture & Technical Leadership
-        sub_title: System design, review, standards, operational improvements
+        sub_title: System design, technical decisions, standards
         description: |
-          • Architecture review, service-boundary design, platform decision-making, engineering standards, mentoring, and technical ownership.
+          • Architecture and service-boundary design, platform decisions, engineering standards, code review, and mentoring.
 
-          • Career progression from backend engineer to team lead and infrastructure/platform engineer, with increasing responsibility for system design and operational complexity.
+          • Career progression from backend engineer to team lead, head of development, and infrastructure/platform engineer, with growing responsibility for system design and production systems.
 
   - title: Professional Experience
     layout: list
@@ -96,17 +110,23 @@ content:
         link_text: adyen.com
         sub_title: Infrastructure Engineer — CI/CD & Platform
         caption: Amsterdam, Netherlands · Jul 2023 — Present
-        quote: Production infrastructure, CI/CD, Kubernetes-based delivery, automation, and operational reliability for a large-scale payments platform.
+        quote: Production infrastructure, platform tooling, Kubernetes-based delivery, and reliability for a large-scale payments platform.
         description: |
-          • Designed and improved production CI/CD and platform tooling around Kubernetes-based delivery workflows, with attention to deployment reliability and operational clarity.
+          • Designed and built adyencli, a Go-based platform CLI that provides SDKs for teams building plugins in four programming languages.
 
-          • Worked with Helm, ArgoCD, Argo Workflows, GitLab/Jenkins integrations, artifact systems, and internal automation to make delivery paths safer and easier to operate.
+          • Implemented plugin management and execution in adyencli, with access-control mechanisms for controlled, secure plugin execution in Linux environments.
 
-          • Built and maintained Go-based developer/platform tooling, including CLI and service integrations for controlled plugin execution and workflow automation.
+          • Worked on highly available infrastructure for heavy workloads, built to keep workloads running through the loss of an entire data centre.
 
-          • Improved deployment hardening, observability, and operational feedback loops so teams could understand merge requests, releases, logs, metrics, and post-deployment behaviour more clearly.
+          • Delivered applications on Kubernetes with Helm, Argo CD for GitOps deployments, and Argo Rollouts for progressive delivery, integrated with GitLab/Jenkins CI and artifact systems.
 
-          • Collaborated across teams on review, architecture, reliability concerns, and practical automation for production infrastructure.
+          • Automated infrastructure and operational workflows with Argo Workflows, Argo Events, and Temporal, and built self-service tooling that let teams operate independently instead of relying on manual steps.
+
+          • Used Terraform for infrastructure provisioning, HashiCorp Vault for secrets management, and HashiCorp Consul for service discovery in platform infrastructure.
+
+          • Improved observability and deployment hardening with Prometheus metrics, Grafana dashboards, logs, and post-deployment feedback, and investigated production issues across pipelines, infrastructure, and services.
+
+          **Tech stack:** Go · Python · Kubernetes · Helm · Argo CD · Argo Rollouts · Argo Workflows · Argo Events · Temporal · Terraform · HashiCorp Vault · HashiCorp Consul · Redis · Prometheus · Grafana · GitLab CI · Jenkins · Linux
 
       - layout: left
         title: Studocu
@@ -233,19 +253,24 @@ content:
     layout: list
     content:
       - layout: left
-        title: Backend
+        title: Languages & Backend
         description: |
-          Go, PHP, Python, Shell, APIs, services, workers, CLIs, service boundaries, integration layers.
+          Go, Python, PHP, Shell, APIs, gRPC, GraphQL, services, workers, CLIs.
 
       - layout: left
-        title: Infrastructure & Platform
+        title: Containers & Orchestration
         description: |
-          Kubernetes, Docker, Helm, ArgoCD, Argo Workflows, Argo Events, Terraform, AWS, private cloud, OpenStack, Cilium, Vault/Consul, Harbor, Nexus.
+          Kubernetes, Docker, Helm, Cilium.
 
       - layout: left
-        title: CI/CD & Automation
+        title: Delivery & Workflows
         description: |
-          GitLab CI, Jenkins, deployment automation, merge-request automation, artifact workflows, release guardrails, operational tooling.
+          Argo CD, Argo Rollouts, Argo Workflows, Argo Events, Temporal, GitLab CI, Jenkins, Harbor, Nexus.
+
+      - layout: left
+        title: Infrastructure & Automation
+        description: |
+          AWS, private cloud, OpenStack, Terraform, HashiCorp Vault, HashiCorp Consul.
 
       - layout: left
         title: Data & Messaging
@@ -255,7 +280,7 @@ content:
       - layout: left
         title: Observability & Reliability
         description: |
-          Prometheus, Grafana, metrics, logging, readiness checks, operational dashboards, rollout safety, production feedback loops.
+          Prometheus, Grafana, metrics, logging, operational dashboards, readiness checks, rollout safety.
 
       - layout: left
         title: Architecture
@@ -291,16 +316,6 @@ content:
     layout: list
     content:
       - layout: left
-        title: Ryan Klann
-        sub_title: VP of Engineering, Pepper.com
-        caption: The World's Largest Deal Community
-        quote: >-
-          Kousha is a developer who has very strong technical skills and has shown to be able to
-          take responsibility for a project and be relied upon. If there is something technical
-          that he doesn't understand he will jump right in and learn what he needs in order to
-          solve the problem. It's been a pleasure working with you.
-
-      - layout: left
         title: Nikola Barac
         sub_title: Head of Software Engineering, Pepper.com
         caption: The World's Largest Deal Community
@@ -313,13 +328,14 @@ content:
           very happy to work with him again!
 
       - layout: left
-        title: Hooman Moghani
-        sub_title: Product Manager, Insider
+        title: Ryan Klann
+        sub_title: VP of Engineering, Pepper.com
+        caption: The World's Largest Deal Community
         quote: >-
-          Kousha is amazing at his job! He is one of the most brilliant engineers that I've worked
-          with, one of the best in his field, and is always willing to share best practices. He was
-          always very committed and focused on delivering on time. He was a top performer and
-          inspired us to give our best. Anyone would be lucky to have Kousha as a colleague.
+          Kousha is a developer who has very strong technical skills and has shown to be able to
+          take responsibility for a project and be relied upon. If there is something technical
+          that he doesn't understand he will jump right in and learn what he needs in order to
+          solve the problem. It's been a pleasure working with you.
 
       - layout: left
         title: Gizem Sevinç
@@ -328,33 +344,6 @@ content:
           Kousha is a talented software developer that I thoroughly enjoy working with. Thanks to
           its extensive knowledge in backend technologies, it provides effective and fast solutions
           to many problems. Highly recommended if you are working with PHP, Phyton, or Go.
-
-      - layout: left
-        title: Mehrab Sadooghianzadeh
-        sub_title: CTO, Dreamdays
-        quote: >-
-          Kousha is a talented expert in many development areas.
-
-      - layout: left
-        title: Mana Azizi
-        sub_title: Group Product Director, Bamilo (Rocket Internet SE)
-        quote: >-
-          I believe Kousha as a talented full-stack software developer with a creative mind which
-          is coming not only from his intelligence but also from his broad experience. He posses
-          strong analytical mind which is absolutely invaluable for a developer. His calm attitude
-          in addition to his knowledge and experience makes him a precious asset for any company
-          targeting large-scale platforms development.
-
-      - layout: left
-        title: Raha Molaie
-        sub_title: HR Administrator, Bamilo (Rocket Internet SE)
-        quote: >-
-          It was a short time after Bamilo (our former company) that we both worked together
-          closely but with no doubt, Kousha is one of the maturest people I've ever worked with and
-          I can call his personality "Self-HR", I've never heard that word before but I like to use
-          it due to defining Kousha's behavior and leadership ability and also being easy going and
-          helpfulness. He always gave me hand on colleagues' issues in the best way. He definitely
-          is a valuable asset to any organization.
 
 # Footer
 footer_show_references: true
