@@ -39,9 +39,9 @@ additional_links:
 about_title: Executive Summary
 about_profile_image: images/1629721583450.jpg
 about_content: |
-  Systems & Infrastructure / Platform Engineer with a backend engineering background. I build and operate production platforms: Kubernetes-based infrastructure, CI/CD and workflow systems, and the developer tooling teams use to ship and run their services. My work covers infrastructure automation, observability, reliability, and distributed systems, with a focus on platforms that are secure, resilient, and straightforward to operate.
+  Systems & Infrastructure / Platform Engineer with a backend engineering background. I build and operate production platforms: Kubernetes-based infrastructure, CI/CD and workflow systems, and the developer tooling teams use to ship and run their services. My work covers infrastructure automation, observability, reliability, and distributed systems, with a focus on building platforms that are secure, resilient, and straightforward to operate.
 
-  I own the systems I work on from design and implementation through production operation and ongoing improvement. I enjoy hard technical problems and the architectural decisions that come with them, and I build tools that let engineering teams work independently. I hold a high bar for engineering quality and for systems that stay reliable and maintainable as they grow.
+  I take ownership of the systems I work on, from design and implementation through production operation and ongoing improvement. I enjoy hard technical problems and the architectural decisions that come with them, and I build tools that let engineering teams work independently. I hold a high bar for engineering quality and for systems that remain reliable and maintainable as they grow.
 
 content:
   - title: Core Expertise
@@ -73,7 +73,7 @@ content:
         title: High Availability & Reliability
         sub_title: Resilient infrastructure, rollout safety, operational readiness
         description: |
-          • Work on highly available infrastructure for heavy workloads that keeps running through the loss of an entire data centre.
+          • Highly available backend systems across multiple data centres, with request routing, workload distribution, and failover that keep them operating under heavy load and through data-centre loss.
 
           • Deployment hardening, safe rollout patterns, readiness checks, and the operational groundwork that lets production changes ship with confidence.
 
@@ -110,23 +110,25 @@ content:
         link_text: adyen.com
         sub_title: Infrastructure Engineer — CI/CD & Platform
         caption: Amsterdam, Netherlands · Jul 2023 — Present
-        quote: Production infrastructure, platform tooling, Kubernetes-based delivery, and reliability for a large-scale payments platform.
+        quote: Developer platforms, highly available backend architecture, multi-data-centre workflow orchestration, and self-service automation for a large-scale payments platform.
         description: |
-          • Designed and built adyencli, a Go-based platform CLI that provides SDKs for teams building plugins in four programming languages.
+          • Designed and built adyencli in Go, the CLI of a plugin management platform: teams develop plugins with Adyen-provided SDKs in four programming languages, submit them to be built and distributed through Adyen's package-management infrastructure, and the platform manages their lifecycle and controlled execution in Linux environments.
 
-          • Implemented plugin management and execution in adyencli, with access-control mechanisms for controlled, secure plugin execution in Linux environments.
+          • Built access control and controlled, secure plugin execution into the platform, and worked on its backend services and supporting infrastructure on Kubernetes, Helm, Argo CD, HashiCorp Vault, and HashiCorp Consul.
 
-          • Worked on highly available infrastructure for heavy workloads, built to keep workloads running through the loss of an entire data centre.
+          • Designed the backend architecture of a separate highly available system distributed across four geographically separated data centres, routing requests to suitable, fast-responding services, with the architecture built to handle heavy workloads and keep operating when one or more data centres become unavailable.
 
-          • Delivered applications on Kubernetes with Helm, Argo CD for GitOps deployments, and Argo Rollouts for progressive delivery, integrated with GitLab/Jenkins CI and artifact systems.
+          • Built a solution for operating Argo Workflows across multiple Kubernetes clusters and data centres, including the workflow controllers and their supporting database and state infrastructure, with execution responsibility coordinated across data centres that all had access to the workflow workload.
 
-          • Automated infrastructure and operational workflows with Argo Workflows, Argo Events, and Temporal, and built self-service tooling that let teams operate independently instead of relying on manual steps.
+          • Used Kubernetes Leader Election as part of determining which controller owned a workflow's execution. Workflow and step state were recorded in the database, so when a lost node left a step marked Failed and ownership moved to another controller, the new owner retried that step from the recorded state and the workflow continued from there instead of restarting; surviving data centres took over when a data centre failed.
 
-          • Used Terraform for infrastructure provisioning, HashiCorp Vault for secrets management, and HashiCorp Consul for service discovery in platform infrastructure.
+          • Contributed to a modular, self-service automation platform in Python: teams configure repository-specific automation by writing Gherkin scenarios that invoke reusable modules, instead of implementing each workflow themselves. It uses NATS as its event and message infrastructure and provides detailed Prometheus and Grafana monitoring of automation runs, down to individual merge requests and their pipeline executions.
 
-          • Improved observability and deployment hardening with Prometheus metrics, Grafana dashboards, logs, and post-deployment feedback, and investigated production issues across pipelines, infrastructure, and services.
+          • Across this work, used Jenkins and GitLab CI for CI/CD pipelines, Argo CD and Argo Rollouts for deployment and progressive delivery, Argo Events for event-driven automation, and Temporal for workflow orchestration.
 
-          **Tech stack:** Go · Python · Kubernetes · Helm · Argo CD · Argo Rollouts · Argo Workflows · Argo Events · Temporal · Terraform · HashiCorp Vault · HashiCorp Consul · Redis · Prometheus · Grafana · GitLab CI · Jenkins · Linux
+          • Used Terraform for infrastructure provisioning, Puppet for configuration management, HashiCorp Vault for secrets management, and HashiCorp Consul for service discovery, and worked with Flannel networking and service mesh technology in K3s environments.
+
+          **Tech stack:** Go · Python · Gherkin · Kubernetes · K3s · Helm · Argo CD · Argo Workflows · Argo Events · Argo Rollouts · Temporal · Jenkins · GitLab CI · Terraform · Puppet · HashiCorp Vault · HashiCorp Consul · Flannel · NATS · Redis · Prometheus · Grafana · Linux
 
       - layout: left
         title: Studocu
@@ -260,7 +262,7 @@ content:
       - layout: left
         title: Containers & Orchestration
         description: |
-          Kubernetes, Docker, Helm, Cilium.
+          Kubernetes, K3s, Docker, Helm, Cilium, Flannel, service mesh.
 
       - layout: left
         title: Delivery & Workflows
@@ -270,7 +272,7 @@ content:
       - layout: left
         title: Infrastructure & Automation
         description: |
-          AWS, private cloud, OpenStack, Terraform, HashiCorp Vault, HashiCorp Consul.
+          AWS, private cloud, OpenStack, Terraform, Puppet, HashiCorp Vault, HashiCorp Consul.
 
       - layout: left
         title: Data & Messaging
