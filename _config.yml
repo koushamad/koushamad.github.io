@@ -88,7 +88,7 @@ content:
         caption: Amsterdam, Netherlands · Jul 2023 — Present
         quote: Plugin platform engineering, highly available backend architecture, multi-cluster workflow execution, and self-service automation for a large-scale payments platform.
         description: |
-          • Designed and built **`adyencli` in Go**, the CLI for Adyen's plugin management platform. Engineering teams can develop plugins using Adyen-provided SDKs in four programming languages, submit them for building and distribution through Adyen's package-management infrastructure, and manage their lifecycle and controlled execution on Linux.
+          • Designed and built **adyencli in Go**, the CLI for Adyen's plugin management platform. Engineering teams can develop plugins using Adyen-provided SDKs in four programming languages, submit them for building and distribution through Adyen's package-management infrastructure, and manage their lifecycle and controlled execution on Linux.
 
           • Implemented access controls and secure, controlled plugin execution. Built platform services within Adyen's existing infrastructure, which included Kubernetes, Helm, Argo CD, Cilium networking, Consul for service discovery, Vault for secrets management, and Calico-based network and firewall controls between data centres.
 
@@ -98,7 +98,7 @@ content:
 
           • Coordinated execution ownership per workflow, with Kubernetes Leader Election as part of the broader execution architecture. If the owning cluster failed or came under resource pressure, another available cluster with sufficient capacity could take over that workflow's execution.
 
-          • Enabled Argo Workflows node-status offloading as part of the recovery design. Workflow node and step state was persisted through the database-backed setup. When a node failure caused a step to be marked `Failed`, the new execution owner could use the recorded state and retry handling to rerun that step and continue from that point rather than restarting the entire workflow.
+          • Enabled Argo Workflows node-status offloading as part of the recovery design. Workflow node and step state was persisted through the database-backed setup. When a node failure caused a step to be marked Failed, the new execution owner could use the recorded state and retry handling to rerun that step and continue from that point rather than restarting the entire workflow.
 
           • Contributed to a modular, self-service automation platform built in Python. Teams define repository-specific automation through Gherkin scenarios that invoke reusable modules. The platform uses NATS and provides detailed Prometheus and Grafana monitoring down to individual merge requests and their pipeline executions.
 
