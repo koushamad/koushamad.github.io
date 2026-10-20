@@ -17,6 +17,7 @@ Usage:  python3 scripts/build_cv_pdf.py [output.pdf]
 Chrome: uses CHROME_BIN if set, else the macOS app path, else `chromium`.
 """
 
+import base64
 import html
 import os
 import re
@@ -33,7 +34,11 @@ DEFAULT_OUT = ROOT / "assets" / "Kousha-Ghodsizad-CV.pdf"
 
 # The PDF shows these recommendations in this order; keep the list in step
 # with the curated entries in _config.yml so the website and PDF match.
-PDF_RECOMMENDATIONS = ["Nikola Barac", "Ryan Klann", "Gizem Sevinç"]
+# Jobs with at least this many bullets may continue across a page break
+# (heading and first two bullets stay together); shorter jobs never split.
+LONG_JOB_BULLETS = 6
+
+PDF_RECOMMENDATIONS = ["Nikola Barac", "Morteza Poussaneh", "Ryan Klann", "Gizem Sevinç Erdur"]
 
 
 def chrome_binary():
@@ -54,8 +59,9 @@ def esc(s):
 
 
 def parse_description(desc):
-    """Split a description blob into bullets + optional '**Tech stack:**' line."""
-    bullets, tech = [], None
+    """Split a description blob into intro text, '•' bullets, and an optional
+    '**Tech stack:**' line. Lines without a bullet marker form the intro."""
+    intro, bullets, tech = [], [], None
     for raw in (desc or "").splitlines():
         line = raw.strip()
         if not line:
@@ -64,8 +70,19 @@ def parse_description(desc):
         if m:
             tech = m.group(1).strip()
             continue
-        bullets.append(line.lstrip("•").strip())
-    return bullets, tech
+        if line.startswith("•"):
+            bullets.append(line.lstrip("•").strip())
+        else:
+            intro.append(line)
+    return " ".join(intro), bullets, tech
+
+
+def inline(s):
+    """Escape text, then render the Markdown the website also renders:
+    **bold** and `code`."""
+    s = esc(s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
+    return re.sub(r"`(.+?)`", r'<span class="code">\1</span>', s)
 
 
 def parse_caption(caption):
@@ -87,16 +104,16 @@ def load():
 
     jobs = []
     for e in entries("Professional Experience"):
-        bullets, tech = parse_description(e.get("description"))
+        intro, bullets, tech = parse_description(e.get("description"))
         loc, dates = parse_caption(e.get("caption"))
         jobs.append({"company": e["title"], "role": e.get("sub_title", ""),
                      "loc": loc, "dates": dates,
-                     "quote": (e.get("quote") or "").strip(),
+                     "quote": (e.get("quote") or "").strip(), "intro": intro,
                      "bullets": bullets, "tech": tech})
 
     projects = []
     for e in entries("Selected Projects"):
-        bullets, tech = parse_description(e.get("description"))
+        _, bullets, tech = parse_description(e.get("description"))
         projects.append({"name": e["title"], "stack": e.get("sub_title", ""),
                          "tag": (e.get("caption") or "").strip(),
                          "bullets": bullets, "tech": tech})
@@ -108,7 +125,7 @@ def load():
 
     expertise = []
     for e in entries("Core Expertise"):
-        bullets, _ = parse_description(e.get("description"))
+        _, bullets, _ = parse_description(e.get("description"))
         expertise.append({"area": e["title"], "sub": e.get("sub_title", ""),
                           "bullets": bullets})
 
@@ -127,8 +144,14 @@ def load():
         recs.append({"who": e["title"], "role": e.get("sub_title", ""),
                      "quote": " ".join((e.get("quote") or "").split())})
 
+    photo = ""
+    if cfg.get("about_profile_image"):
+        img = ROOT / cfg["about_profile_image"]
+        mime = "image/png" if img.suffix.lower() == ".png" else "image/jpeg"
+        photo = f"data:{mime};base64," + base64.b64encode(img.read_bytes()).decode()
+
     return {
-        "name": cfg["name"], "title": cfg["title"],
+        "name": cfg["name"], "title": cfg["title"], "photo": photo,
         "email": cfg["email"], "phone": cfg["phone"],
         "website": cfg["website"], "location": "Amsterdam, Netherlands",
         "linkedin": f"linkedin.com/in/{cfg['linkedin_username']}",
@@ -139,8 +162,9 @@ def load():
     }
 
 
-def bullets_html(items):
-    return "<ul>" + "".join(f"<li>{esc(b)}</li>" for b in items) + "</ul>"
+def bullets_html(items, cls=""):
+    attr = f' class="{cls}"' if cls else ""
+    return f"<ul{attr}>" + "".join(f"<li>{inline(b)}</li>" for b in items) + "</ul>"
 
 
 def render(d):
@@ -155,6 +179,8 @@ body {{ font: 9.6pt/1.48 'Helvetica Neue', Helvetica, Arial, sans-serif; color: 
 .grid {{ display: grid; grid-template-columns: 62mm 1fr; position: relative; }}
 .rail {{ padding: 13mm 7mm 10mm 9mm; }}
 .main {{ padding: 13mm 12mm 10mm 9mm; }}
+.photo {{ display: block; width: 27mm; height: 27mm; border-radius: 50%;
+          object-fit: cover; margin: 0 0 5mm; border: .8pt solid #cfd6dd; }}
 h1 {{ font-size: 17.5pt; color: {navy}; line-height: 1.12; }}
 .role {{ font-size: 9.6pt; font-weight: 600; margin: 1.2mm 0 4mm; color: #37506b; }}
 .rail h2 {{ font-size: 8.6pt; text-transform: uppercase; letter-spacing: .7px;
@@ -163,13 +189,17 @@ h1 {{ font-size: 17.5pt; color: {navy}; line-height: 1.12; }}
 .rail .skillrow {{ font-size: 8.4pt; margin-bottom: 1.4mm; }}
 .rail .skillrow b {{ display: block; color: {navy}; }}
 .rail .edu {{ font-size: 8.4pt; margin-bottom: 1.6mm; }}
-.rail .note {{ font-size: 8.1pt; font-style: italic; color: #45505c; margin-top: 2mm; }}
+.note {{ font-size: 8.1pt; font-style: italic; color: #45505c; margin-top: 2mm; }}
 .main h2 {{ font-size: 10pt; text-transform: uppercase; letter-spacing: .7px;
            color: {navy}; margin: 4.5mm 0 2mm; }}
 .main .keep > h2:first-child {{ margin-top: 4.5mm; }}
 .main > .keep:first-child > h2 {{ margin-top: 0; }}
 .keep {{ break-inside: avoid-page; }}
 .job {{ margin-bottom: 3.2mm; break-inside: avoid-page; }}
+.job.long {{ break-inside: auto; }}
+ul.cont {{ margin-top: 0; }}
+li {{ break-inside: avoid; }}
+.main .edu {{ margin-bottom: 1.2mm; }}
 .jobline {{ display: flex; justify-content: space-between; align-items: baseline; }}
 .jobline b {{ font-size: 10.2pt; color: {navy}; }}
 .dates {{ font-size: 8.4pt; color: #5a6672; white-space: nowrap; }}
@@ -178,6 +208,8 @@ ul {{ margin: 0 0 0 3.8mm; }}
 li {{ margin-bottom: .55mm; }}
 li::marker {{ color: {navy}; }}
 .tech {{ font-size: 8.3pt; color: #55606c; margin-top: .8mm; }}
+.intro {{ margin-bottom: .8mm; }}
+.code {{ font-family: Menlo, 'DejaVu Sans Mono', monospace; font-size: 8.8pt; }}
 p.sum {{ margin-bottom: 1.6mm; font-size: 9.4pt; }}
 .exprow {{ margin-bottom: 1.6mm; }}
 .exprow b {{ color: {navy}; }}
@@ -186,13 +218,29 @@ p.sum {{ margin-bottom: 1.6mm; font-size: 9.4pt; }}
 .rec .quote {{ font-size: 8.9pt; font-style: italic; color: #38424d; }}
 """
 
+    def block(b, h2=""):
+        if isinstance(b, tuple):
+            head, rest = b
+            return f'<div class="job long"><div class="keep">{h2}{head}</div>{rest}</div>'
+        return f'<div class="keep">{h2}{b}</div>' if h2 else b
+
     def sec(title, blocks):
         if not blocks:
             return f"<h2>{esc(title)}</h2>"
-        return (f'<div class="keep"><h2>{esc(title)}</h2>{blocks[0]}</div>'
-                + "".join(blocks[1:]))
+        return block(blocks[0], f"<h2>{esc(title)}</h2>") + "".join(block(b) for b in blocks[1:])
 
-    rail = [f"<h1>{esc(d['name'])}</h1>", f'<div class="role">{esc(d["title"])}</div>']
+    def job(j):
+        head = (f'<div class="jobline"><b>{esc(j["company"])}</b><span class="dates">{esc(j["dates"])}</span></div>'
+                f'<div class="rolename">{esc(j["role"])} · {esc(j["loc"])}</div>'
+                + (f'<p class="intro">{inline(j["intro"])}</p>' if j["intro"] else ""))
+        tech = f'<div class="tech">{esc(j["tech"])}</div>' if j["tech"] else ""
+        if len(j["bullets"]) >= LONG_JOB_BULLETS:
+            return (head + bullets_html(j["bullets"][:2]),
+                    bullets_html(j["bullets"][2:], "cont") + tech)
+        return f'<div class="job">{head}{bullets_html(j["bullets"])}{tech}</div>'
+
+    rail = [f'<img class="photo" src="{d["photo"]}" alt="">' if d["photo"] else "",
+            f"<h1>{esc(d['name'])}</h1>", f'<div class="role">{esc(d["title"])}</div>']
     rail.append("<h2>Contact</h2>")
     for item in (d["location"], d["phone"], d["email"], d["website"],
                  d["linkedin"], d["github"]):
@@ -200,36 +248,32 @@ p.sum {{ margin-bottom: 1.6mm; font-size: 9.4pt; }}
     rail.append("<h2>Technical Skills</h2>")
     for s in d["skills"]:
         rail.append(f'<div class="skillrow"><b>{esc(s["group"])}</b>{esc(s["items"])}</div>')
-    rail.append("<h2>Education</h2>")
-    for e in d["education"]:
-        rail.append(f'<div class="edu"><b>{esc(e["degree"])}</b><br>'
-                    f'{esc(e["school"])} · {esc(e["years"])}</div>')
-    rail.append('<div class="note">References available on request.</div>')
 
     main = [sec("Summary", [f'<p class="sum">{esc(p)}</p>' for p in d["summary"]])]
 
     main.append(sec("Core Expertise",
-                    [f'<div class="exprow"><b>{esc(e["area"])}:</b> {esc(e["sub"])}. '
-                     f'{esc(" ".join(e["bullets"]))}</div>' for e in d["expertise"]]))
+                    [f'<div class="exprow"><b>{esc(e["area"])}:</b> '
+                     f'{esc(". ".join(x.rstrip(".") for x in [e["sub"], " ".join(e["bullets"])] if x))}.</div>'
+                     for e in d["expertise"]]))
 
-    main.append(sec("Experience", [f"""<div class="job">
-<div class="jobline"><b>{esc(j['company'])}</b><span class="dates">{esc(j['dates'])}</span></div>
-<div class="rolename">{esc(j['role'])} · {esc(j['loc'])}</div>
-{bullets_html(j['bullets'])}
-{f'<div class="tech">{esc(j["tech"])}</div>' if j['tech'] else ''}
-</div>""" for j in d["jobs"]]))
+    main.append(sec("Experience", [job(j) for j in d["jobs"]]))
 
     main.append(sec("Selected Projects", [f"""<div class="job">
-<div class="jobline"><b>{esc(p['name'])}</b><span class="dates">{esc(p['tag'])}</span></div>
-<div class="rolename">{esc(p['stack'])}</div>
+<div class="jobline"><b>{esc(p['name'])}</b></div>
+<div class="rolename">{esc(" · ".join(x for x in (p["stack"], p["tag"]) if x))}</div>
 {bullets_html(p['bullets'])}
 {f'<div class="tech">{esc(p["tech"])}</div>' if p['tech'] else ''}
 </div>""" for p in d["projects"]]))
+
+    main.append(sec("Education",
+                    [f'<div class="edu"><b>{esc(e["degree"])}</b> · {esc(e["school"])} · {esc(e["years"])}</div>'
+                     for e in d["education"]]))
 
     main.append(sec("Recommendations",
                     [f'<div class="rec"><div class="who">{esc(r["who"])} — {esc(r["role"])}</div>'
                      f'<div class="quote">“{esc(r["quote"])}”</div></div>'
                      for r in d["recs"]]))
+    main.append('<div class="note">References available on request.</div>')
 
     body = (f'<div class="railbg"></div><div class="grid">'
             f'<aside class="rail">{"".join(rail)}</aside>'

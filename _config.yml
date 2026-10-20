@@ -37,11 +37,11 @@ additional_links:
 
 # Header / Executive Summary
 about_title: Executive Summary
-about_profile_image: images/1629721583450.jpg
+about_profile_image: images/kousha-profile.jpg
 about_content: |
-  Systems & Infrastructure / Platform Engineer with a backend engineering background. I build and operate production platforms: Kubernetes-based infrastructure, CI/CD and workflow systems, and the developer tooling teams use to ship and run their services. My work covers infrastructure automation, observability, reliability, and distributed systems, with a focus on building platforms that are secure, resilient, and straightforward to operate.
+  Systems & Infrastructure / Platform Engineer with a backend engineering background. I build and operate production platforms, from Kubernetes infrastructure and CI/CD workflows to the developer tools engineering teams use to build and run their services. My work spans infrastructure automation, observability, reliability, and distributed systems, with a focus on secure, resilient, and maintainable systems.
 
-  I take ownership of the systems I work on, from design and implementation through production operation and ongoing improvement. I enjoy hard technical problems and the architectural decisions that come with them, and I build tools that let engineering teams work independently. I hold a high bar for engineering quality and for systems that remain reliable and maintainable as they grow.
+  I take ownership from design and implementation through production operation and ongoing improvement. I enjoy solving complex technical problems, making architectural decisions, and building tools that help engineering teams work independently. I care about engineering quality and systems that remain reliable as they scale.
 
 content:
   - title: Core Expertise
@@ -49,57 +49,33 @@ content:
     content:
       - layout: left
         title: Platform Engineering & Developer Tooling
-        sub_title: Internal platforms, CLIs, self-service workflows, secure execution
         description: |
-          • Go-based platform tooling, including CLIs and plugin SDKs, with plugin management and access-controlled execution on Linux.
-
-          • Workflow automation with Argo Workflows, Argo Events, and Temporal, and self-service tooling that lets teams operate independently.
+          • Go-based platform tools and CLIs, plugin management, secure execution, reusable automation, and self-service workflows.
 
       - layout: left
         title: Kubernetes & Application Delivery
-        sub_title: Kubernetes infrastructure, GitOps, progressive delivery, CI/CD
         description: |
-          • Kubernetes-based production infrastructure and application delivery with Helm, Argo CD for GitOps, and Argo Rollouts for progressive delivery in private cloud environments.
-
-          • CI/CD with GitLab CI and Jenkins, deployment and merge-request automation, artifact workflows, and release guardrails.
+          • Kubernetes and K3s infrastructure, Helm, GitOps with Argo CD, progressive delivery with Argo Rollouts, and CI/CD with GitLab CI and Jenkins.
 
       - layout: left
         title: Infrastructure as Code & Secrets
-        sub_title: Provisioning, secrets management, service discovery
         description: |
-          • Terraform, HashiCorp Vault, and HashiCorp Consul used alongside Kubernetes to provision infrastructure, manage secrets, and register services.
+          • Infrastructure provisioning with Terraform, configuration management with Puppet, secrets management with HashiCorp Vault, and service discovery with HashiCorp Consul.
 
       - layout: left
         title: High Availability & Reliability
-        sub_title: Resilient infrastructure, rollout safety, operational readiness
         description: |
-          • Highly available backend systems across multiple data centres, with request routing, workload distribution, and failover that keep them operating under heavy load and through data-centre loss.
-
-          • Deployment hardening, safe rollout patterns, readiness checks, and the operational groundwork that lets production changes ship with confidence.
+          • Multi-data-centre architectures, request routing, workflow recovery and failover, deployment safety, and production reliability.
 
       - layout: left
         title: Observability & Production Operations
-        sub_title: Metrics, monitoring, debugging, incident investigation
         description: |
-          • Prometheus and Grafana, metrics, logs, dashboards, and post-deployment feedback loops for production systems.
-
-          • Investigating and resolving production issues across application, infrastructure, pipeline, and database layers.
+          • Prometheus, Grafana, metrics, logging, dashboards, post-deployment monitoring, and production issue investigation.
 
       - layout: left
-        title: Backend & Distributed Systems
-        sub_title: Go services, APIs, distributed systems, messaging
+        title: Backend Systems & Architecture
         description: |
-          • Backend services, APIs, workers, CLIs, service boundaries, integration layers, and data flows, with particular strength in Go.
-
-          • Practical experience with messaging and data systems such as Redis, RabbitMQ, Kafka, NATS, MySQL, PostgreSQL, Cassandra, ClickHouse, Elasticsearch, and MongoDB.
-
-      - layout: left
-        title: Architecture & Technical Leadership
-        sub_title: System design, technical decisions, standards
-        description: |
-          • Architecture and service-boundary design, platform decisions, engineering standards, code review, and mentoring.
-
-          • Career progression from backend engineer to team lead, head of development, and infrastructure/platform engineer, with growing responsibility for system design and production systems.
+          • Go services, APIs, workers, messaging, distributed systems, system design, service boundaries, technical reviews, and engineering standards.
 
   - title: Professional Experience
     layout: list
@@ -110,25 +86,25 @@ content:
         link_text: adyen.com
         sub_title: Infrastructure Engineer — CI/CD & Platform
         caption: Amsterdam, Netherlands · Jul 2023 — Present
-        quote: Developer platforms, highly available backend architecture, multi-data-centre workflow orchestration, and self-service automation for a large-scale payments platform.
+        quote: Plugin platform engineering, highly available backend architecture, multi-cluster workflow execution, and self-service automation for a large-scale payments platform.
         description: |
-          • Designed and built adyencli in Go, the CLI of a plugin management platform: teams develop plugins with Adyen-provided SDKs in four programming languages, submit them to be built and distributed through Adyen's package-management infrastructure, and the platform manages their lifecycle and controlled execution in Linux environments.
+          • Designed and built **`adyencli` in Go**, the CLI for Adyen's plugin management platform. Engineering teams can develop plugins using Adyen-provided SDKs in four programming languages, submit them for building and distribution through Adyen's package-management infrastructure, and manage their lifecycle and controlled execution on Linux.
 
-          • Built access control and controlled, secure plugin execution into the platform, and worked on its backend services and supporting infrastructure on Kubernetes, Helm, Argo CD, HashiCorp Vault, and HashiCorp Consul.
+          • Implemented access controls and secure, controlled plugin execution. Built platform services within Adyen's existing infrastructure, which included Kubernetes, Helm, Argo CD, Cilium networking, Consul for service discovery, Vault for secrets management, and Calico-based network and firewall controls between data centres.
 
-          • Designed the backend architecture of a separate highly available system distributed across four geographically separated data centres, routing requests to suitable, fast-responding services, with the architecture built to handle heavy workloads and keep operating when one or more data centres become unavailable.
+          • Designed the backend architecture of a separate highly available system distributed across four geographically separated data centres. Requests were routed to suitable, responsive services, and the architecture was built to handle heavy workloads and remain operational when one or more data centres became unavailable.
 
-          • Built a solution for operating Argo Workflows across multiple Kubernetes clusters and data centres, including the workflow controllers and their supporting database and state infrastructure, with execution responsibility coordinated across data centres that all had access to the workflow workload.
+          • Built a highly available, multi-cluster execution solution for Argo Workflows across Kubernetes clusters and data centres. Every workflow was available across the participating clusters, while one cluster owned and executed its steps at a time.
 
-          • Used Kubernetes Leader Election as part of determining which controller owned a workflow's execution. Workflow and step state were recorded in the database, so when a lost node left a step marked Failed and ownership moved to another controller, the new owner retried that step from the recorded state and the workflow continued from there instead of restarting; surviving data centres took over when a data centre failed.
+          • Coordinated execution ownership per workflow, with Kubernetes Leader Election as part of the broader execution architecture. If the owning cluster failed or came under resource pressure, another available cluster with sufficient capacity could take over that workflow's execution.
 
-          • Contributed to a modular, self-service automation platform in Python: teams configure repository-specific automation by writing Gherkin scenarios that invoke reusable modules, instead of implementing each workflow themselves. It uses NATS as its event and message infrastructure and provides detailed Prometheus and Grafana monitoring of automation runs, down to individual merge requests and their pipeline executions.
+          • Enabled Argo Workflows node-status offloading as part of the recovery design. Workflow node and step state was persisted through the database-backed setup. When a node failure caused a step to be marked `Failed`, the new execution owner could use the recorded state and retry handling to rerun that step and continue from that point rather than restarting the entire workflow.
 
-          • Across this work, used Jenkins and GitLab CI for CI/CD pipelines, Argo CD and Argo Rollouts for deployment and progressive delivery, Argo Events for event-driven automation, and Temporal for workflow orchestration.
+          • Contributed to a modular, self-service automation platform built in Python. Teams define repository-specific automation through Gherkin scenarios that invoke reusable modules. The platform uses NATS and provides detailed Prometheus and Grafana monitoring down to individual merge requests and their pipeline executions.
 
-          • Used Terraform for infrastructure provisioning, Puppet for configuration management, HashiCorp Vault for secrets management, and HashiCorp Consul for service discovery, and worked with Flannel networking and service mesh technology in K3s environments.
+          • Worked with Jenkins and GitLab CI for pipeline automation, Argo Rollouts for progressive delivery, Argo Events for event-driven automation, Temporal for workflow orchestration, and Terraform and Puppet for infrastructure provisioning and configuration management.
 
-          **Tech stack:** Go · Python · Gherkin · Kubernetes · K3s · Helm · Argo CD · Argo Workflows · Argo Events · Argo Rollouts · Temporal · Jenkins · GitLab CI · Terraform · Puppet · HashiCorp Vault · HashiCorp Consul · Flannel · NATS · Redis · Prometheus · Grafana · Linux
+          **Tech stack:** Go · Python · Gherkin · Kubernetes · Helm · Argo CD · Argo Workflows · Argo Events · Argo Rollouts · Temporal · Jenkins · GitLab CI · Terraform · Puppet · HashiCorp Vault · HashiCorp Consul · Cilium · Calico · NATS · Redis · Prometheus · Grafana · Linux
 
       - layout: left
         title: Studocu
@@ -138,15 +114,15 @@ content:
         caption: Amsterdam, Netherlands · Jul 2022 — Jul 2023
         quote: Backend performance, observability, CI/CD checks, and reliability improvements for a high-traffic education platform.
         description: |
-          • Improved backend and platform-facing areas around website performance, crawler accessibility, and production reliability.
+          • Improved backend and platform-facing functionality related to website performance, crawler accessibility, and production reliability.
 
-          • Worked with operations and platform teams to add monitoring across local, staging, and production environments.
+          • Worked with operations and platform teams to improve monitoring across local, staging, and production environments.
 
-          • Built CI/CD checks for SEO and performance testing to make release quality more repeatable and easier to validate.
+          • Built CI/CD checks for SEO and performance testing, making release quality easier to validate consistently.
 
-          • Investigated bottlenecks across application and database layers and translated findings into practical engineering improvements.
+          • Investigated application and database bottlenecks and translated findings into practical engineering improvements.
 
-          **Tech stack:** Amazon Web Services (AWS) · S3 · SNS · SQS · RDS · DevOps · PHP · Laravel · Go · Big Data · Test Driven Development (TDD) · MySQL · ElasticSearch · Redis
+          **Tech stack:** AWS · S3 · SNS · SQS · RDS · PHP · Laravel · Go · MySQL · Elasticsearch · Redis · TDD
 
       - layout: left
         title: KolayIK
@@ -156,13 +132,15 @@ content:
         caption: Istanbul, Turkey · May 2021 — May 2022
         quote: Backend architecture, team leadership, automation, and platform reliability for HR and operations systems.
         description: |
-          • Led backend and platform-oriented work across HR systems, expense management, data import/export, and queue-based services.
+          • Led backend engineering across HR systems, expense management, data import/export, and queue-based services.
 
-          • Applied modular architecture, domain boundaries, TDD, messaging, AWS services, and Kubernetes where appropriate to improve maintainability and operational behaviour.
+          • Designed and brought up K3s infrastructure from scratch for a multi-data-centre, high-availability environment, covering cluster deployment and the supporting infrastructure required to operate it.
+
+          • Applied modular architecture, domain boundaries, test-driven development, messaging, and AWS services to improve maintainability and operational behaviour.
 
           • Built automation for failure reporting and operational feedback, including queue handling and Slack-integrated reporting.
 
-          • Supported delivery through technical review, design direction, mentoring, and pragmatic engineering standards.
+          • Supported delivery through technical reviews, design decisions, mentoring, and practical engineering standards.
 
       - layout: left
         title: Wingie Enuygun Group
@@ -172,15 +150,15 @@ content:
         caption: Istanbul, Turkey · May 2020 — Apr 2021
         quote: Team leadership, provider integrations, Go services, search, caching, and database reliability for travel systems.
         description: |
-          • Led hotel-provider integration work and backend services for provider aggregation, search, caching, and data pipelines.
+          • Led hotel-provider integrations and backend services for provider aggregation, search, caching, and data pipelines.
 
-          • Designed Go/gRPC services to manage concurrent provider requests and standardise hotel data from external systems.
+          • Designed Go/gRPC services to coordinate concurrent provider requests and standardise hotel data from external systems.
 
-          • Improved reliability through testing practices, Elasticsearch tuning, cache-rate management, and database cluster migration work.
+          • Improved reliability through testing, Elasticsearch tuning, cache-rate management, and database cluster migration work.
 
-          • Guided the team through technical review, testing workshops, and delivery decisions that balanced reliability with business needs.
+          • Guided technical reviews, testing workshops, and delivery decisions that balanced reliability with business needs.
 
-          **Tech stack:** Hexagonal Architecture · Microservices · Amazon Web Services (AWS) · DevOps · PHP · Go · Object-Oriented Programming (OOP) · Web Applications · Design Patterns · Big Data · Test Driven Development · MySQL · MongoDB · Symfony
+          **Tech stack:** Hexagonal Architecture · Microservices · AWS · PHP · Go · MySQL · MongoDB · Symfony · DevOps · TDD
 
       - layout: left
         title: Insider
@@ -190,15 +168,15 @@ content:
         caption: Istanbul, Turkey · Jun 2019 — Jun 2020
         quote: Backend architecture, service refactoring, messaging, security remediation, and data migration for marketing infrastructure.
         description: |
-          • Refactored newsletter and email-delivery systems from legacy structures toward clearer service boundaries.
+          • Refactored newsletter and email-delivery systems to establish clearer service boundaries and improve maintainability.
 
           • Worked on Go services, messaging, security remediation, and data migration across high-volume marketing data systems.
 
-          • Improved maintainability through architecture review, repository-service patterns, and clearer data-flow design.
+          • Improved service design through architecture reviews, repository-service patterns, and clearer data flows.
 
           • Built supporting services for A/B testing, spam detection, and queue-based processing.
 
-          **Tech stack:** RabbitMQ · Amazon Web Services (AWS) · DevOps · PHP · Go (Programming Language) · Object-Oriented Programming (OOP) · Design Patterns · Test Driven Development · MySQL · MongoDB · Leadership · Teamwork · Management · Redis
+          **Tech stack:** RabbitMQ · AWS · PHP · Go · MySQL · MongoDB · Redis · Design Patterns · TDD
 
       - layout: left
         title: Bamilo
@@ -210,13 +188,13 @@ content:
         description: |
           • Built and led engineering work across seller tooling, warehouse operations, delivery tracking, inventory services, and internal platforms.
 
-          • Owned backend architecture, service design, team growth, and technical review for marketplace operations systems.
+          • Owned backend architecture, service design, team growth, and technical reviews for marketplace operations systems.
 
-          • Designed data migration pipelines and service improvements for inventory and seller-centre workflows.
+          • Designed data migration pipelines and improved services supporting inventory and seller-centre workflows.
 
-          • Helped convert operational problems into maintainable systems for logistics, warehouse, seller, and marketplace teams.
+          • Turned operational needs into maintainable systems for logistics, warehouse, seller, and marketplace teams.
 
-          **Tech stack:** RabbitMQ · Kubernetes · GraphQL · Amazon Web Services (AWS) · DevOps · PHP · Laravel · Go (Programming Language) · Object-Oriented Programming (OOP) · Design Patterns · MySQL · MongoDB · Leadership · Management · Redis · Cassandra · Apache Kafka
+          **Tech stack:** RabbitMQ · Kubernetes · GraphQL · AWS · PHP · Laravel · Go · MySQL · MongoDB · Redis · Cassandra · Kafka
 
       - layout: left
         title: Sepehr Mahan Tech
@@ -228,28 +206,29 @@ content:
         description: |
           • Developed suggestion, task-management, meeting-management, form-builder, workflow, social-network, and mobile API systems.
 
-          • Focused on backend services, process automation, maintainable application foundations, and practical delivery for private and public-sector clients.
+          • Built backend services and application foundations focused on process automation, maintainability, and practical delivery for private- and public-sector clients.
 
-          • Built the early backend and product-engineering foundation that later grew into larger platform, architecture, and leadership responsibilities.
+          • Developed the backend and product-engineering foundations that supported later work in platform engineering, system architecture, and technical leadership.
 
-          **Tech stack:** Linux · PHP · JavaScript · Python (Programming Language) · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns · Object-Oriented Programming (OOP) · Teamwork
+          **Tech stack:** Linux · PHP · JavaScript · Python · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns
 
   - title: Selected Projects
     layout: list
     content:
       - layout: left
         title: Pepper.com Platform Work
-        caption: Marketplace microservices work · Remote / Berlin
-        sub_title: Backend services, GraphQL flows, image service work, near-cache behaviour
-        quote: Marketplace platform work with microservices, product/deal flows, backend behaviour, and security-oriented review.
+        caption: Scalable image processing and marketplace microservices · Remote / Berlin
+        quote: Scalable Go image processing, deterministic request routing, and marketplace microservices for a high-volume deal-community platform.
         description: |
-          • Collaborated with Supernova and microservice teams to develop features, maintain services, and improve backend behaviour.
+          • Built a Go-based image-processing service capable of processing around **5,000 new images per minute**, generating multiple resized variants for delivery across the platform.
 
-          • Redesigned and developed deal submission, product listing, and product detail flows using GraphQL.
+          • Implemented deterministic request routing for image-resizing workloads. Cloudflare middleware derived a routing value from each image ID and the configured scaling limit, added it to a request header, and enabled the load-balancing layer to route requests to Kubernetes pods based on that value. This kept requests for a given image consistently routed to one service under the same routing configuration.
 
-          • Worked on image-service capabilities, near-cache behaviour, load-balancing improvements, and microservice security review.
+          • Prevented concurrent duplicate resize requests for the same image from triggering redundant processing. A singleflight-style request-coalescing mechanism allowed overlapping requests to share work already in progress.
 
-          **Tech stack:** GraphQL · Amazon Web Services (AWS) · SQS · SNS · RDS · S3 · ELB · Microservice · PHP · Laravel · Go · Object-Oriented Programming (OOP) · Design Patterns · Test Driven Development (TDD) · ElasticSearch · Redis
+          • Developed GraphQL flows for deal submission, product listings, and product details, and contributed to image-service performance, near-cache behaviour, load balancing, and microservice security reviews.
+
+          **Tech stack:** Go · Kubernetes · Cloudflare · GraphQL · AWS · SQS · SNS · RDS · S3 · ELB · Elasticsearch · Redis · TDD
 
   - title: Technologies
     layout: list
@@ -262,7 +241,12 @@ content:
       - layout: left
         title: Containers & Orchestration
         description: |
-          Kubernetes, K3s, Docker, Helm, Cilium, Flannel, service mesh.
+          Kubernetes, K3s, Docker, Helm.
+
+      - layout: left
+        title: Kubernetes Networking & Storage
+        description: |
+          Cilium (Kubernetes networking), Calico (network and firewall controls in existing infrastructure), Flannel (pod networking in personal infrastructure), Longhorn (storage in personal infrastructure).
 
       - layout: left
         title: Delivery & Workflows
@@ -319,33 +303,24 @@ content:
     content:
       - layout: left
         title: Nikola Barac
-        sub_title: Head of Software Engineering, Pepper.com
-        caption: The World's Largest Deal Community
-        quote: >-
-          Kousha worked on pepper.com features as a senior PHP developer and took ownership of one
-          of our most important microservices written in Go. He demonstrated passion for tackling
-          challenging problems, staying o hours until they got solved and following up the next
-          days. While working on his daily tasks he was often paying attention to security issues
-          that many developers often neglect. Kousha was a valuable team member and I would be
-          very happy to work with him again!
+        sub_title: "Director of Engineering at Atolls (former Global Savings Group)"
+        quote: "Kousha worked on pepper.com features as a senior PHP developer and took the ownership of one of our most important microservices written in Go. He demonstrated passion for tackling challenging problems, staying off hours until they got solved and following up the next days. While working on his daily tasks he was often paying attention to security issues that many developers often neglect. Kousha was a valuable team member and I would be very happy to work with him again!"
+
+      - layout: left
+        title: Morteza Poussaneh
+        sub_title: "Applied AI Engineer · Ex-CTO"
+        quote: "I am delighted to recommend Kousha as a senior software developer. Having worked closely with him in three different companies, I can confidently say that he is an exceptional professional. Kousha's passion for technology is evident in his eagerness to learn and his ability to effortlessly work with multiple programming languages. He is known for getting things done, even in challenging and stressful situations, and his calm demeanor and problem-solving skills are truly admirable. Kousha's dedication, expertise, and exceptional work ethic make him an invaluable asset to any organization."
 
       - layout: left
         title: Ryan Klann
-        sub_title: VP of Engineering, Pepper.com
-        caption: The World's Largest Deal Community
-        quote: >-
-          Kousha is a developer who has very strong technical skills and has shown to be able to
-          take responsibility for a project and be relied upon. If there is something technical
-          that he doesn't understand he will jump right in and learn what he needs in order to
-          solve the problem. It's been a pleasure working with you.
+        sub_title: "VP of Engineering, Pepper.com"
+        caption: "The World's Largest Deal Community"
+        quote: "Kousha is a developer who has very strong technical skills and has shown to be able to take responsibility  for a project and be relied upon.  If there is something technical that he doesn't understand he will jump right in and learn what he needs in order to solve the problem.  Its been a pleasure working with you."
 
       - layout: left
-        title: Gizem Sevinç
-        sub_title: CTO and Co-founder, Kolay
-        quote: >-
-          Kousha is a talented software developer that I thoroughly enjoy working with. Thanks to
-          its extensive knowledge in backend technologies, it provides effective and fast solutions
-          to many problems. Highly recommended if you are working with PHP, Phyton, or Go.
+        title: Gizem Sevinç Erdur
+        sub_title: "Former Founder & CTO, HR Tech"
+        quote: "Kousha is a talented software developer that I thoroughly enjoy working with. Thanks to its extensive knowledge in backend technologies, it provides effective and fast solutions to many problems. Highly recommended if you are working with PHP, Phyton or Go."
 
 # Footer
 footer_show_references: true
