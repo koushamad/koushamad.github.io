@@ -88,23 +88,19 @@ content:
         caption: Amsterdam, Netherlands · Jul 2023 — Present
         quote: Plugin platform engineering, highly available backend architecture, multi-cluster workflow execution, and self-service automation for a large-scale payments platform.
         description: |
-          • Designed and built **adyencli in Go**, the CLI for Adyen's plugin management platform. Engineering teams can develop plugins using Adyen-provided SDKs in four programming languages, submit them for building and distribution through Adyen's package-management infrastructure, and manage their lifecycle and controlled execution on Linux.
+          • **Designed and built adyencli in Go**, the CLI and package management platform for AdyenCLI. It enables engineering teams to develop plugins using Adyen-provided SDKs in four programming languages, submit them for building and distribution through Adyen's package-management infrastructure, and manage their lifecycle, access controls, and secure execution on both Linux and macOS. The platform operated within Adyen's existing infrastructure, including Kubernetes, Helm, Argo CD, Vault, Consul, and Cilium, alongside Calico-based network and firewall controls between data centres.
 
-          • Implemented access controls and secure, controlled plugin execution. Built platform services within Adyen's existing infrastructure, which included Kubernetes, Helm, Argo CD, Cilium networking, Consul for service discovery, Vault for secrets management, and Calico-based network and firewall controls between data centres.
+          • **Designed the backend architecture of a separate highly available system spanning four geographically distributed data centres.** It routed requests to suitable, responsive services and was designed to handle heavy workloads and remain operational when one or more data centres became unavailable.
 
-          • Designed the backend architecture of a separate highly available system distributed across four geographically separated data centres. Requests were routed to suitable, responsive services, and the architecture was built to handle heavy workloads and remain operational when one or more data centres became unavailable.
+          • **Built a highly available, multi-cluster execution solution for Argo Workflows.** Workflows were available across participating Kubernetes clusters, with one cluster responsible for executing each workflow's steps at a time. Kubernetes Leader Election was part of the broader execution architecture. If the owning cluster failed or came under resource pressure, another available cluster with sufficient capacity could take over the workflow.
 
-          • Built a highly available, multi-cluster execution solution for Argo Workflows across Kubernetes clusters and data centres. Every workflow was available across the participating clusters, while one cluster owned and executed its steps at a time.
+          • **Implemented workflow recovery using Argo Workflows node-status offloading.** Workflow node and step state was persisted through the database-backed setup. When a node failure caused a step to be marked Failed, the new execution owner could use the recorded state and retry handling to rerun that step and continue from that point, rather than restarting the entire workflow.
 
-          • Coordinated execution ownership per workflow, with Kubernetes Leader Election as part of the broader execution architecture. If the owning cluster failed or came under resource pressure, another available cluster with sufficient capacity could take over that workflow's execution.
-
-          • Enabled Argo Workflows node-status offloading as part of the recovery design. Workflow node and step state was persisted through the database-backed setup. When a node failure caused a step to be marked Failed, the new execution owner could use the recorded state and retry handling to rerun that step and continue from that point rather than restarting the entire workflow.
-
-          • Contributed to a modular, self-service automation platform built in Python. Teams define repository-specific automation through Gherkin scenarios that invoke reusable modules. The platform uses NATS and provides detailed Prometheus and Grafana monitoring down to individual merge requests and their pipeline executions.
+          • **Contributed to a modular, self-service automation platform built in Python.** Engineering teams define repository-specific automation through Gherkin scenarios that invoke reusable modules. The platform uses NATS and provides detailed monitoring through Prometheus and Grafana, including individual merge requests and their associated pipeline executions.
 
           • Worked with Jenkins and GitLab CI for pipeline automation, Argo Rollouts for progressive delivery, Argo Events for event-driven automation, Temporal for workflow orchestration, and Terraform and Puppet for infrastructure provisioning and configuration management.
 
-          **Tech stack:** Go · Python · Gherkin · Kubernetes · Helm · Argo CD · Argo Workflows · Argo Events · Argo Rollouts · Temporal · Jenkins · GitLab CI · Terraform · Puppet · HashiCorp Vault · HashiCorp Consul · Cilium · Calico · NATS · Redis · Prometheus · Grafana · Linux
+          **Tech stack:** Go · Python · Gherkin · Kubernetes · Helm · Argo CD · Argo Workflows · Argo Events · Argo Rollouts · Temporal · Jenkins · GitLab CI · Terraform · Puppet · HashiCorp Vault · HashiCorp Consul · Cilium · Calico · NATS · Redis · Prometheus · Grafana · Linux · macOS
 
       - layout: left
         title: Studocu
