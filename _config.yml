@@ -39,9 +39,9 @@ additional_links:
 about_title: Executive Summary
 about_profile_image: images/kousha-profile.jpg
 about_content: |
-  Systems & Infrastructure / Platform Engineer with a backend engineering background. I build and operate production platforms, from Kubernetes infrastructure and CI/CD workflows to the developer tools engineering teams use to build and run their services. My work spans infrastructure automation, observability, reliability, and distributed systems, with a focus on secure, resilient, and maintainable systems.
+  Systems, infrastructure and platform engineer with a background in backend development. I build and run production platforms: Kubernetes infrastructure, CI/CD workflows, and the developer tools engineering teams use to build and run their own services. Most of my work sits in infrastructure automation, observability and distributed systems, and I pay close attention to keeping those systems secure and maintainable.
 
-  I take ownership from design and implementation through production operation and ongoing improvement. I enjoy solving complex technical problems, making architectural decisions, and building tools that help engineering teams work independently. I care about engineering quality and systems that remain reliable as they scale.
+  I usually own a piece of work from the first design through to production and the improvements that come after it. I like hard technical problems and architectural decisions, and I like building tools that let other teams get things done on their own. Engineering quality matters to me, especially in systems that have to keep working as they grow.
 
 content:
   - title: Core Expertise
@@ -50,32 +50,32 @@ content:
       - layout: left
         title: Platform Engineering & Developer Tooling
         description: |
-          • Go-based platform tools and CLIs, plugin management, secure execution, reusable automation, and self-service workflows.
+          • Platform tools and CLIs written in Go, plugin management and secure plugin execution, reusable automation, and self service workflows for engineering teams.
 
       - layout: left
         title: Kubernetes & Application Delivery
         description: |
-          • Kubernetes and K3s infrastructure, Helm, GitOps with Argo CD, progressive delivery with Argo Rollouts, and CI/CD with GitLab CI and Jenkins.
+          • Kubernetes and K3s infrastructure, Helm, GitOps with Argo CD, progressive delivery with Argo Rollouts, and CI/CD pipelines in GitLab CI and Jenkins.
 
       - layout: left
         title: Infrastructure as Code & Secrets
         description: |
-          • Infrastructure provisioning with Terraform, configuration management with Puppet, secrets management with HashiCorp Vault, and service discovery with HashiCorp Consul.
+          • Terraform for provisioning, Puppet for configuration management, HashiCorp Vault for secrets and HashiCorp Consul for service discovery.
 
       - layout: left
         title: High Availability & Reliability
         description: |
-          • Multi-data-centre architectures, request routing, workflow recovery and failover, deployment safety, and production reliability.
+          • Architectures that span several data centres, request routing, workflow failover and recovery, and safe deployments.
 
       - layout: left
         title: Observability & Production Operations
         description: |
-          • Prometheus, Grafana, metrics, logging, dashboards, post-deployment monitoring, and production issue investigation.
+          • Prometheus and Grafana, metrics, logging and dashboards, monitoring after each deployment, and digging into production issues.
 
       - layout: left
         title: Backend Systems & Architecture
         description: |
-          • Go services, APIs, workers, messaging, distributed systems, system design, service boundaries, technical reviews, and engineering standards.
+          • Go services, APIs, workers and messaging, distributed system design, service boundaries, technical reviews and engineering standards.
 
   - title: Professional Experience
     layout: list
@@ -84,39 +84,35 @@ content:
         title: Adyen
         link: https://adyen.com/
         link_text: adyen.com
-        sub_title: Infrastructure Engineer — CI/CD & Platform
-        caption: Amsterdam, Netherlands · Jul 2023 — Present
-        quote: Plugin platform engineering, highly available backend architecture, multi-cluster workflow execution, and self-service automation for a large-scale payments platform.
+        sub_title: Infrastructure Engineer, CI/CD & Platform
+        caption: Amsterdam, Netherlands · Jul 2023 to Present
+        quote: Platform engineering, internal developer tooling, workflow automation, and highly available services deployed across four geographically distributed data centres.
         description: |
-          • **Designed and built adyencli in Go**, the CLI and package management platform for AdyenCLI. It enables engineering teams to develop plugins using Adyen-provided SDKs in four programming languages, submit them for building and distribution through Adyen's package-management infrastructure, and manage their lifecycle, access controls, and secure execution on both Linux and macOS. The platform operated within Adyen's existing infrastructure, including Kubernetes, Helm, Argo CD, Vault, Consul, and Cilium, alongside Calico-based network and firewall controls between data centres.
+          • **Designed and built adyencli in Go**, Adyen's CLI and plugin management platform. It enables engineering teams to develop plugins using SDKs provided by AdyenCLI for four programming languages over gRPC, submit plugins for building and distribution, and manage their lifecycle, access controls, and secure execution on Linux and macOS.
 
-          • **Designed the backend architecture of a separate highly available system spanning four geographically distributed data centres.** It routed requests to suitable, responsive services and was designed to handle heavy workloads and remain operational when one or more data centres became unavailable.
+          • **Designed the backend architecture of a highly available system deployed across four geographically distributed data centres.** It routes requests to responsive services, supports heavy workloads, and is designed to remain operational when one or more data centres become unavailable.
 
-          • **Built a highly available, multi-cluster execution solution for Argo Workflows.** Workflows were available across participating Kubernetes clusters, with one cluster responsible for executing each workflow's steps at a time. Kubernetes Leader Election was part of the broader execution architecture. If the owning cluster failed or came under resource pressure, another available cluster with sufficient capacity could take over the workflow.
+          • **Built a highly available, multi cluster execution and recovery solution for Argo Workflows.** Workflows can be taken over by another available cluster when their execution owner fails or comes under resource pressure. Persisted workflow state and retry handling enable recovery from failed steps without restarting the entire workflow.
 
-          • **Implemented workflow recovery using Argo Workflows node-status offloading.** Workflow node and step state was persisted through the database-backed setup. When a node failure caused a step to be marked Failed, the new execution owner could use the recorded state and retry handling to rerun that step and continue from that point, rather than restarting the entire workflow.
+          • **Contributed to a modular, self service automation platform built in Python and integrated into the HA environment.** Engineering teams define repository specific automation through Gherkin scenarios and reusable modules. The platform uses NATS, with Prometheus and Grafana monitoring down to individual merge requests and their associated pipeline executions.
 
-          • **Contributed to a modular, self-service automation platform built in Python.** Engineering teams define repository-specific automation through Gherkin scenarios that invoke reusable modules. The platform uses NATS and provides detailed monitoring through Prometheus and Grafana, including individual merge requests and their associated pipeline executions.
-
-          • Worked with Jenkins and GitLab CI for pipeline automation, Argo Rollouts for progressive delivery, Argo Events for event-driven automation, Temporal for workflow orchestration, and Terraform and Puppet for infrastructure provisioning and configuration management.
-
-          **Tech stack:** Go · Python · Gherkin · Kubernetes · Helm · Argo CD · Argo Workflows · Argo Events · Argo Rollouts · Temporal · Jenkins · GitLab CI · Terraform · Puppet · HashiCorp Vault · HashiCorp Consul · Cilium · Calico · NATS · Redis · Prometheus · Grafana · Linux · macOS
+          **Tech stack:** Go · Python · gRPC · Gherkin · Kubernetes · Helm · Argo CD · Argo Workflows · Argo Events · Argo Rollouts · Temporal · Jenkins · GitLab CI · Terraform · Puppet · HashiCorp Vault · HashiCorp Consul · Cilium · Calico · NATS · Redis · Prometheus · Grafana · Linux
 
       - layout: left
         title: Studocu
         link: https://studocu.com/
         link_text: studocu.com
         sub_title: Senior Software Engineer
-        caption: Amsterdam, Netherlands · Jul 2022 — Jul 2023
-        quote: Backend performance, observability, CI/CD checks, and reliability improvements for a high-traffic education platform.
+        caption: Amsterdam, Netherlands · Jul 2022 to Jul 2023
+        quote: Backend performance, observability and CI/CD checks for a high traffic education platform.
         description: |
-          • Improved backend and platform-facing functionality related to website performance, crawler accessibility, and production reliability.
+          • Worked on the backend and platform side of the site where it affected page performance, crawler accessibility and production reliability.
 
-          • Worked with operations and platform teams to improve monitoring across local, staging, and production environments.
+          • Improved monitoring across local, staging and production environments together with the operations and platform teams.
 
-          • Built CI/CD checks for SEO and performance testing, making release quality easier to validate consistently.
+          • Built CI/CD checks for SEO and performance testing, so every release was validated the same way.
 
-          • Investigated application and database bottlenecks and translated findings into practical engineering improvements.
+          • Tracked down application and database bottlenecks and turned what we found into concrete fixes.
 
           **Tech stack:** AWS · S3 · SNS · SQS · RDS · PHP · Laravel · Go · MySQL · Elasticsearch · Redis · TDD
 
@@ -125,34 +121,34 @@ content:
         link: https://kolayik.com/
         link_text: kolayik.com
         sub_title: Senior Software Engineer / Backend Team Lead
-        caption: Istanbul, Turkey · May 2021 — May 2022
-        quote: Backend architecture, team leadership, automation, and platform reliability for HR and operations systems.
+        caption: Istanbul, Turkey · May 2021 to May 2022
+        quote: Backend architecture, team leadership and platform reliability for HR and operations systems.
         description: |
-          • Led backend engineering across HR systems, expense management, data import/export, and queue-based services.
+          • Led backend engineering for HR systems, expense management, data import and export, and queue based services.
 
-          • Designed and brought up K3s infrastructure from scratch for a multi-data-centre, high-availability environment, covering cluster deployment and the supporting infrastructure required to operate it.
+          • Designed and brought up K3s infrastructure from scratch for a high availability environment across multiple data centres, from cluster deployment to the supporting infrastructure needed to run it.
 
-          • Applied modular architecture, domain boundaries, test-driven development, messaging, and AWS services to improve maintainability and operational behaviour.
+          • Used modular architecture, clear domain boundaries, test driven development, messaging and AWS services to make the systems easier to maintain and operate.
 
-          • Built automation for failure reporting and operational feedback, including queue handling and Slack-integrated reporting.
+          • Built automation for failure reporting and operational feedback, including queue handling and reports sent to Slack.
 
-          • Supported delivery through technical reviews, design decisions, mentoring, and practical engineering standards.
+          • Supported delivery with technical reviews, design decisions, mentoring and practical engineering standards.
 
       - layout: left
         title: Wingie Enuygun Group
         link: https://www.enuygun.com/
         link_text: enuygun.com
         sub_title: Senior Software Engineer / Team Lead
-        caption: Istanbul, Turkey · May 2020 — Apr 2021
-        quote: Team leadership, provider integrations, Go services, search, caching, and database reliability for travel systems.
+        caption: Istanbul, Turkey · May 2020 to Apr 2021
+        quote: Team leadership, provider integrations and Go services for hotel search and travel systems.
         description: |
-          • Led hotel-provider integrations and backend services for provider aggregation, search, caching, and data pipelines.
+          • Led hotel provider integrations and the backend services behind provider aggregation, search, caching and data pipelines.
 
-          • Designed Go/gRPC services to coordinate concurrent provider requests and standardise hotel data from external systems.
+          • Designed Go and gRPC services that coordinated concurrent provider requests and standardised hotel data coming from external systems.
 
-          • Improved reliability through testing, Elasticsearch tuning, cache-rate management, and database cluster migration work.
+          • Improved reliability through testing, Elasticsearch tuning, cache rate management and a database cluster migration.
 
-          • Guided technical reviews, testing workshops, and delivery decisions that balanced reliability with business needs.
+          • Ran technical reviews and testing workshops, and helped make delivery decisions that weighed reliability against business needs.
 
           **Tech stack:** Hexagonal Architecture · Microservices · AWS · PHP · Go · MySQL · MongoDB · Symfony · DevOps · TDD
 
@@ -161,16 +157,16 @@ content:
         link: https://useinsider.com/
         link_text: useinsider.com
         sub_title: Senior Software Engineer
-        caption: Istanbul, Turkey · Jun 2019 — Jun 2020
-        quote: Backend architecture, service refactoring, messaging, security remediation, and data migration for marketing infrastructure.
+        caption: Istanbul, Turkey · Jun 2019 to Jun 2020
+        quote: Backend architecture, service refactoring and data migration for marketing infrastructure.
         description: |
-          • Refactored newsletter and email-delivery systems to establish clearer service boundaries and improve maintainability.
+          • Refactored the newsletter and email delivery systems so they had clearer service boundaries and were easier to maintain.
 
-          • Worked on Go services, messaging, security remediation, and data migration across high-volume marketing data systems.
+          • Worked on Go services, messaging, security remediation and data migration in high volume marketing data systems.
 
-          • Improved service design through architecture reviews, repository-service patterns, and clearer data flows.
+          • Improved service design through architecture reviews, the repository and service pattern, and clearer data flows.
 
-          • Built supporting services for A/B testing, spam detection, and queue-based processing.
+          • Built supporting services for A/B testing, spam detection and queue based processing.
 
           **Tech stack:** RabbitMQ · AWS · PHP · Go · MySQL · MongoDB · Redis · Design Patterns · TDD
 
@@ -179,14 +175,14 @@ content:
         link: https://bamilo.com/
         link_text: bamilo.com
         sub_title: Senior Software Engineer / Head of Development
-        caption: Tehran, Iran · Aug 2015 — Apr 2019
-        quote: Technical ownership, backend architecture, internal platforms, logistics systems, and team leadership for an e-commerce marketplace.
+        caption: Tehran, Iran · Aug 2015 to Apr 2019
+        quote: Technical ownership, backend architecture, logistics systems and team leadership for an online marketplace.
         description: |
           • Built and led engineering work across seller tooling, warehouse operations, delivery tracking, inventory services, and internal platforms.
 
           • Owned backend architecture, service design, team growth, and technical reviews for marketplace operations systems.
 
-          • Designed data migration pipelines and improved services supporting inventory and seller-centre workflows.
+          • Designed data migration pipelines and improved the services behind inventory and seller centre workflows.
 
           • Turned operational needs into maintainable systems for logistics, warehouse, seller, and marketplace teams.
 
@@ -197,14 +193,14 @@ content:
         link: https://www.sepehrmahan.com/
         link_text: sepehrmahan.com
         sub_title: Software Engineer / Senior Software Engineer
-        caption: Tehran, Iran · Aug 2012 — Jul 2015
+        caption: Tehran, Iran · Aug 2012 to Jul 2015
         quote: Early backend engineering, workflow systems, process automation, and organisational collaboration platforms.
         description: |
-          • Developed suggestion, task-management, meeting-management, form-builder, workflow, social-network, and mobile API systems.
+          • Developed suggestion, task management, meeting management, form builder, workflow, social network and mobile API systems.
 
-          • Built backend services and application foundations focused on process automation, maintainability, and practical delivery for private- and public-sector clients.
+          • Built backend services and application foundations for process automation, delivered to private and public sector clients.
 
-          • Developed the backend and product-engineering foundations that supported later work in platform engineering, system architecture, and technical leadership.
+          • Built up the backend and product engineering experience that my later work in platform engineering, system architecture and technical leadership grew from.
 
           **Tech stack:** Linux · PHP · JavaScript · Python · Node.js · SQL · MySQL · Redis · MongoDB · RabbitMQ · Design Patterns
 
@@ -214,15 +210,15 @@ content:
       - layout: left
         title: Pepper.com Platform Work
         caption: Scalable image processing and marketplace microservices · Remote / Berlin
-        quote: Scalable Go image processing, deterministic request routing, and marketplace microservices for a high-volume deal-community platform.
+        quote: Go image processing at scale, deterministic request routing and marketplace microservices for a high volume deal community platform.
         description: |
-          • Built a Go-based image-processing service capable of processing around **5,000 new images per minute**, generating multiple resized variants for delivery across the platform.
+          • Built an image processing service in Go that handled around **5,000 new images per minute**, generating several resized variants of each image for delivery across the platform.
 
-          • Implemented deterministic request routing for image-resizing workloads. Cloudflare middleware derived a routing value from each image ID and the configured scaling limit, added it to a request header, and enabled the load-balancing layer to route requests to Kubernetes pods based on that value. This kept requests for a given image consistently routed to one service under the same routing configuration.
+          • Implemented deterministic request routing for image resizing. Cloudflare middleware derived a routing value from each image ID and the configured scaling limit and added it to a request header. The load balancing layer used that value to route requests to Kubernetes pods, so requests for a given image kept reaching the same service as long as the routing configuration stayed the same.
 
-          • Prevented concurrent duplicate resize requests for the same image from triggering redundant processing. A singleflight-style request-coalescing mechanism allowed overlapping requests to share work already in progress.
+          • Stopped concurrent resize requests for the same image from triggering duplicate processing. A singleflight style request coalescing mechanism let overlapping requests share the work already in progress.
 
-          • Developed GraphQL flows for deal submission, product listings, and product details, and contributed to image-service performance, near-cache behaviour, load balancing, and microservice security reviews.
+          • Developed GraphQL flows for deal submission, product listings and product details. Also worked on image service performance, near cache behaviour, load balancing and security reviews of the microservices.
 
           **Tech stack:** Go · Kubernetes · Cloudflare · GraphQL · AWS · SQS · SNS · RDS · S3 · ELB · Elasticsearch · Redis · TDD
 
@@ -274,17 +270,17 @@ content:
     content:
       - layout: left
         title: Islamic Azad University
-        caption: 2011 — 2015
+        caption: 2011 to 2015
         sub_title: BSc Computer Software Engineering
         description: |
-          Computer software engineering foundation with research work in GIS/GPS-based Android applications.
+          Computer software engineering, with research work on Android applications based on GIS and GPS.
 
       - layout: left
         title: Islamic Azad University
-        caption: 2008 — 2011
+        caption: 2008 to 2011
         sub_title: ASc Computer Programming
         description: |
-          Computer programming foundation with early algorithmic and robotics-related research work.
+          Computer programming, with early research work on algorithms and robotics.
 
   - title: Links
     layout: text
@@ -304,8 +300,8 @@ content:
 
       - layout: left
         title: Morteza Poussaneh
-        sub_title: "Applied AI Engineer · Ex-CTO"
-        quote: "I am delighted to recommend Kousha as a senior software developer. Having worked closely with him in three different companies, I can confidently say that he is an exceptional professional. Kousha's passion for technology is evident in his eagerness to learn and his ability to effortlessly work with multiple programming languages. He is known for getting things done, even in challenging and stressful situations, and his calm demeanor and problem-solving skills are truly admirable. Kousha's dedication, expertise, and exceptional work ethic make him an invaluable asset to any organization."
+        sub_title: "Applied AI Engineer · Former CTO"
+        quote: "I am delighted to recommend Kousha as a senior software developer. Having worked closely with him in three different companies, I can confidently say that he is an exceptional professional. Kousha's passion for technology is evident in his eagerness to learn and his ability to effortlessly work with multiple programming languages. He is known for getting things done, even in challenging and stressful situations, and his calm demeanor and problem solving skills are truly admirable. Kousha's dedication, expertise, and exceptional work ethic make him an invaluable asset to any organization."
 
       - layout: left
         title: Ryan Klann

@@ -35,8 +35,9 @@ DEFAULT_OUT = ROOT / "assets" / "Kousha-Ghodsizad-CV.pdf"
 # The PDF shows these recommendations in this order; keep the list in step
 # with the curated entries in _config.yml so the website and PDF match.
 # Jobs with at least this many bullets may continue across a page break
-# (heading and first two bullets stay together); shorter jobs never split.
-LONG_JOB_BULLETS = 6
+# (heading + first two bullets, and last two bullets + tech line, stay together);
+# shorter jobs never split.
+LONG_JOB_BULLETS = 4
 
 PDF_RECOMMENDATIONS = ["Nikola Barac", "Morteza Poussaneh", "Ryan Klann", "Gizem Sevinç Erdur"]
 
@@ -86,7 +87,7 @@ def inline(s):
 
 
 def parse_caption(caption):
-    """'Amsterdam, Netherlands · Jul 2023 — Present' -> (location, dates)."""
+    """'Amsterdam, Netherlands · Jul 2023 to Present' -> (location, dates)."""
     if not caption:
         return "", ""
     parts = [p.strip() for p in caption.split("·")]
@@ -235,8 +236,10 @@ p.sum {{ margin-bottom: 1.6mm; font-size: 9.4pt; }}
                 + (f'<p class="intro">{inline(j["intro"])}</p>' if j["intro"] else ""))
         tech = f'<div class="tech">{esc(j["tech"])}</div>' if j["tech"] else ""
         if len(j["bullets"]) >= LONG_JOB_BULLETS:
+            middle = j["bullets"][2:-2]
             return (head + bullets_html(j["bullets"][:2]),
-                    bullets_html(j["bullets"][2:], "cont") + tech)
+                    (bullets_html(middle, "cont") if middle else "")
+                    + f'<div class="keep">{bullets_html(j["bullets"][-2:], "cont")}{tech}</div>')
         return f'<div class="job">{head}{bullets_html(j["bullets"])}{tech}</div>'
 
     rail = [f'<img class="photo" src="{d["photo"]}" alt="">' if d["photo"] else "",
@@ -270,7 +273,7 @@ p.sum {{ margin-bottom: 1.6mm; font-size: 9.4pt; }}
                      for e in d["education"]]))
 
     main.append(sec("Recommendations",
-                    [f'<div class="rec"><div class="who">{esc(r["who"])} — {esc(r["role"])}</div>'
+                    [f'<div class="rec"><div class="who">{esc(r["who"])} · {esc(r["role"])}</div>'
                      f'<div class="quote">“{esc(r["quote"])}”</div></div>'
                      for r in d["recs"]]))
     main.append('<div class="note">References available on request.</div>')
@@ -280,7 +283,7 @@ p.sum {{ margin-bottom: 1.6mm; font-size: 9.4pt; }}
             f'<div class="main">{"".join(main)}</div></div>')
 
     return (f'<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8">'
-            f'<title>{esc(d["name"])} — CV</title><style>{css}</style></head>'
+            f'<title>{esc(d["name"])} CV</title><style>{css}</style></head>'
             f'<body>{body}</body></html>')
 
 
